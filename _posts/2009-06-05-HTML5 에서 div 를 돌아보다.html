@@ -1,0 +1,24 @@
+---
+layout: post
+title: HTML5 에서 div 를 돌아보다
+date: 2009-06-05 00:08:03.000000000 -04:00
+categories:
+- HTML
+- standards
+tags:
+- div
+- HTML
+- "웹표준"
+- web standards
+---
+<p>html5 를 주욱 읽다가 copy&paste 로 노트에 남겨두었던 div 에 대한 부분이다.  사실 오랫동안 table 디자인으로 익숙해지셨던 분들에게 일모리를 포함하여 table 디자인 대체 요소로 보고 있지만 사실 그 이상이기도 하면서 그렇지도 않다.  쏟아지는 nested div 들 앞에 무너지는 많은 퍼블리셔들 개발자들을 보며 gg! 그리고 &lt;! -- 와 --&gt; 랑 절친을 맺으시길 이라는 말 밖에는...</p>
+<blockquote><p>Div 엘리먼트는 특별한 의미가 전혀 없다.  자식 엘리먼트를 나타낸다.  이어지는(연속적인) 엘리먼트 그룹에 일반적인 의미를 마크업 하기위해 class, lang/xml:lang 그리고 title 속성과 함께 사용될수 있다.
+The div element has no special meaning at all. It represents its children. It can be used with the class, lang/xml:lang, and title attributes to mark up semantics common to a group of consecutive elements. - <a href="http://www.w3.org/TR/2009/WD-html5-20090423/interactive-elements.html#the-div-element">W3C</a></p></blockquote>
+<blockquote><p>div 엘리먼트에 <a href="#phrasing-content">phrasing content</a> 을 담을 수 있도록 허락함으로써 저자들이 class="" 속성 사용에서 부터 마크업 안에 다른 어떤 엘리먼트를 넣지 않는등 div 를 남용하기 쉽도록 되어있다.  접근성의 시각으로 볼때 이것은 악몽 ((disaster 재앙이라는 표현은 한국에선 최악의 상황으로 표현될 뿐더러 잘 사용되지 않는다.)) 이며 그러한 페이지들을 표준이 아님을(non-compliant) 알리는 식으로 하되 스팩이 따로 지원하지 않는 한 지금 상태의 메카니즘대로 사용되는걸 제한하지는 않도록 하면 좋을꺼 같다.
+Allowing div elements to contain phrasing content makes it easy for authors to abuse div, using it with the class="" attribute to the point of not having any other elements in the markup. This is a disaster from an accessibility point of view, and it would be nice if we could somehow make such pages non-compliant without preventing people from using divs as the extension mechanism that they are, to handle things the spec can't otherwise do (like making new widgets). - <a href="http://www.w3.org/TR/2009/WD-html5-20090423/interactive-elements.html#the-div-element">W3C</a></p></blockquote>
+<p>그러고 보니 Table 의 악용 그리고 남용에 대해 글을 쓴지가 어제 같은데 이제는 div 남용에 대한 글들을 여기 저기서 볼 수 있다.  사실 불완전한 HTML 내에서 시멘틱 마크업을 최대한 살리면서 디자이너들이 표현하려다 보니 남용아닌 남용이 표출될 수 밖에 없다.  단순한 division 을 나타내며 문서를 자르는 것 뿐만이 아니라 이것 위에 프레젠테이션을 씌워야 하는 고통은 이미 많은 퍼블리셔들과 개발자들이 경험한 고통이다 (물론 nested div 도). html5 에서 header, footer, article, section, aside 등이 어느정도 해결을 해준다고 하지만 그 또한 '바로 이거야!' 라는 뇌리를 치는 해결책은 아니다.  물론 어느정도의 시멘틱적인 요소를 첨가함으로써 문서 자체에 의미를 주지만 그것을 더욱 의미 있게 나누려다 보니... 사실 더 머리가 아파온다.  오해는 없으시길.  대환영 그리고 대환영이다.  숨통이 트여지는 기분.</p>
+<p>물론 아직 밖은 흐리다.</p>
+<blockquote id="phrasing-content"><p>Phrasing content 는 문서의 text(문자, 본문)들과 그 text 들을 마크업 하는 문단내(intra-paragraph) 엘리먼트들 까지도 포함한다.  phrasing content 의 모음이 문단을 형성한다.
+Phrasing content is the text of the document, as well as elements that mark up that text at the intra-paragraph level. Runs of phrasing content form paragraphs. - <a href="http://www.w3.org/TR/2009/WD-html5-20090212/dom.html#phrasing-content-0">W3C</a></p></blockquote>
+<p>P.S. 사이트에 간단히 JS 로 HTML5 분위기를 IE 에서도 낼 수 있다는 장점을 사용해서 일몰.com에 몇안되는 요소들을 첨부 해보았다.  전에 어느분의 포스팅에서도 본거 같은데, DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.0//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic10.dtd" 이거... 외우기 힘들다...  &lt;!DOCTYPE html&gt; 얼마나 좋나...</p>
+<p>P.P.S 몇일간 사이트 업데이트를 할 예정.</p>

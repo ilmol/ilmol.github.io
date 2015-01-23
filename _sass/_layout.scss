@@ -1,0 +1,139 @@
+body > header {
+	height: 60px;
+	position: relative;
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #ededed;
+
+	#logo {
+		width: 60px;
+		height: 52px;
+		text-align: center;
+		padding: 8px 0 0;
+		float: left;
+		border-right: 1px solid #eee;
+
+		img {
+			width: 43px;
+			height: 42px;
+
+		}
+	}
+	#logo:hover {
+		background-color: $color-brand;
+		transition: background-color 2s;
+	}
+
+	nav {
+		position: relative;
+		ul {
+			float: right;
+			margin-right: 20px;
+			padding-right: 30px;
+		}
+		li {
+			padding: 14px 0;
+			margin: 7px 0 0;
+			font-size: .8em;
+			line-height: 16px;
+			float: left;
+
+			a {
+				padding: 0 12px;
+				float: left;
+
+				span {
+					display: none;
+				}
+
+			}
+			i {
+				font-size: 1.2em;
+				transform: translate3d(0,0,0);
+			}
+		}
+	}
+}
+// end header
+label[for="cat-trigger"] {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  z-index: 5;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+.cat-trigger:checked + label {
+  background-color: #000;
+}
+ 
+.cat-trigger:checked ~ #main {
+    right: 200px;
+}
+.cat-trigger + label, #main {
+  	transition: right 0.4s;
+}
+
+#cat-trigger {
+	display: none;
+}
+
+#wrapper {
+	position: relative;
+	clear: both;
+}
+#wrapper > aside {
+	width: 200px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: 20px;
+	text-align: right;
+	background-color: $color-bg-side;
+	color: $color-font-aside;
+	bottom: 0;
+	
+	li {
+		padding: 1px 10px 4px;
+	}
+	a {
+	}
+	i {
+		padding-right: 5px;
+		font-size: .9em;
+	}
+	p {
+		padding-left: 20px;
+		padding-right: 10px;
+		text-align: right;
+		font-size: .8em;
+	}
+}
+// end sidebar
+
+#main {
+	right: 0;
+	position: relative;
+	border-right: 1px solid #eee;
+	min-height: 660px;
+	background: #fff;
+	@import "article";
+}
+// end main
+
+.pagination {
+	font-size: .9em;
+	padding: 0 $size-padding-article-side;
+}
+footer {
+	clear: both;
+	width: 100%;
+	position: relative;
+	p {
+		text-align: center;
+		font-size: .8em;
+	}
+}

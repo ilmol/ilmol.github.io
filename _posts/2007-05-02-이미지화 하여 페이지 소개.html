@@ -1,0 +1,37 @@
+---
+layout: post
+title: "이미지화 하여 페이지 소개"
+date: 2007-05-02 11:45:45.000000000 -04:00
+categories:
+- PRODUCT
+tags:
+- "워드프레스"
+---
+<p>최근에 테마를 제대로 넣으면서 많은 조정을 하고 있는 중입니다.  기본 틀을 제대로 잡아주니 무엇을 하던간에 편하네요.  아무튼 워드프레스로 글(word)을 찍어내시는(press) 분들 중 <a href="http://ilmol.com/wp/2005/06/07/21/">워드프레스의 꽃이라 불리우는 페이지 기능</a>을 쓰시는 분들이 많은 것으로 압니다.  혹시나 만드신 페이지들을 좀더 문서답게 이미지화 하여 소개하고 싶으시면 <a href="http://ilmol.com/wp/topics">이러한 방법</a>을 쓰실수 있겠네요.
+<img src="assets/480761975_b1312a4254.jpg?v=0" alt="문서화 예제" />
+<!--more-->
+style.css 에 아래 css 를 추가하시고
+{% highlight css %}
+.page_document {float:left;  width: 150px; height:220px;
+ background: url(이미지 주소) no-repeat top left;
+ margin: 0 15px 10px 10px;
+ }</p>
+<p>/* 문서 제목 부분 */
+.page_document a {float:left;width: 149px; height: 140px;
+ text-align:center;
+ font-family: Georgia, serif;
+ font-size:16px;
+ font-weight:bold;
+ color:black;
+padding-top: 40px;
+ }</p>
+<p>/* 마우스 오버일때 효과 */
+.page_document a:hover{background:none;color:#951a14;}
+{% endhighlight %} </p>
+<p>그리고 페이지를 소개하고 싶으신 곳에   "page_document" 이라는 div 안에 링크와 설명을 넣으면 되겠네요
+{% highlight html %}</p>
+<div class="page_document"><a href="문서주소">About Me</a>나에대한 이야기 이다</div>
+<p>{% endhighlight %}</p>
+<p>이미지는 이것을 사용하시면 되겠습니다.  계정에 저장하여 쓰시기 바랍니다.
+<img src="assets/480773495_cbb38b906e.jpg?v=0" alt="빈종이 이미지" /></p>
+<p>P.S. 미국은 한창 <a href="http://sports.espn.go.com/nba/index?lpos=globalnav&lid=gn_NBA_NBA">NBA 플레이오프</a>가 진행중이군요</p>

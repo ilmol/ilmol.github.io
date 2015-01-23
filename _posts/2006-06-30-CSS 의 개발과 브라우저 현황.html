@@ -1,0 +1,23 @@
+---
+layout: post
+title: CSS 의 개발과 브라우저 현황
+date: 2006-06-30 15:11:05.000000000 -04:00
+categories:
+- CSS
+---
+<p>이제겨우 브라우저들이 CSS2 와  2.1 을 조금씩 신경써서 지켜가고 있는 가운데 몇몇 브라우저들에서는 몇가지 CSS3 를 해석하고 있습니다.  제생각에는 WebKit 이 가장만이 지원하는거 같더군요.  꽤 오래되긴 했지만 (신기하게 아무도 언급을 안하는) <a href="http://ilmol.com/wp/2005/07/19/93/">Multi Column</a> 은 불여우에서 1.5버전부터 지원되고 있는 기능이 있구요, 이미 오래전에 CSS2, CSS2.1 에 권고되어 나온 선택자들,  first-child, adjacent, attribute, and child selectors 등도 <a href="http://ilmol.com/wp/2006/05/20/217/">IE 도 지원한다고 발표</a>가 됬습니다.</p>
+<h3>Multi Column 다단계 피라미드가 아닌 다단락기능</h3>
+<p>MULTI COLUMN 이야기 해 보겠습니다.  CSS3 권고안으로써  인쇄물에서 쉽게 볼수 있는 단락기능입니다.  글이 나뉘는 것이죠.  단, 현재 <a href="http://developer.mozilla.org/en/docs/CSS3_Columns" rel="external">불여우에서만 지원</a>이 되고 있습니다.  사용은 다음과 같습니다.
+<!--more-->
+{% highlight css %}-moz-column-count: 3;
+-moz-column-width:20em;
+-moz-column-gap: 2em;{% endhighlight %}</p>
+<p>css 구문인데 쉽습니다.  3개의 column, 너비는 최소한20em 이 되어야하고 그리고 그 간격은 2em로 하라 라는것이죠.  어렵지 않아서 더 길게 설명하지 않아도 될꺼 같습니다.
+<img src="assets/178191881_3a28d1aa96.jpg?v=0" alt="column" /></p>
+<h3>문제 시간</h3>
+<p>두번째로 가려다가 오늘은 포스팅을 짧게 줄이기 위해 모든 설명을 여기서 마치고 방문자 분께 문제내기로 한번 나가보겠습니다.  바쁘다는 핑계로 너무 거저먹기 위주로 나가나요 ㅡㅜ</p>
+<p>제가 가끔 <a href="http://ilmol.com/wp/csstesting/">시험삼아 돌리는 페이지가 있습니다</a>.  이것저것 실험해보는 페이지 인데 보시다시피 불여우로 볼때와, 오페라로 볼때, ie 로 볼때 다 다르게 보입니다.  네 코드는 같습니다만, 지원하는 부분들이 틀립니다.  북마크 해두셨다가 가끔 들리시면 이상한 실험이 이루어 지고 있을지도 모르겠습니다 </p>
+<p>자 그럼 질문 나갑니다.  <a href="http://ilmol.com/wp/csstesting/">이 페이지를</a> 익스플로러6, 불여우1.5, 오페라9 를 놓고 봤을때에, (포스팅부분, 즉 본문만 비교)</p>
+<p><strong>1.  IE6와 불여우1.5에서의 차이점은 몇가지 일까요?</p>
+<p>2.  불여우와 그럼 오페라에서 볼때의 차이점은 무엇이 있을까요?</strong></p>
+<p>@@</p>

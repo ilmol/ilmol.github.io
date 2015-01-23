@@ -1,0 +1,38 @@
+---
+layout: post
+title: "워드프레스2.5 정식 릴리스"
+date: 2008-03-30 18:04:38.000000000 -04:00
+categories:
+- PRODUCT
+tags:
+- "업그레이드"
+- "워드프레스"
+- wordpress 2.5
+---
+<p><img src="assets/20080329-r7hqsbhc4pfhxh4m7nkgnccb77.jpg" alt="워드프레스" /></p>
+<p>드디어 워드프레스 2.5가 <a href="http://wordpress.org/">정식 릴리스</a> 되었습니다.  지난번 <a href="http://ilmol.com/wp/2008/03/20/380/">RC1 공개때</a> 상당히 기대를 했던지라 공개되자마자 일모리네 업데이트를 단행했습니다.  오랜만의 업그레이드라 살짝 긴장되더군요.  잠시 한글이 깨지는 사태가 발생하긴 했으나 팔콘님께서 빠르게 복구에 도움을 주셨습니다.  피드또한 제대로 작동 중입니다.</p>
+<p>Wordpress 2.5 는 내부 Structure 틀 뿐만 아니라 관리자 페이지의 업데이트가 가장 큰 변화이지만 새로운 메뉴 배치라던지 디자인등이 이전 버전의 틀을 기반으로 옮겼기 때문에 사용성에 있어서 어려움은 없고 오히려 상당히 만족스러운 인터페이스를 제공하고 있습니다.  업그레이드를 적극 추천하고 싶군요.</p>
+<p>워드프레스 <a href="http://codex.wordpress.org/Upgrading_WordPress_Extended">업그레이드 가이드</a></p>
+<ol>
+<li>DB를 백업합니다.</li>
+<li>워프 파일들 또한 백업합니다.</li>
+<li>백업들이 제대로 되었나 확인합니다.</li>
+<li>플러그인들을 모두 Activate 에서 Deactivate으로 꺼줍니다.</li>
+<li>위의 4 스텝들이 제대로 되었나 다시 확인해 봅니다.</li>
+<li>워드프레스 새 버전을 다운하여 압축을 풉니다.</li>
+<li>이하의 파일들을 제외하고는 모든 워드프레스 파일들을 계정에서 지웁니다.
+ wp-config.php
+ wp-content 폴더.  하지만 그 안의 cache 나 plugins/widgets 는 지우는 것이 좋습니다.
+ wp-images 폴더
+ <del datetime="2008-03-30T23:48:45+00:00">wp-content/languages 폴더</del>
+ .htaccess 파일
+ robots.txt 파일</li>
+<li>새 파일들을 계정으로 업로드 합니다.</li>
+<li>워드프레스 업그레이드 프로그램을 돌립니다.
+ http://계정주소/워드프레스폴더/wp-admin/upgrade.php</li>
+<li>Permalinks 와 .htaccess 를 업데이트 시켜줍니다.</li>
+<li>플러그인들과 테마를 2.5와 호환이 가능한 버전으로 업데이트 시켜줍니다.</li>
+<li>플러그인들을 Activate 모드로 작동시킵니다.</li>
+<li>워드프레스에 어떤 변화가 있는지 살펴봅니다.</li>
+</ol>
+<p>업그레이드 완료!</p>

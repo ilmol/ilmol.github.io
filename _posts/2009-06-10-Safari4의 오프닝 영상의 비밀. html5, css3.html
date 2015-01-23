@@ -1,0 +1,100 @@
+---
+layout: post
+title: Safari4의 오프닝 영상의 비밀. html5, css3
+date: 2009-06-10 17:10:07.000000000 -04:00
+categories:
+- BROWSER
+- CSS
+- HTML
+- standards
+tags:
+- CSS3
+- "브라우저"
+- HTML
+- "오프닝"
+- "사파리4"
+- "애플"
+---
+<p>사파리4 브라우저에는 사파리 개발자들이 브라우저의 역량을 마음껏 뽐내는 흥미로운 부분을 담고 있습니다.  짧게나마 나누면서 파워풀한 html5+css3+js를 만나보겠습니다.</p>
+<p>사파리 브라우저를 설치하시면 <a href="http://www.apple.com/safari/welcome/">오프닝 영상이 나오게 됩니다</a>.  이 영상은 처음에 단순한 맥OSX 설치후에 시작되는 프로그램 자체적인 영상으로 생각했지만 그것이 아니라  여러 이미지들과 작은 MOV 파일을 가지고 HTML, CSS3, JS 로 이루어진 html 페이지 입니다.  물론 영상을 보시면 하나의 비디오 파일을 돌리는 듯한 착각이 들 정도로 잘 꾸며져 있습니다.  이미 베타버전 공개시 토론되었던 부분이라 아주 오랜 시간 후에 치는 뒷북일수 있겠군요.</p>
+<p>{% highlight html %}
+<audio id="music" src="http://images.apple.com/safari/welcome/media/audio.mp4"></audio></p>
+<div id="header">
+<h1>Welcome to Safari 4</h1>
+</p></div>
+<div id="apple">
+<div class="icon"></div>
+<div class="spots"></div>
+<div class="flare"></div>
+<div class="flareicon"></div>
+</p></div>
+<div id="safari">
+<div>
+		 <video id="compass" src="http://images.apple.com/safari/welcome/media/compass.mov" width="256" height="256">
+			 <img src="assets/safari.jpg" width="200" height="200" alt="Safari 4" />
+		 </video>
+    </div>
+</p></div>
+<p>{% endhighlight %}</p>
+<p>HTML5 지원 하면 떠오르는 두 태그죠 audio, video가 눈에 띄실겁니다.  그러나 어찌보면 이 페이지에서 작은 부분을 차지할뿐 중요한건 CSS3 자체에 있습니다.  #apple 안에 들어있는 .icon, .spots .flare .flareicon 등이 영상에 직접적인 연관을 보여줍니다.  물론 이벤트를 컨트롤 하는 js도 빼 놓을수 없겠죠.</p>
+<p><a href="http://images.apple.com/safari/welcome/styles/safari.css">오프닝 페이지의 소스</a>를 보시면 아시겠지만 웹킷전용 CSS3를 제어하여 각각의 icon spots 등을 순서대로 ease-in, linear 방식등으로 일정 시간에 플레이되고 지연되도록 설정되어 있습니다.  간단한 순서대로 나열해서 말씀드리자면 첫째로 대강의 기본 설정이 첫 부분입니다.  그리고 각각의 엘리먼트들이 스케쥴데로 플레이 되도록 -webkit-keyframes 값들이 지정되어 있고 마지막에는 설정값과 엘리먼트의 연결 그리고 플레이 시간이 지정되어 있습니다.</p>
+<p>하나하나 설명을 드리면 너무나 길어질듯 하구요, 간단히 예제를 보면서 설명드리겠습니다.
+이하 코드는 제가 방금 제작한 <a href="http://ilmol.com/example/ilmolintro.html">ilmol.com 인트로입니다</a>... 참 썰렁하네요.
+대강의 스토리 라인은 ilmol.com/wp 를 클릭시 설정된 애니메이션이 작동하는 것입니다.  애니메이션은 하단에서 부터 화면 상단부분까지 사이즈및 투명도가 올라가면서 뚜렷하게 출력된후 사라지는 순서로 정했습니다.  일단 구현된 페이지를 <strong>사파리4에서</strong> 한번 보시구요.
+<a href="http://ilmol.com/example/ilmolintro.html"><img src="assets/20090610-xqmfsfhg1m15sutqru8gcij2ty.jpg" alt="ilmol/wp" /></a>
+<!--more-->
+{% highlight html %}
+<!DOCTYPE html SYSTEM>
+<html lang="en-us">
+<head>
+<meta charset="utf-8" />
+<title>Welcome to ILMOL</title>
+<meta name="Author" content="ilmol" /></p>
+<style type="text/css">
+body {margin:0; color:#fff; background: #000; overflow:hidden;text-align:center;}
+div h1 {-webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.4, transparent), to(rgba(255, 255, 255, 0.4)));
+}
+@-webkit-keyframes introo {</p>
+<p>      0% {
+        opacity: 0;
+        -webkit-animation-timing-function:ease-out;
+        padding-top: 200px;
+      }</p>
+<p>      60% {
+        opacity: 1;
+        -webkit-transform: scale(2);
+        -webkit-animation-timing-function:ease-in;
+        padding-top: 50px;
+      }</p>
+<p>      100% {
+        opacity: 0;
+        -webkit-transform: scale(0.7);
+        -webkit-animation-timing-function:linear;
+        padding-top: 75px;</p>
+<p>      }
+    }
+.slide {
+  -webkit-animation-name: introo;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: 2;
+}
+</style>
+<p></head>
+<body></p>
+<div onclick="className='slide'">
+<h1>ilmol.com/wp</h1>
+</div>
+<p></body>
+</html>
+{% endhighlight %}</p>
+<p>보시다시피 html 은 별거 없습니다. 간단한 js로 slide가 시작되도록했고 ilmol.com/wp 주소가 그 안에 들어있습니다.
+이 간단한 부분을 가지고 css에서 여러가지를 지정해 주어야 합니다.  애니메이션의 키프래임안에서 시간에따라 어떻게 변화할 것인지를 지정하는 것이 첫번째 입니다.  -webkit-keyframes 다음에 나오는 것이 에니메이션 이름이구요.  각각의 keyframe 타임라인에는 투명도, animation-timing-function, 위치 등이 지정되어 있습니다.  </p>
+<p>keyframe 이 지정되었다면 몇초간 이루어지는지 몇번 이루어 지는지 등을 지정합니다.  저는 3초간 한 사이클이 이루어지고 2번 플레이 되도록 지정했습니다.
+{% highlight css %}
+.slide {
+  -webkit-animation-name: introo;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: 2;}
+{% endhighlight %}
+주의깊게 보실 부분은 에니메이션 이름이 지정되어 있다는 것입니다.  "-webkit-animation-name: introo;"  키프래임 설정이름과 애니메이션 이름이 연결되어야 합니다.  위의 말씀드린 몇가지만 주의하셔서 살펴보시면 전혀 어렵지 않습니다 </p>
+<p>이번 사파리4 오프닝 영상은 이를 백분 활용하여 감쪽같은 영상을 만들어 내었고 그 영상만으로도 우리를 매혹시키기에 충분했습니다.  앞으로 여러가지 활용 부분들이 개발되고 적용되겠지만 사파리내에서 한정되기 보다는 공식 css3를 사용하여 모든브라우저에 활용되면 좋겠다라는 꿈을 가져봅니다.  물론 쉽지도 않을듯 하고 시간도 걸리리라 생각됩니다만...  스케쥴에 앞서가고 있는 html5, 스케쥴에 뒤쳐진 css3, 둘의 만남은 어떻게 웹을 바꾸어 놓을지.  그리고 언제가 될지가 괜시리 기다려지는 그런 날입니다.</p>

@@ -1,0 +1,22 @@
+---
+layout: post
+title: max-width 와 min-width
+date: 2007-05-11 12:49:40.000000000 -04:00
+categories:
+- CSS
+- HTML
+---
+<p>max-width 와 min-width는 놀랍게도 인터넷익스플로러에서 먹히지 않는다.  이 때문일까?  이제 1024 이상의 해상도를 가진 유저들이 상당히 많아 졌는데도 너비의 유연성을 가진 국내 사이트를 거의 찾아볼수 없다.  이제 '흔해진' 블로그 디자인에서도 찾아보기 힘들다.  IE가 지원하지 않는것이 주 요인일까 아니면 테이블을 사용한 틀에 잡힌 디자인이 손에 익은것이 주 요인일까?  아니면 복잡한 % 계산이?  물론 안쓴다고 해서 문제될 부분은 아니다.</p>
+<p>internet explorer 에서 max 와 min 너비를 지정해 줄수 있다고 봤지만 min-width 가 에러를 발생한다. </p>
+<p>#wrap
+{
+max-width: 1000px;
+width:expression(document.body.clientWidth &gt; 1000? "1000px" : "auto"); }</p>
+<p>에러가 나는 min-width
+#wrap
+{
+min-width: 700px;
+width:expression(document.body.clientWidth &lt; 700? "700px" : "auto");  }</p>
+<p>흠.</p>
+<p>참고로 최근 일모리네를 방문한 25,000 명의 해상도를 나눈 그래프다.  40% 가 1280해상도를 사용하고 있으며 23%가 1024 해상도를 사용하고 있다.  하지만 나머지 결과를 살펴보면 모두가 1024 이상의 해상도를 보여주고 있다.  다시 말하면 23%를 뺀 전체방문자의 77%가  1024해상도 이상을 사용하고 있음을 알려준다. </p>
+<p><a href="http://farm1.static.flickr.com/209/492819281_41ab7cdd86.jpg?v=0"><img src="assets/492819281_41ab7cdd86_m.jpg" alt="일모리네 방문자 해상도 그래프" /></a></p>

@@ -1,0 +1,59 @@
+---
+layout: post
+title: "워드프레스 CSS 는 유저가 고르자"
+date: 2005-04-25 14:46:31.000000000 -04:00
+categories:
+- CSS
+- ETC
+- PRODUCT
+- standards
+tags:
+- "워드프레스"
+---
+<p>워드프레스에도 하나의 테마에  여러개의 css 파일을 적용하게 해봅시다.  물론 워드프레스 뿐만이 아닌 테터툴즈라던지 <strong>모든 페이지에 가능합니다</strong>.</p>
+<p>지금 적용이된 예제를 <a href="http://ilmol.zzaru.net" target="_blank">제 WP 페이지</a>에 가시면 오른쪽 위의 사각형들을 클릭하시면서 보실수 있습니다.  클릭후엔 쿠키로 정보를 남겨서 다음에 접속시에도 적용이 되어 나오게 됩니다.  물론  CSS 파일만 다를뿐  index.php나 모든 파일은 건드리지 않습니다.  파일하나로 바뀌게 되는효과입니다.
+강력한 CSS와 XHTML  의 힘이죠 <!--more--></p>
+<p><img src="assets/b0045637_14275941.jpg" alt="alternate bg" /></p>
+<p>여기저기서 많이 보았지만(<a href="http://www.csszengarden.com/" target="_blank">잰가든</a>이 그렇게 되어있었죠) 제가쓸수 있는 적용 플러그인을 찾고 싶었습니다.  css 파일은 다 만들어 놓았었거든요.  </p>
+<p>낮잠을 한숨 잔후에  이런저런 경로를 통해 찾게 된 방법을 소개합니다.  <a href="http://ppleyard.org.uk/archives/2005/01/01/css-style-switcher-tutorial.html">원본사이트</a>를 찾았습니다.  :)
+많은경우  그저 테마를 복사해서 테마를 하나 더 만든후 안에있는 css 파일만 바꾸어 넣어 테마를 바꾸어 보여주는것은 흔했지만  단순히 css 파일만 바꾸어 주는것은 조금 찾기 힘들었습니다.  힘들었던 만큼 직접 적용하고 보니  괜찮습니다.</p>
+<p>거창한 플러그인은 아니고 간단히   파일업로드 후 index 파일에 코드 몇줄만 넣으면 되는 간단한 방법입니다.</p>
+<div style="border: 1px solid #eeeeee; padding: 9px; background: #eeeeee;">준비:  새롭게 만들어진 CSS 파일. 혹은 파일들.</p>
+<ol>
+<li> <b><a href="http://ilmol.com/js/styleswitcher.js">파일을 다운로드</a> 합니다.</b>
+다운로드된 styleswitcher.js 파일을 테마폴더에 넣습니다.
+그리고 올리는 김에 새롭게 만든 CSS 파일(들)도 같이 폴더에 넣어줍니다.</li>
+<li><b>header.php 에다  방금 올린 파일의 경로를 넣어줍니다.</b>
+&lt;script type="text/javascript" src="파일경로/styleswitcher.js"&gt;&lt;/script&gt;
+  주의: styleswitcher 경로를 넣을때에 맞는지 확인을 잘 해주셔야 합니다.
+    간단하게는 직접 http://주소를 넣어도 됩니다.  </li>
+<li>그리고 <b>그 다음줄에 스타일시트 경로들을 적습니다</b>.
+기본(원본) css , 새로만든 css  등등을 순서대로 적어 넣으면 됩니다.</p>
+<p>원본경로
+&lt;link rel="stylesheet" type="text/css" href="원본.css" title="default" /&gt;
+  주의: title 값이 나중에 링크할때의 값이 되니 잘 적어주세요
+   스타일시트적용후 전혀 적용된거 같지 않게 나온다면 경로가 틀린것이니 잘 확인바랍니다.</p>
+<p>새로만든 css 경로
+&lt;link rel="<font color="#ff0000">alternate</font> stylesheet" type="text/css" href="새로운.css" title="<font color="#ff0000">green</font>" /&gt;
+  주의: 빨간 글씨로 적혀진것들이 다르니 잘 확인하시고 적으세요
+   title을  green 이라고 임의로 정했습니다.
+   이 경로는 여러개로 만들어 넣어도 됩니다.</p>
+<p>&lt;link rel="alternate stylesheet" type="text/css" href="새로운1.css" title="green" /&gt;
+&lt;link rel="alternate stylesheet" type="text/css" href="새로운2.css" title="blue" /&gt;
+</li>
+<li>그리고 이제  직접 유저가 클릭할수 있는 링크를 넣고 싶은곳에
+&lt;a href="#" onclick="setActiveStyleSheet('green'); return false;"&gt;바꾸려면클릭&lt;/a&gt;
+이렇게 넣으시면 끝납니다.</li>
+</ol>
+<p>From :  <a href="http://ppleyard.org.uk/archives/2005/01/01/css-style-switcher-tutorial.html">David Appleyard</a>
+</div>
+<p>#주의!! <span style="color: red;">순서가 아주 중요합니다.  &lt;script&gt; 부분이 절대 스타일시트보다 위에 위치하면 안됩니다.  그럴경우에는 언제나 default가 먼저 보인후에 다른 스타일시트가 적용됩니다</span></p>
+<p><a href="http://ppleyard.org.uk/index.php?p=69" target="_blank">DavidAppleyard</a> 에서 참고를 했습니다.
+그리 어렵지 않으니 해보시기 바랍니다.  </p>
+링크따라 가시면 직접 헤더와 헤더사이에 일일이 새로운 css 링크들을 적지 않아도
+알아도 찾아주는 php 코드가 있으니 필요하시면 가보시기 바랍니다.  </p>
+<p>일단 유저들에게 다양함을 보여줄수 있으니 커다란 장점이 되겠네요
+.
+.
+<b>Go WordPress.</b>
+웹표준화에 참여합시다.</p>

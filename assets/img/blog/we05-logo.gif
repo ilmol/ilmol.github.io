@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+<meta charset="UTF-8" />
+
+<title>Web Essentials – Grundlagen und Bereiche der Webentwicklung auf we05.com</title>
+<meta name="description" content="Die Entwicklung von Internetseiten schreitet seit Beginn der 1990er-Jahre unaufhaltsam voran. Längst nicht mehr haben nur professionelle Unternehmen ihre eigene" />
+<meta name="keywords" content="Internetseiten, Homepage, Unternehmen, Entwicklung, Erstellung, Programmierung" />
+<meta name="robots" content="index" />
+<link rel="canonical" href="http://www.we05.com/" />
+
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://www.we05.com/wp-content/themes/twentyten_modi/style.css" />
+<link rel="pingback" href="http://www.we05.com/xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title="we05.com &raquo; Feed" href="http://www.we05.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="we05.com &raquo; Kommentar-Feed" href="http://www.we05.com/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="we05.com &raquo; Die Webentwicklung im Zuge der Zeit Kommentar-Feed" href="http://www.we05.com/hom/feed" />
+<link rel='stylesheet' id='category-posts-css'  href='http://www.we05.com/wp-content/plugins/category-posts/cat-posts.css?ver=4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://www.we05.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.we05.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.we05.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.1" />
+<link rel='shortlink' href='http://www.we05.com/' />
+<meta name="google-site-verification" content="z_t7kJWeimi2beGELhU6MozirM2bF_caWiW_8seZiRs" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21498092-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script
+></head>
+
+<body class="home page page-id-14 page-template-default">
+
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.we05.com/" : "http://www.we05.com/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.php' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 32);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="https://www.we05.com/piwik.php?idsite=32" style="border:0" alt="" /></p></noscript>
+
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+
+										<img src="http://www.we05.com/wp-content/themes/twentyten_modi/images/headers/path.jpg" width="940" height="" alt="" />
+								</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+			  				<div class="skip-link screen-reader-text"><a href="#content" title="Springe zum Inhalt">Springe zum Inhalt</a></div>
+								<div class="menu-header"><ul id="menu-menue" class="menu"><li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-14 current_page_item menu-item-23"><a href="http://www.we05.com/">Home</a></li>
+<li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="http://www.we05.com/webdevelopment">Webdevelopment</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="http://www.we05.com/webdesign">Webdesign</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="http://www.we05.com/online-marketing">Online Marketing</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="http://www.we05.com/seo">SEO</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="http://www.we05.com/sem">SEM</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="http://www.we05.com/podcast">Podcast</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20"><a href="http://www.we05.com/news">News</a></li>
+</ul></div>			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+
+
+				<div id="post-14" class="post-14 page type-page status-publish hentry">
+											<h2 class="entry-title">Die Webentwicklung im Zuge der Zeit</h2>
+					
+					<div class="entry-content">
+						<p>Die Entwicklung von Internetseiten schreitet seit Beginn der 1990er-Jahre unaufhaltsam voran. Längst nicht mehr haben nur professionelle Unternehmen ihre eigene URL, auch Privatpersonen gestalten ihre eigenen Blogs, um die Welt an ihren Ansichten teilhaben zu lassen. Doch ein gelungener Internet-Auftritt muss auch einen entsprechend gekonnten Aufbau, Erstellung, Programmierung und vieles mehr enthalten.</p>
+<p>Ein wenig Know-how genügt, um selbst eine Homepage zu erstellen. Nichtsdestotrotz ist einiges zu beachten, und vor allem die Einhaltung der so genannten <a href="http://www.w3.org/" target="_blank">W3C</a>-Normen vom World Wide Web Consortium ist essenziell. Wer sich das nicht zutraut, kann seine Internetseiten als Unternehmer von qualifizierten Firmen gestalten lassen. Vielfältige Angebote und Produkte stehen den Nachfragern hier zur Verfügung. Die Professionalität zeichnet sich dadurch aus, dass vor der Programmierung beraten und konzeptioniert wird, unterschiedliche Designs besprochen, Entwicklung und Administrierung von <a href="http://www.bfi.nabu-burgwedel.de/Datenbanken/Grundlagen/Architekturen.html" target="_blank">Datenbankarchitekturen</a> angeboten werden und nach Fertigstellung der Homepage langfristig eine Begleitung in Anspruch genommen werden kann. Updates, inhaltliche Änderungen, Erweiterungen usw. können somit jederzeit problemlos eingepflegt werden. Zusätzlich beinhaltet das Angebot unzähliger Web-Firmen <a href="http://www.bitbiz.de/" target="_blank">Suchmaschinenoptimierung</a> und -Platzierung als auch spezifische Vermarktungsstrategien, um die erstellten Web-Sites an den Mann zu bringen. Die Betreuung von Internetprojekten kann über einen freien Mitarbeiter, aber ebenso über einen im Unternehmen angestellten Programmierer erfolgen, der zeitlich flexibel arbeitet.</p>
+<p>Wer seine eigene Homepage selbst erstellen möchte, kann auf so genannte <a href="http://www.earvin.de/content-management-systeme" target="_blank">Content-Management-Systeme</a> zurückgreifen. Die Software hierfür ist unter anderem <a href="http://typo3.org/" target="_blank">Typo3</a>. Wichtig sind Optik und Aussagekraft der Homepages. Der Grafik und dem Design wird eine große Bedeutung beigemessen. Das schafft Akzeptanz und Neugier bei den Nutzern. Daher sollten<br />
+Webseiten benutzerfreundlich und übersichtlich gestaltet werden. Kunden identifizieren das Unternehmen mit dessen Internetauftritt, und Kundenzufriedenheit ist oberstes Gebot für das Geschäft.</p>
+<p>Entwickler von Internetseiten müssen sich ständig mit Blick auf die Zukunft und der damit einhergehenden immer moderner werdenden Entwicklung weiterbilden. Modernste Standards beziehen sich auf die Umsetzung und Programmierung in Programmiersprachen wie zum Beispiel XHTML, HTML, CSS und MySQL, um nur einige zu nennen. Spezifische Handbücher und Schulungen ermöglichen es, die Vielfalt der Programmiermöglichkeiten bei der Erstellung von Internetseiten anzuwenden.</p>
+<p>Heutzutage ist es bedeutsam, dass <a href="http://de.wikipedia.org/wiki/Barrierefreiheit" target="_blank">Barrierefreiheit</a> auf programmierten Websites gegeben ist, was bedeutet, dass diese Seiten von Suchmaschinen schnell erkannt werden und somit für den Nutzer schnell sichtbar sind. Die Möglichkeit, barrierefreie Internetseiten zu erhalten, ist auch für bereits existierende Seiten problemlos nachhol- und durchführbar. Einen weiteren Vorteil der Barrierefreiheit ist, dass schnellere Ladezeiten erreicht werden und somit ein nutzerfreundlicherer Umgang gewährleistet werden kann. Nicht nur Suchmaschinen bieten für Werbung und Promotion die Möglichkeit, den Internetnutzern Homepages schnell zugänglich zu machen. Andere Wege sind zum Beispiel Keyword-Advertising oder auch Banner-Werbung. Eine nachträgliche Prüfung der Anzahl der Besucher auf der Homepage ist durch Erfolgskontrollen und Statistiken durchführbar. Unternehmen, die die Erstellung von Webseiten anbieten, versorgen ihre Kunden mit den erforderlichen Daten, Zahlen und Fakten, die für diese Kontrolle erforderlich sind. Hierunter fallen Besucher- und Server-Statistiken, Clicks und PageViews, aber auch noch viele weitere kenntnisse.</p>
+<p>Auf dieser Seite sind weitere Informationen zu den Bereichen <a href="http://www.we05.com/webdevelopment" target="_blank">Webdevelopment</a>, <a href="http://www.we05.com/webdesign" target="_blank">Webdesign</a>, Suchmaschinenoptimierung, <a href="http://www.we05.com/sem" target="_blank">Suchmaschinenmarketing</a> und <a href="http://www.we05.com/online-marketing" target="_blank">Onlinemarketing</a> zu finden.</p>
+																	</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+
+				
+
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+
+<li id="search-4" class="widget-container widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://www.we05.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Suche nach:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Suche" />
+				</div>
+			</form></li>			</ul>
+		</div><!-- #primary .widget-area -->
+
+	</div><!-- #main -->
+
+	<div id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+
+			<div id="site-info">
+				&copy; 2015 - Alle Rechte vorbehalten. | <a href="/impressum" rel="nofollow">Impressum</a>
+			</div><!-- #site-info -->
+
+			<div id="site-generator">
+				</a>
+			</div><!-- #site-generator -->
+
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+<script type='text/javascript' src='http://www.we05.com/wp-includes/js/comment-reply.min.js?ver=4.1'></script>
+</body>
+</html>

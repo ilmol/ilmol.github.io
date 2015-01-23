@@ -1,0 +1,72 @@
+---
+layout: post
+title: Firefox 3.5 도 이제 @font-face
+date: 2009-07-01 08:40:25.000000000 -04:00
+categories:
+- BROWSER
+- CSS
+- HTML
+- standards
+tags:
+- '3.5'
+- "@font-face"
+- CSS3
+- "불여우"
+- "브라우저"
+- firefox
+- "파이어폭스"
+---
+<p>따끈따끈한 브라우저 업데이트가 릴리스 되었습니다.  많은 분들이 기다리셨던 <a href="http://firefox.com">Firefox 3.5</a>!
+많은 기능중에서도 저는 일모리네가 언제나 그렇듯이 쌩뚱맞는 @font-face를 살펴보고 싶은데요 일단 @font-face 이야기 전에 간단히 아웃라인만 살펴보겠습니다.</p>
+<ul>
+<li>HTML5의 video 태그와 audio태그를 지원한다는것 (기타 문서적인 틀을잡는 태그들은 이미 지원중이었슴)</li>
+<li>더욱 빨라진 js엔진</li>
+<li>Location Aware Browsing 탑재</li>
+<li>더욱 빨라진 컨텐츠 렌더링</li>
+<li>새로운 웹기술적용: downloadable fonts, CSS media queries, new transformations and properties, JavaScript query selectors, HTML5 local storage and offline application storage, &lt;canvas&gt; text, ICC profiles, and SVG transforms.</li>
+</ul>
+<p>파이어폭스 인스톨 후 html5의 video, audio 태그를 강조하는거 보니 안띄워줄수 없더군요.  태그는 간단합니다.
+{% highlight html %}
+<video src="http://videos.mozilla.org/firefox/3.5/meet/meet.ogv" controls style="width: 600px;"></video>
+{% endhighlight %}</p>
+<p>삽입후 출력되는 화면.
+<video src="http://videos.mozilla.org/firefox/3.5/meet/meet.ogv" controls style="width: 400px;">불여우 소개영상은 Firefox3.5 에서만 출력됩니다.</video></p>
+<p>이제 css로 스타일을 입혀줄수 있겠죠  video {border: 3px solid #eee;}  응용의 부분은 무궁무진합니다.</p>
+<h2>@font-face</h2>
+<p>이번 파이어폭스 3.5 부터는 @font-face 가 지원되게 됩니다.  CSS3에서 구현되는 기능으로 보지만 이미 CSS2 때에도 사실 IE에서 특정 폰트종류 (.eot) 만 지원되었었죠.  엄청난 관심가운데 개발이 되어졌음에도 불구하고 copyright, 라이센스 등의 문제와 브라우저 미지원으로 널리 사용되지 못했습니다.  물론 이제 사파리3.1, <a href="http://opentype.info/blog/2009/04/16/google-chrome-with-webfonts-support/">크롬 2.0 브라우저</a>에 이어 불여우3.5 까지 지원되며 곧 릴리스될 <a href="http://opentype.info/blog/2009/06/04/sneak-peek-font-face-in-opera-10/">오페라10 에서도 지원</a>하게 됩니다.  몇달안에 <strong>IE를 제외한 모든 메이저 브라우저들이 이 기능을 지원</strong> 한다는 것입니다. </p>
+<p>W3C에서 정의하는 @font-face 를 따오면, @font-face는 필요한 폰트를 링크하여 필요한 부분에 출력토록 하는 기능을 담당합니다.  제작자가 특정 환경때문에 폰트 미지원을 우려하여 기본폰트만을 사용하는 제한을 벗어나서 유저에게 원하는 렌더링을 보여줄수 있게 됩니다.  CSS 룰을 사용하여 유저에이전트(보통 브라우저) 는 주어진 텍스트 안에 제작자가 원하는 특정 폰트가 사용될 경우 다운로드 하여 출력하게 됩니다. TrueType (.ttf) 이나 OpenType (.otf) 을 사용할수 있는 것이죠.</p>
+<blockquote><p>The @font-face rule allows for linking to fonts that are automatically activated when needed. This permits authors to work around the limitation of "web-safe" fonts, allowing for consistent rendering independent of the fonts available in a given user's environment. A set of font descriptors define the location of a font resource, either locally or externally, and the style characteristics of an individual face. Multiple @font-face rules can be used to construct font families with a variety of faces. Using CSS font matching rules, a user agent can selectively download only those faces that are needed for a given piece of text. - <a href="http://www.w3.org/TR/css3-webfonts/#the-font-face-rule">W3C</a></p></blockquote>
+<p>사용법은 나름 쉽습니다.  @font-face 에서 사용되어질 폰트이름과 위치를 지정해 놓으면 기본조건이 갖추어 집니다.  그 후 보통 폰트 스타일을 적용하는 것과 동일하게 font-family를 사용하여 이름을 불러주면 되겠습니다.
+{% highlight css %}
+@font-face {
+   font-family: ILMOL;
+   src: url("http://ilmol.com/ILMOL.ttf") format("truetype");
+}</p>
+<p>p {
+font-family: ILMOL;
+}
+{% endhighlight %}</p>
+<p>특별히 제작자가 사용하고자 하는 폰트와 비슷한 폰트가 이미 유저의 컴퓨터에 있을 시에 그것을 먼저 사용하도록 하며 비슷한 폰트 조차도 없을 경우 다운로드 하게 하는 방법이 local입니다.  예를들어 ILMOL 이라는 폰트와 ELMOL 그리고 YILMOL 이라는 폰트가 거의 비슷한 스타일을 갖고 있으니 ILMOL폰트를 다운로드 전에 ELMOL이나 YILMOL 폰트가 일단 유저 컴퓨터에 있나 확인하여 사용하게 하려면,
+{% highlight css %}
+@font-face {
+  font-family: ILMOL;
+  src: local("ELMOL"),
+       local("YILMOL"),
+       url(ILMOL.ttf);
+}</p>
+<p>body { font-family: ILMOL, sans-serif; }
+{% endhighlight %}
+이렇게 지정해 줄수 있습니다.  이는 특히 다른 플랙폼의 컴퓨터들 사이에 비슷한 폰트를 지정할때 유용한데 맥에서의 Helvetica 는 PC에 없으므로 비슷한 서체인 Trebuchet MS 가 있나 확인을 먼저 하게한 후에 Helvetica를 다운받게 할수 있겠죠.  물론 둘다 저작권의 문제도 있고 기본적으로 제공되므로 실제적인 사용의 사례는 없겠지만 말입니다.</p>
+<div class="disney">This font is Disney!</div>
+<p>위는 실제적으로 사용해 본 결과 입니다.  약 40k밖에 되지 않는 "Walt Disney Script" 서체 입니다.  웹그림 1개 다운로드 받는 사이즈 정도밖에 되지 않지만 엄청나게 파워풀한 결과를 가지고 올 수 있습니다.  디자이너분들은 무슨 이야기인지 뼈저리게 느끼고 계실듯 하네요.  물론 현재 IE와 Opera 9.x는 보이지 않습니다.</p>
+<h2>아직 이른걸까?</h2>
+<p>인터넷익스플로러가 지원하지 않는다는 치명적인 단점 말고도 넘어야 할 산들이 있습니다.  일단은 서체의 라이센스 문제입니다.  다행이도 <a href="http://blog.typekit.com/2009/05/27/introducing-typekit/">Typekit</a> 이 이부분을 위하여 열심히 뛰고 있는 중입니다만 무료라고 제공되는 폰트들이라 해도 css링크나 웹폰트로의 사용은 금하고 있는것들이 대부분 입니다.  타입킷 이메일 알림이에 가입해 놓은지 오래되었지만 아직도 별 다른 소식이 없네요.</p>
+<p>한국에 이 문제를 적용시키게 되면 그 문제는 더욱 커지게 됩니다.  무료로 제공되는 폰트들을 찾기가 거의 불가능 할 뿐더러 지난번 네이버에서 '나눔' 서체를 공개하며 한글 폰트 개발이 <a href="http://hangeul.naver.com/index.nhn?goto=fonts#fonts">얼마나 어려운가</a>를 나누었지만서도 몇천자를 디자인하여야 함은 해외 폰트개발과는 너무나도 차이가 납니다.  또한 서체의 개발이 어렵고 방대한 만큼 그 용량또한 방대합니다.  약 4MB을 넘나드는 사이즈는 웹폰트로써 적합한지의 의문조차 갖지 못하게 만들죠.  </p>
+<p>그럼 우리에겐 단순히 그림의 떡이냐.  네 앞으로 몇년간은 충분히 가능합니다만 변화의 가능성 또한 충분합니다.  일단 IE의 미지원이 그래도 가장 큰 장애물이겠지만 IE 개발팀 또한 @font-face의 필요를 충분히 인식하고 있기 때문에 추후에 곧 지원되지 않을까 하는 생각입니다.  이미 .eot 폰트 종류를 지원하므로 가능한 부분이라고 봅니다.  CSS3가 완전해지지 않는한 지원않겠다는 방침을 들고 일어서면 할말 없습니다만...</p>
+<p>IE가 지원에 나섬으로 인해서 모든 브라우저에서 @font-face가 가능해 진다고 볼때 제일 먼저 군침을 돌릴만한 곳은 각종 메거진과 신문사들입니다.  사이트들이 더욱 미려해지고 시시각각 바뀌는 헤드라인이 그 어느때 보다도 아름답게 출력된다면 이를 마다할 미디어 매체는 없다고 봅니다.  더군다나 1px의 미학을 즐기는 디자이너들에게는 천국과 같겠죠.
+"난 1px 오탁후!"
+여기서 웹서체를 제공하는 회사나 폰트업체가 나온다면 그 또한 유명세를 타게 될지도 모르는 일이구요.</p>
+<p>언제 어떠한 방식으로 이 부분이 한국의 디자이너들과 개발자들에게 영향이 갈지는 누구도 모릅니다.  하지만 이미 해외개발자들에겐 시동이 걸렸고 사이트가 더욱더 세련되어지고 진화되도록 도울것은 확실합니다.
+Less image, faster browsing, better internet.
+이건 그 누구도 부인할수 없는 모두가 원하는 결과입니다. </p>
+<p>좋은 소식에도 불구하고 한숨소리가...</p>

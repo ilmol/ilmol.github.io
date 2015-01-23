@@ -1,0 +1,26 @@
+---
+layout: post
+title: "!important 핵아닌 css 핵"
+date: 2005-07-08 20:06:50.000000000 -04:00
+categories:
+- CSS
+---
+<p>!important 는 핵이 아닌 부분으로써 핵으로 많이 간주되고 쓰이고 있습니다.
+이 important, 중요 부분은 특정한 값이 반복적으로 적용되었을 경우 어떤것에 우선순위를 주는지 정할수 있습니다.   해더의 폰트색상을 빨강으로 정해 놓고 혹시나 다른곳에서 정해줄때 바뀌지 않도록 !import 를 넣어주면 어떻게 되던간에 그 값이 지정값이 됩니다.  <!--more--></p>
+<p><del datetime="2005-07-08T19:12:53+00:00">물론, IE 에서는 이것이 먹히지 않기에 간단한 값을 IE 에만 적용시키는 방법으로 쓰이기도합니다.  핵 으로 말이죠. 단.  맥용 ie5 이상은 !important 가 잘 먹힌다는거 알아두시면 좋겠죠.</del>
+<strong>Netscape 4x 버전</strong>에서는 먹히지 않습니다.  ㅡㅡ;;;
+절대 새벽에 포스팅 하면 안되겠군요. . .
+아무튼 실수잡아주시는 분들 언제나 땡큐 뽀뽀 해드립니다.
+<a href="http://www.ceprix.net/" title="ceprix님 블로그">ceprix</a> <a href="http://crizin.net/" title="crizin님 블로그">crizin</a> 두분 감사드립니다.</p>
+<p>{% highlight css %}#header {color: #eee !important;}{% endhighlight %}</p>
+<p>세미콜른 전에 !import가 들어갑니다.  ; 밖으로 나가거나 잘못 위치하게 되면 그것을 선택한 값이 전혀 사용이안되는 경우가 생기니 주의해서 넣으시기 바랍니다.</p>
+<p>{% highlight css %} #header {color: #eee !important;}
+#header {color: #000;}{% endhighlight %}</p>
+<p>이렇게 주어질때에 <del datetime="2005-07-08T19:12:53+00:00">ie를 제외한 모든 최신 브라우저들게는 #eee 색이 보이지만 ie 에서는</del>  케스케이드로 인해서 000색이 보여야 하지만 !important 로 인해 #eee 가 보입니다.
+사용이 간단하니 써볼만 하네요 </p></p>
+<p>언제한번 핵들을 다 정리해 봐야겠습니다. 물론 몇가지 메이저 문제들이 더 남아있기는 하지만요...</p>
+<p>첨가: {% highlight css %}#header {
+color: #eee !important;
+color: #000;
+}{% endhighlight %}</p>
+<p>IE 에서 같은 selector안에 같은값에 !important를 주면 인식하지 못합니다.  ie 의 버그중의 하나겠죠.  </p>;  지적해주신 <a href="http://www.getografik.com/" title="제이님 블로그">제이</a>님 감사요</p>

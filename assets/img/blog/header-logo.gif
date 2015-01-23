@@ -1,0 +1,1156 @@
+
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+    
+<title>Visual Studio Magazine Home -- Visual Studio Magazine</title>
+<meta name="description" content="The home page of Visual Studio Magazine online, the leading site for enterprise .NET developers. ">
+<meta name="keywords" content="Visual Studio Magazine, home, Visual Studio, .NET, XML, VB.NET, Visual Basic, C#, SQL Server, Applicaiton Development, Web Development">
+   
+    
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="shortcut icon" href="/design/ECG/VisualStudioMagazine/img/favicon-vsm.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/design/ECG/VisualStudioMagazine/css/style.css?v=38">
+<script src="/design/ECG/VisualStudioMagazine/js/modernizr.custom.84202.js"></script>
+<script type="text/javascript">
+	  (function() {
+	    var config = {
+	      kitId: 'zwa5rup',
+	      scriptTimeout: 3000
+	    };
+	    var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+	  })();
+</script>
+<script src="/design/ECG/VisualStudioMagazine/js/scripts-ck.js?v=11"></script>
+<script>
+function showIntersitial(){}
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6779162-24']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+
+    
+    
+    
+    
+</head>
+
+<body id="Body1">
+    
+    
+    
+    
+    
+    <form name="form1" method="post" action="Home.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTgwOTIwMjgxMQ9kFgQCAQ9kFgYCAQ8WAh4EVGV4dAU1VmlzdWFsIFN0dWRpbyBNYWdhemluZSBIb21lIC0tIFZpc3VhbCBTdHVkaW8gTWFnYXppbmVkAgMPFgIfAAVrY29udGVudD0iVGhlIGhvbWUgcGFnZSBvZiBWaXN1YWwgU3R1ZGlvIE1hZ2F6aW5lIG9ubGluZSwgdGhlIGxlYWRpbmcgc2l0ZSBmb3IgZW50ZXJwcmlzZSAuTkVUIGRldmVsb3BlcnMuICJkAgUPFgIfAAWQAWNvbnRlbnQ9IlZpc3VhbCBTdHVkaW8gTWFnYXppbmUsIGhvbWUsIFZpc3VhbCBTdHVkaW8sIC5ORVQsIFhNTCwgVkIuTkVULCBWaXN1YWwgQmFzaWMsIEMjLCBTUUwgU2VydmVyLCBBcHBsaWNhaXRvbiBEZXZlbG9wbWVudCwgV2ViIERldmVsb3BtZW50ImQCDw9kFgICCw9kFgYCGQ9kFgICAQ9kFgJmD2QWAgIBD2QWBAIBDw9kFgQeB29uRm9jdXMFKEZvY3VzU2VhcmNoQm94KCdwaF9oZWFkZXIyXzFfdHh0U2VhcmNoJykeBm9uQmx1cgUPQmx1clNlYXJjaEJveCgpZAIDDxBkZBYAZAI7D2QWAmYPZBYCZg9kFgJmD2QWAgIFDxQrAAJkZGQCXQ9kFgJmD2QWAgIBDxYCHwAF4QLCqSAxOTk2LTIwMTUgMTEwNSBNZWRpYSwgSW5jLiBWaWV3IG91ciA8YSBocmVmPSJodHRwOi8vMTEwNW1lZGlhLmNvbS9wcml2YWN5LmFzcHgiIHRhcmdldD0iX2JsYW5rIj5Qcml2YWN5IFBvbGljeTwvYT4gYW5kIDxhIGhyZWY9Imh0dHA6Ly8xMTA1bWVkaWEuY29tL3Rlcm1zLmh0bWwiIHRhcmdldD0iX2JsYW5rIj5UZXJtcyBvZiBVc2U8L2E+Lgo8cCBhbGlnbj0iY2VudGVyIj48Yj48YSBocmVmPSJtYWlsdG86Ym5hZ2VsQDExMDVtZWRpYS5jb20/c3ViamVjdD1SZWdhcmRpbmcgVmlzdWFsc3R1ZGlvbWFnYXppbmUuY29tIj5Qcm9ibGVtcz8gUXVlc3Rpb25zPyBGZWVkYmFjaz8gRS1tYWlsIHVzLjwvYT48L2I+PC9wPmQYBAUacGhfc2NvbnRlbnQ1XzIkbHZPdXRlckxpc3QPZ2QFGnBoX3Njb250ZW50NV8xJGx2T3V0ZXJMaXN0D2dkBRpwaF9zY29udGVudDNfMCRsdk91dGVyTGlzdA9nZAUZcGhfcGNvbnRlbnQ0XzAkbHZJdGVtTGlzdA9nZF2rBwL4S2D+O78MJLx18bBq4+3m" />
+
+<script language="javascript" type="text/javascript">
+var id = ''; 
+
+function FocusSearchBox(ctl) {
+id = ctl;}
+
+function BlurSearchBox() {
+id = '';}
+
+document.onkeypress = function disableKey(e) { var evtobj = window.event ? event : e;var unicode = evtobj.charCode ? evtobj.charCode : evtobj.keyCode;if (unicode == 13) {if (id == '') {window.event.keyCode = 0;} else {document.getElementById("hdnSearch").value = id;document.getElementById(id.replace("txt", "btn")).click();} } }
+</script>
+<script src="/ScriptResource.axd?d=lA4YcjqYGqEtyoU9SXv1fQNKpBVAd6uY2C59BfMJQTQ9nr7Lr6gxPie6DPWr94TstFBGwfF2UXhKpdYzXUsQ-WVmHM4v8Czi7POlmms2P0tIAYy0_EKlV3DxrXSWozwLP8RJ1gBcASOW15ht9rI28NaFfdkyWcTVyUMRpmy8LWEqVrXz0&amp;t=2e2045e2" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A9DC696D" />
+    
+    
+        <div class="wrapper">
+            <div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=WALLPAPER;tile=1;sz=152x800,152x650;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=WALLPAPER;tile=1;sz=152x800,152x650;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=WALLPAPER;tile=1;sz=152x800,152x650;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+
+            
+            
+            
+            
+            
+            <div class="leaderboard">
+                <div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=LEAD_T1;tile=2;sz=728x90,700x90;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=LEAD_T1;tile=2;sz=728x90,700x90;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=LEAD_T1;tile=2;sz=728x90,700x90;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+<div class="ticker">
+
+
+<div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TICK_T1;tile=3;sz=974x32;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TICK_T1;tile=3;sz=974x32;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TICK_T1;tile=3;sz=974x32;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+
+                </div><!-- closing div -->
+
+
+
+                
+                
+                
+            </div>		            
+
+            <header role="banner" class="header">            
+                <h1><a href="/"><img alt="Visual Studio Magazine - Expert Solutions for .NET Development" src="/~/media/ECG/visualstudiomagazine/vsm_logo_mobile.ashx"></a></h1>
+
+
+
+                <div id="ph_header2_0_divBlockBox" class="twitter">
+	
+	<div id="ph_header2_0_divBody" class="summary"> 
+<div class="social"><a class="twitter ir" href="http://twitter.com/VSMdev" target="_blank">Twitter</a> <a class="rss ir" href="http://visualstudiomagazine.com/rss-feeds/rss-list.aspx">RSS</a><img alt="" src="~/media/ECG/visualstudiomagazine/vslogo.ashx"> </div></div>
+	
+</div>
+
+<NOINDEX>
+
+<div id="ph_header2_1_pnlSearch" class="search">
+	
+    <fieldset>
+        <input name="ph_header2_1$txtSearch" type="text" id="ph_header2_1_txtSearch" onFocus="FocusSearchBox('ph_header2_1_txtSearch')" onBlur="BlurSearchBox()" />        
+        
+        <input type="submit" name="ph_header2_1$btnSearch" value="Search" id="ph_header2_1_btnSearch" class="submit" />
+        
+	    <input type="hidden" id="hdnSearch" name="hdnSearch" visible="false" />
+	</fieldset>
+
+</div>
+
+</NOINDEX>
+
+<NOINDEX>
+
+<!-- component markup start -->
+<div class='nav topics'>
+    <ul class="topnavlist"><li class="navblock vs">
+		<a href="http://visualstudiomagazine.com/pages/topic-pages/visual-studio-tutorials.aspx">
+				<img alt="" src="~/media/ECG/visualstudiomagazine/Images/blank.ashx"></a>
+</li><li class="navblock c-vb">		<a href="http://visualstudiomagazine.com/pages/topic-pages/c-sharp-vb-tutorials.aspx">
+				<img alt="" src="~/media/ECG/visualstudiomagazine/Images/blank.ashx"></a>
+</li><li class="navblock net">
+		<a href="http://visualstudiomagazine.com/pages/topic-pages/net-tutorials.aspx">
+				<img alt="" src="~/media/ECG/visualstudiomagazine/Images/blank.ashx"></a>
+</li><li class="navblock win8">
+		<a href="http://visualstudiomagazine.com/pages/topic-pages/windows-8-tutorials.aspx">
+				<img alt="" src="~/media/ECG/visualstudiomagazine/Images/blank.ashx"></a>
+</li><li class="navblock mobile">
+		<a href="http://visualstudiomagazine.com/pages/topic-pages/mobile-how-to.aspx">
+				<img alt="" src="~/media/ECG/visualstudiomagazine/Images/blank.ashx"></a>
+</li><li class="navblock last html5-js">
+		<a href="http://visualstudiomagazine.com/pages/topic-pages/html5-javascript-tutorials.aspx">
+				<img alt="" src="~/media/ECG/visualstudiomagazine/Images/blank.ashx"></a>
+</li></ul>
+    <br class="clear" />
+</div>
+<!-- component markup end -->
+
+</NOINDEX>
+
+
+                
+
+<NOINDEX>
+
+<!-- component markup start -->
+<div class='top-menu-left nav'>
+    <ul class="topnavlist"><li class=""><a href="http://visualstudiomagazine.com/articles/list/news.aspx">News</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/features.aspx">In-Depth</a></li><li class=""><a href="http://visualstudiomagazine.com/blogs/tool-tracker/list/blog-list.aspx">.NET Tips & Tricks</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/agile-advisor.aspx">Agile Advisor</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/on-vb.aspx">Code Focused</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/c-sharp-corner.aspx">C# Corner</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/mono-for-android.aspx">Cross-Platform C#</a></li><li class=""><a href="http://visualstudiomagazine.com/blogs/data-driver/list/blog-list.aspx">Data Driver</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/inside-tfs.aspx">Inside TFS</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/mobile-corner.aspx">Mobile Corner</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/new-age-c.aspx">Modern C++</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/neural-network-lab.aspx">Neural Network Lab</a></li><li class=""><a href="http://visualstudiomagazine.com/blogs/onward-and-upward/list/blog-list.aspx">OnWard and UpWard</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/practical-aspnet.aspx">Practical .NET</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/redmond-review.aspx">Redmond Review</a></li><li class=" last"><a href="http://visualstudiomagazine.com/articles/list/ui-code-expert.aspx">UI Code Expert</a></li></ul>
+    <br class="clear" />
+</div>
+<!-- component markup end -->
+
+</NOINDEX>
+
+
+
+<NOINDEX>
+
+<!-- component markup start -->
+<div class='top-menu-right nav'>
+    <ul class="topnavlist"><li class=""><a href="http://visualstudiomagazine.com/whitepapers/list/vsm-tech-library-list.aspx">Tech Library</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/salary-surveys/salary-survey.aspx">2013 Salary Survey</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/visual-studio-2012.aspx">Visual Studio 2012</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/alm.aspx">ALM</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/agile-and-scrum.aspx">Agile/Scrum</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/async.aspx">Async/Parallel/Multicore</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/cloud-computing.aspx">Cloud/Azure</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/open-source.aspx">Open Source</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/sharepoint.aspx">SharePoint</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/sql-server.aspx">SQL Server</a></li><li class=""><a href="http://visualstudiomagazine.com/articles/list/web-development.aspx">Web Development</a></li><li class=""><a href="http://visualstudiomagazine.com/issues/issue-archive.aspx">HTML Issue Archive</a></li><li class=" last"><a href="http://visualstudiomagazine.com/pages/topic-pages/archive.aspx">Full Archive</a></li></ul>
+    <br class="clear" />
+</div>
+<!-- component markup end -->
+
+</NOINDEX>
+
+
+                
+                
+            </header>
+                
+
+            <div id="main">
+    		
+                
+                
+                
+                
+                
+
+                 <div class="sideBar">
+                    
+
+<NOINDEX>
+
+<!-- component markup start -->
+<div class='topnav nav'>
+    <ul class="topnavlist"><li class="selected home"><a href="http://visualstudiomagazine.com/home.aspx">Home</a></li><li class=""><a href="https://newsletters.1105pubs.com/nl/URMG.do?pk=WSNVSM" target="_blank">Newsletters</a></li><li class=""><a href="http://visualstudiomagazine.com/whitepapers/list/vsm-tech-library-list.aspx">Whitepapers</a></li><li class=""><a href="http://visualstudiomagazine.com/webcasts/list/webcast-list.aspx">Webcasts</a></li><li class=""><a href="http://visualstudiomagazine.com/research/list/back-issues.aspx">PDF Back Issues</a></li><li class=""><a href="http://visualstudiomagazine.com/pages/advertise.aspx">Advertise</a></li><li class=""><a href="http://visualstudiomagazine.com/pages/contact-us.aspx">Contact Us</a></li><li class=" last"><a href="http://visualstudiomagazine.com/blogs/vs-live-video/list/blog-list.aspx">Live! Video</a></li></ul>
+    <br class="clear" />
+</div>
+<!-- component markup end -->
+
+</NOINDEX>
+
+
+                    
+                    
+                    
+                    
+                </div>
+                
+                <div class="pContent">
+                    
+                    
+                    
+                    <div id="ph_pcontent4_0_divListBox" class="whatsnew">
+    
+    
+    <ul>
+                    
+                
+                <li id="ph_pcontent4_0_lvItemList_ctrl0_liListItem">
+                    <div id="ph_pcontent4_0_lvItemList_ctrl0_dvSection" class="section">News</div>
+                    <a href="http://visualstudiomagazine.com/articles/2015/01/20/syncfusion-sweetens-asp-net-features.aspx"><img src='~/media/ECG/redmondmag/Images/introimages2014/GENYellowtoGreenMotherboardPrint.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl0_h3Title"><a href="http://visualstudiomagazine.com/articles/2015/01/20/syncfusion-sweetens-asp-net-features.aspx">Syncfusion Sweetens ASP.NET Features in Essential Studio 2014 Volume 4</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl0_pSummary" class="summary">
+                        The company touts this release as the biggest yet for mobile developers, but those using it with ASP.NET will find lots to love in the number of new controls that span several tools across the Microsoft suite.
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl0_spnDate2" class="date">01/20/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl0_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl0_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl1_liListItem">
+                    <div id="ph_pcontent4_0_lvItemList_ctrl1_dvSection" class="section">Neural Network Lab</div>
+                    <a href="http://visualstudiomagazine.com/articles/2015/01/01/multi-swarm-optimization.aspx"><img src='~/media/ECG/visualstudiomagazine/Images/introimages2014/0115vsm_MccaffreyNeural.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl1_h3Title"><a href="http://visualstudiomagazine.com/articles/2015/01/01/multi-swarm-optimization.aspx">Multi-Swarm Optimization for Neural Networks Using C#</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl1_pSummary" class="summary">
+                        Multi-swarm optimization (MSO) is a powerful variation of particle swarm optimization. Understanding how MSO works and how to implement it can be a valuable addition to your developer toolkit.
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl1_spnDate2" class="date">01/20/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl1_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl1_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl2_liListItem">
+                    <div id="ph_pcontent4_0_lvItemList_ctrl2_dvSection" class="section">Practical .NET</div>
+                    <a href="http://visualstudiomagazine.com/articles/2015/01/01/managing-complex-web-requests.aspx"><img src='~/media/ECG/visualstudiomagazine/Images/introimages2014/0115vsm_VogelPPnetLong.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl2_h3Title"><a href="http://visualstudiomagazine.com/articles/2015/01/01/managing-complex-web-requests.aspx">Managing Complex Web Requests</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl2_pSummary" class="summary">
+                        A complex ASP.NET MVC form can drive you to a big, ugly action method that handles all the functionality the page offers. The ActionMethodSelector provides a clean way to separate that logic over multiple methods, provided you understand a key distinction of which  many ASP.NET MVC developers aren't aware.
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl2_spnDate2" class="date">01/19/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl2_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl2_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl3_liListItem">
+                    
+                    <a href="http://visualstudiomagazine.com/blogs/tool-tracker/2015/01/control-xml-output-saveoptions.aspx"><img src='~/media/ECG/redmondmag/Images/introimages2014/0114red_F2_BridgeCloud.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl3_h3Title"><a href="http://visualstudiomagazine.com/blogs/tool-tracker/2015/01/control-xml-output-saveoptions.aspx">Control XML Output with SaveOptions</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl3_pSummary" class="summary">
+                        A more elegant solution that doesn't waste any time making sure things are all nicely nested and indented in an XML document.
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl3_spnDate2" class="date">01/16/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl3_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl3_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl4_liListItem">
+                    <div id="ph_pcontent4_0_lvItemList_ctrl4_dvSection" class="section">Code Focused</div>
+                    <a href="http://visualstudiomagazine.com/articles/2015/01/01/sharpening-developer-productivity.aspx"><img src='~/media/ECG/redmondmag/Images/introimages2014/140409REDMackieExpress.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl4_h3Title"><a href="http://visualstudiomagazine.com/articles/2015/01/01/sharpening-developer-productivity.aspx">Sharpening Developer Productivity with ReSharper</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl4_pSummary" class="summary">
+                        ReSharper is a Visual Studio plug-in from JetBrains that brings an incredible amount of features designed to increase developer productivity.
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl4_spnDate2" class="date">01/15/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl4_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl4_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl5_liListItem">
+                    <div id="ph_pcontent4_0_lvItemList_ctrl5_dvSection" class="section">News</div>
+                    <a href="http://visualstudiomagazine.com/articles/2015/01/15/telerik-cloud-mobile-services.aspx"><img src='~/media/ECG/VirtualizationReview/Images/introimages2014/1014vrm_EdNote.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl5_h3Title"><a href="http://visualstudiomagazine.com/articles/2015/01/15/telerik-cloud-mobile-services.aspx">Telerik Adds Bevy of Cloud Mobile Development Services</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl5_pSummary" class="summary">
+                        More quick-start templates, enhanced push notifications, and new Telerik Device Cloud service, currently in beta, will allow testing on hundreds of physical devices. 
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl5_spnDate2" class="date">01/15/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl5_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl5_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl6_liListItem">
+                    <div id="ph_pcontent4_0_lvItemList_ctrl6_dvSection" class="section">DevDisasters</div>
+                    <a href="http://visualstudiomagazine.com/articles/2015/01/01/the-long-and-short-of-it.aspx"><img src='~/media/ECG/visualstudiomagazine/Images/introimages2014/0115vsm_bowytzDevDis.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl6_h3Title"><a href="http://visualstudiomagazine.com/articles/2015/01/01/the-long-and-short-of-it.aspx">The Long and Short of It</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl6_pSummary" class="summary">
+                         Not just once, but repeated in various lucrative apps -- a humongous chunk of code that should've been reduced to a mere line. 
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl6_spnDate2" class="date">01/14/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl6_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl6_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl7_liListItem">
+                    
+                    <a href="http://visualstudiomagazine.com/blogs/tool-tracker/2015/01/retrieve-multiple-recordsets-single-trip-database.aspx"><img src='~/media/ECG/visualstudiomagazine/Images/introimages/0613vsm_Balbes.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl7_h3Title"><a href="http://visualstudiomagazine.com/blogs/tool-tracker/2015/01/retrieve-multiple-recordsets-single-trip-database.aspx">Retrieve Multiple RecordSets in a Single Trip to the Database</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl7_pSummary" class="summary">
+                        Here's another way to reduce trips to the database: Put multiple Select statements in your ADO.NET commands or stored procedures.
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl7_spnDate2" class="date">01/13/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl7_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl7_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl8_liListItem">
+                    
+                    <a href="http://visualstudiomagazine.com/articles/2015/01/12/visual-studio-external-lists-sharepoint.aspx"><img src='~/media/ECG/redmondmag/Images/introimages/EDMackie0513Merge.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl8_h3Title"><a href="http://visualstudiomagazine.com/articles/2015/01/12/visual-studio-external-lists-sharepoint.aspx">A Visual Studio Trick for Creating External Lists for SharePoint</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl8_pSummary" class="summary">
+                        Make Visual Studio do the hard work to simplify the creation of external lists that can be used to connect outside data to your SharePoint projects. 
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl8_spnDate2" class="date">01/12/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl8_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl8_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl9_liListItem">
+                    <div id="ph_pcontent4_0_lvItemList_ctrl9_dvSection" class="section">News</div>
+                    <a href="http://visualstudiomagazine.com/articles/2015/01/09/net-framework-4-5-2-update.aspx"><img src='~/media/ECG/redmondmag/Images/introimages2014/GENBluenumbersandlettersovertypinghands.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl9_h3Title"><a href="http://visualstudiomagazine.com/articles/2015/01/09/net-framework-4-5-2-update.aspx">With Patch Tuesday Comes  .NET Framework 4.5.2</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl9_pSummary" class="summary">
+                        The .NET Framework update will include debugging and tracing capabilities in this round and will be automatically delivered to those using Windows Server Update Services. 
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl9_spnDate2" class="date">01/09/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl9_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl9_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl10_liListItem">
+                    <div id="ph_pcontent4_0_lvItemList_ctrl10_dvSection" class="section">News</div>
+                    <a href="http://visualstudiomagazine.com/articles/2015/01/08/build-tool-updated.aspx"><img src='~/media/ECG/VirtualizationReview/Images/introimages2014/GEN4BlueLightningonBlack.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl10_h3Title"><a href="http://visualstudiomagazine.com/articles/2015/01/08/build-tool-updated.aspx">IncrediBuild Tool Updated for Visual Studio 2015 Preview</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl10_pSummary" class="summary">
+                        Xoreax Ltd. today announced its IncrediBuild tool designed to speed up cross-platform development builds in Visual Studio has been updated to support the latest version, the Visual Studio 2015 Preview.
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl10_spnDate2" class="date">01/08/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl10_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl10_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl11_liListItem">
+                    <div id="ph_pcontent4_0_lvItemList_ctrl11_dvSection" class="section">C# Corner</div>
+                    <a href="http://visualstudiomagazine.com/articles/2015/01/08/resharper-tips-for-quicker-code-delivery.aspx"><img src='~/media/ECG/redmondmag/Images/introimages2014/140422REDMackieWinCadence.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl11_h3Title"><a href="http://visualstudiomagazine.com/articles/2015/01/08/resharper-tips-for-quicker-code-delivery.aspx">ReSharper Tips for Quicker Code Delivery</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl11_pSummary" class="summary">
+                        JetBrains's .NET plug-in will make quick work of code inspections and refactoring. Here are a few tips to work with it that will have you wondering what to do with all your newfound free time. 
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl11_spnDate2" class="date">01/08/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl11_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl11_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl12_liListItem">
+                    
+                    <a href="http://visualstudiomagazine.com/blogs/tool-tracker/2015/01/power-of-indexes.aspx"><img src='~/media/ECG/visualstudiomagazine/Images/introimages/0613vsm_PVogelLong.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl12_h3Title"><a href="http://visualstudiomagazine.com/blogs/tool-tracker/2015/01/power-of-indexes.aspx">The Power of Indexes</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl12_pSummary" class="summary">
+                        Peter performs what seems like a miracle to his client: He cuts response time by 90% without writing a line of code. Of course, the client set Peter up for success.
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl12_spnDate2" class="date">01/08/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl12_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl12_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl13_liListItem">
+                    <div id="ph_pcontent4_0_lvItemList_ctrl13_dvSection" class="section">News</div>
+                    <a href="http://visualstudiomagazine.com/articles/2015/01/07/microsoft-mobile-developer-report.aspx"><img src='~/media/ECG/visualstudiomagazine/Images/introimages2014/0114vsm_Randolph.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl13_h3Title"><a href="http://visualstudiomagazine.com/articles/2015/01/07/microsoft-mobile-developer-report.aspx">Microsoft Mobile Report Offers Developers Pointers on App Success</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl13_pSummary" class="summary">
+                        A December report on Windows Phone Store app downloads also offers some tips for developers looking to make it big with their mobile apps. 
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl13_spnDate2" class="date">01/07/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl13_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl13_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+                <li id="ph_pcontent4_0_lvItemList_ctrl14_liListItem">
+                    <div id="ph_pcontent4_0_lvItemList_ctrl14_dvSection" class="section">Practical .NET</div>
+                    <a href="http://visualstudiomagazine.com/articles/2014/12/01/creating-complex-xml-documents.aspx"><img src='~/media/ECG/visualstudiomagazine/Images/introimages2014/1214vsm_pvogelPnetLong.jpg' /></a>
+                    <h3 id="ph_pcontent4_0_lvItemList_ctrl14_h3Title"><a href="http://visualstudiomagazine.com/articles/2014/12/01/creating-complex-xml-documents.aspx">Creating Complex XML Documents with XML Literals</a></h3>
+                    
+                    
+                    
+                    <p id="ph_pcontent4_0_lvItemList_ctrl14_pSummary" class="summary">
+                        If you're creating an XML document and want to write code that you'll actually be able to maintain … well, it may be time to learn a little Visual Basic, just so you can use XML Literals. It's a good solution even for C# shops.
+                        
+		                <span id="ph_pcontent4_0_lvItemList_ctrl14_spnDate2" class="date">01/07/2015</span>
+                        <span id="ph_pcontent4_0_lvItemList_ctrl14_spnMore" class="more"></span>
+                    </p>
+                    
+                    <div id="ph_pcontent4_0_lvItemList_ctrl14_dvComments" class="dlb_comments"></div>
+                    
+                </li>
+            
+            
+    </ul>
+    <div id="ph_pcontent4_0_dvPagination" class="pagination">
+        <ul>
+            <li><a href="#" class="prev disablelink">&laquo; previous</a></li>
+<li><a href="#" class="currentpage">1</a></li>
+<li><a href="http://visualstudiomagazine.com/home.aspx?Page=2">2</a></li>
+<li><a href="http://visualstudiomagazine.com/home.aspx?Page=3">3</a></li>
+<li><a href="http://visualstudiomagazine.com/home.aspx?Page=4">4</a></li>
+<li><a href="http://visualstudiomagazine.com/home.aspx?Page=5">5</a></li>
+<li><a href="http://visualstudiomagazine.com/home.aspx?Page=6">6</a></li>
+<li><a href="http://visualstudiomagazine.com/home.aspx?Page=7">7</a></li>
+<li><a href="http://visualstudiomagazine.com/home.aspx?Page=8">8</a></li>
+<li><a href="http://visualstudiomagazine.com/home.aspx?Page=9">9</a></li>
+<li><a href="http://visualstudiomagazine.com/home.aspx?Page=10">10</a></li>
+
+<li><a href="http://visualstudiomagazine.com/home.aspx?Page=2" class="next">next &raquo;</a></li>
+
+        </ul>
+    </div>
+    
+</div>
+                    
+                </div>
+                
+                <div class="sContent">
+                    
+
+<NOINDEX>
+<!-- component markup start -->
+<div id="popular">
+    <div class="tabbedFields">
+        <ul class="tabMenu">
+            <li><a href="javascript:;">Most Popular Articles</a></li>
+            <li><a href="javascript:;">Most Emailed Articles</a></li>
+        </ul>
+        <!-- content 1 -->
+        <div class="tabContent">
+            
+                    <h3><a id="ph_scontent1_0_PopularItemsRepeater_ctl00_StoryHeadlineHyperLink" href="http://visualstudiomagazine.com/articles/2015/01/01/sharpening-developer-productivity.aspx">Sharpening Developer Productivity with ReSharper</a></h3>
+                
+                    <h3><a id="ph_scontent1_0_PopularItemsRepeater_ctl01_StoryHeadlineHyperLink" href="http://visualstudiomagazine.com/articles/2015/01/12/visual-studio-external-lists-sharepoint.aspx">A Visual Studio Trick for Creating External Lists for SharePoint</a></h3>
+                
+                    <h3><a id="ph_scontent1_0_PopularItemsRepeater_ctl02_StoryHeadlineHyperLink" href="http://visualstudiomagazine.com/articles/2015/01/01/managing-complex-web-requests.aspx">Managing Complex Web Requests</a></h3>
+                
+                    <h3><a id="ph_scontent1_0_PopularItemsRepeater_ctl03_StoryHeadlineHyperLink" href="http://visualstudiomagazine.com/blogs/tool-tracker/2015/01/retrieve-multiple-recordsets-single-trip-database.aspx">Retrieve Multiple RecordSets in a Single Trip to the Database</a></h3>
+                
+                    <h3><a id="ph_scontent1_0_PopularItemsRepeater_ctl04_StoryHeadlineHyperLink" href="http://visualstudiomagazine.com/articles/2015/01/01/visual-studio-database-project.aspx">Leveraging a Visual Studio Database Project</a></h3>
+                
+        </div>
+        <!-- content 2 -->
+        <div class="tabContent">
+            
+        </div>
+    </div>
+</div>
+<!-- component markup end -->
+</NOINDEX>
+                    <div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=BOX_R1;tile=4;sz=336x280,300x250;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=BOX_R1;tile=4;sz=336x280,300x250;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=BOX_R1;tile=4;sz=336x280,300x250;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+
+                    <div id="ph_scontent3_0_divListBox" class="featured-free-whitepapers module">
+    
+    <h3 id="ph_scontent3_0_h3Header"><a href="http://visualstudiomagazine.com/whitepapers/list/vsm-tech-library-list.aspx">Free Whitepapers</a></h3>
+                
+            
+            
+            <ul id="ph_scontent3_0_lvOuterList_ctrl0_ulListItem">
+                        
+                    
+                    <li id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl0_liListItem">
+                        
+    		            
+    		            <a href="http://visualstudiomagazine.com/whitepapers/2014/12/syncfusion-big-data-platform.aspx">Big Data Platform Made Easy For Windows Developers</a>
+    		            <span id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl0_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                    <li id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl1_liListItem">
+                        
+    		            
+    		            <a href="http://visualstudiomagazine.com/whitepapers/2014/11/inteltrial-intel-integrated-native-developer-experience.aspx">Intel Integrated Native Developer Experience</a>
+    		            <span id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl1_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                    <li id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl2_liListItem">
+                        
+    		            
+    		            <a href="http://visualstudiomagazine.com/whitepapers/2014/10/dtsearch-getting-to-know-dtsearch.aspx">Getting to Know dtSearch</a>
+    		            <span id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl2_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                    <li id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl3_liListItem">
+                        
+    		            
+    		            <a href="http://visualstudiomagazine.com/whitepapers/2014/10/symantec-the-key-to-smarter-enterprise-security.aspx?tc=page0">The Key to Smarter Enterprise Security</a>
+    		            <span id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl3_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                
+            </ul>
+        
+        
+    <p id="ph_scontent3_0_pFooter" class="footer"><a href="http://visualstudiomagazine.com/whitepapers/list/vsm-tech-library-list.aspx">> More TechLibrary</a></p>
+</div>
+
+                    <div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=BOX_R2;tile=5;sz=336x280,300x250;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=BOX_R2;tile=5;sz=336x280,300x250;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=BOX_R2;tile=5;sz=336x280,300x250;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+<div id="ph_scontent4_1_divBlockBox" class="calendar-listing">
+	
+	<div id="ph_scontent4_1_divBody" class="summary"><div class="upcoming-events">Upcoming Events</div> 
+<ul>
+
+
+
+
+
+
+<li>
+<a href="http://vslive.com/events/las-vegas-2015/home.aspx">Visual Studio Live!, Las Vegas</a><br>
+March 16-20<br>
+Las Vegas, NV
+</li>
+
+<li>
+<a href="http://vslive.com/events/austin-2015/home.aspx">Visual Studio Live!, Austin</a><br>
+June 1-4<br>
+Austin, TX
+</li>
+
+
+
+<li>
+<a href="http://vslive.com/events/san-francisco-2015/home.aspx">Visual Studio Live!, San Francisco</a><br>
+June 15-18<br>
+San Francisco, CA
+</li>
+
+
+<li>
+<a href="http://vslive.com/events/redmond-2015/home.aspx">Visual Studio Live!, Redmond</a><br>
+August 10-14<br>
+Redmond, WA
+</li>
+
+
+</ul></div>
+	
+</div><div class="NET-INSIGHT">
+	
+	<h3>.NET Insight</h3><p class="signupfor">Sign up for our newsletter.</p>
+	<div class="enl">
+		<div id="error" style="" ></div>
+		<div class="enlform">
+			<div id="dvForm">
+				<div id="result"></div>
+					<input type="hidden" ID="hndTABLENAME" Value="ONE001982" />
+				<input type="hidden" ID="hndP00150002" Value="1S" />
+				<input type="hidden" ID="hndP00490002" Value="ZN" />
+				<input type="hidden" ID="hndP06660001" Value="A" />
+				<input type="hidden" ID="hndP35160001" Value="R" />
+				<input type="hidden" ID="hndP91620001" Value="R" />
+				<input type="hidden" ID="hndP43140001" value="H" />
+				<input type="hidden" ID="hndP23230006" value="GetDate()"/>
+				<input type="hidden" ID="hndP00880006" Value="WSREDM" />
+				<div class="formlabel">
+                    <label for="textfield">Email Address:</label>
+                </div>
+				<div class="emailAddress">
+					<div class="userEntry">
+						<input type="text" name="txtEMAILADR" id="txtEMAILADR" data-val="true" data-val-required="The Email address field is required." data-val-regex-pattern="^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$" data-val-regex="Please enter valid email" placeholder="signup@example.com">
+					</div>
+				</div>
+				<div class="dvForm-button">
+                    <input type="button" value="submit" id="button" data-state="hidden">
+                </div>
+			</div>
+			<div id="FormSent" class="hide"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://1105media.com/script/enewsletter-miniforms.js"></script><p class="enewsletterprivacypolicy">I agree to this site's <a href="http://1105media.com/privacy.html" target="_blank">Privacy Policy</a>.</p>
+</div>
+
+
+
+<div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TEMP2;tile=6;sz=336x280,300x250;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TEMP2;tile=6;sz=336x280,300x250;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TEMP2;tile=6;sz=336x280,300x250;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+
+                    <div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=VSM_MSDNWidget;tile=7;sz=1x1;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=VSM_MSDNWidget;tile=7;sz=1x1;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=VSM_MSDNWidget;tile=7;sz=1x1;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+<div id="ph_scontent5_1_divListBox" class="featured-free-whitepapers module">
+    
+    <h3 id="ph_scontent5_1_h3Header">Free Webcasts</h3>
+                
+            
+            
+            <ul id="ph_scontent5_1_lvOuterList_ctrl0_ulListItem">
+                        
+                    
+                    <li id="ph_scontent5_1_lvOuterList_ctrl0_lvItemList_ctrl0_liListItem">
+                        
+    		            
+    		            <a href="http://visualstudiomagazine.com/webcasts/2014/11/newrelic-dec0914.aspx?tc=page0">Unicorns to Horses: Reflections On The DevOps Enterprise Summit</a>
+    		            <span id="ph_scontent5_1_lvOuterList_ctrl0_lvItemList_ctrl0_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                    <li id="ph_scontent5_1_lvOuterList_ctrl0_lvItemList_ctrl1_liListItem">
+                        
+    		            
+    		            <a href="http://visualstudiomagazine.com/webcasts/2014/11/alachisoft-dec1014.aspx?tc=page0">How to Scale .NET Apps with Distributed Caching</a>
+    		            <span id="ph_scontent5_1_lvOuterList_ctrl0_lvItemList_ctrl1_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                
+            </ul>
+        
+        
+    <p id="ph_scontent5_1_pFooter" class="footer"><a href="http://visualstudiomagazine.com/webcasts/list/webcast-list.aspx">> More Webcasts</a></p>
+</div>
+<div id="ph_scontent5_2_divListBox" class="listBoxDynamic">
+    
+    <h3 id="ph_scontent5_2_h3Header"></h3>
+    
+    <p id="ph_scontent5_2_pFooter" class="footer"></p>
+</div>
+<div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=temp_122314;tile=8;sz=336x280,300x250;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=temp_122314;tile=8;sz=336x280,300x250;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=temp_122314;tile=8;sz=336x280,300x250;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+
+                </div>
+                
+                <div class="xContent">
+                    <div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TEMP;tile=9;sz=728x90,700x90;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TEMP;tile=9;sz=728x90,700x90;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TEMP;tile=9;sz=728x90,700x90;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+
+                    
+
+<div id="sponsorTextLink" class="ad sztextlink">
+    <h2>Sponsored Links:</h2><ul><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx01;tile=1;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx01;tile=1;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx01;tile=1;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx02;tile=2;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx02;tile=2;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx02;tile=2;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx03;tile=3;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx03;tile=3;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx03;tile=3;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx04;tile=4;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx04;tile=4;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx04;tile=4;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx05;tile=5;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx05;tile=5;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx05;tile=5;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx06;tile=6;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx06;tile=6;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx06;tile=6;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx07;tile=7;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx07;tile=7;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx07;tile=7;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx08;tile=8;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx08;tile=8;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx08;tile=8;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx09;tile=9;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx09;tile=9;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx09;tile=9;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx10;tile=10;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx10;tile=10;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx10;tile=10;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx11;tile=11;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx11;tile=11;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx11;tile=11;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li><li><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord2 = window.ord2 || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx12;tile=12;sz=620x28;ord=' + ord2 + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx12;tile=12;sz=620x28;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=tx12;tile=12;sz=620x28;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+</li></ul>
+</div><div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TEMP1;tile=10;sz=728x90,700x90;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TEMP1;tile=10;sz=728x90,700x90;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=TEMP1;tile=10;sz=728x90,700x90;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+
+                    
+                    
+                    
+                </div>
+    		
+            </div>
+
+            <footer role="contentinfo" class="footer">
+                
+                
+                
+                
+
+<NOINDEX>
+
+<!-- component markup start -->
+<div class='footer1 nav'>
+    <ul class="footerlist"><li class=""><a href="http://visualstudiomagazine.com/forms/advanced-search.aspx">Advanced Search</a></li><li class=""><a href="http://visualstudiomagazine.com/pages/contact-us.aspx">Contact Us</a></li><li class=""><a href="http://visualstudiomagazine.com/pages/advertise.aspx">Advertise</a></li><li class=""><a href="http://vslive.com/">Events</a></li><li class=""><a href="http://visualstudiomagazine.com/issues/issue-archive.aspx">Print Issues Online</a></li><li class=""><a href="https://newsletters.1105pubs.com/nl/URMG.do?pk=WSNVSM">Free Newsletters</a></li><li class=""><a href="http://visualstudiomagazine.com/pages/sitemap.aspx">Site Map</a></li><li class=" last"><a href="http://1105Reprints.com" target="_blank">Reprints</a></li></ul>
+    <br class="clear" />
+</div>
+<!-- component markup end -->
+
+</NOINDEX>
+
+
+                
+
+<NOINDEX>
+
+<!-- component markup start -->
+<div class='footer-sites nav'>
+    <ul class="footerlist"><li class=""><a href="http://adtmag.com" target="_blank">Application&nbsp;Development&nbsp;Trends</a></li><li class=""><a href="http://esj.com" target="_blank">Enterprise&nbsp;Systems</a></li><li class=""><a href="http://mcpmag.com" target="_blank">MCPmag.com</a></li><li class=""><a href="http://redmondmag.com" target="_blank">Redmond    </a></li><li class=""><a href="http://rcpmag.com" target="_blank">Redmond&nbsp;Channel&nbsp;Partner</a></li><li class=" last"><a href="http://virtualizationreview.com" target="_blank">Virtualization&nbsp;Review</a></li></ul>
+    <br class="clear" />
+</div>
+<!-- component markup end -->
+
+</NOINDEX>
+
+
+                <div id="Copyright_copyright" class="copyright">
+    © 1996-2015 1105 Media, Inc. View our <a href="http://1105media.com/privacy.aspx" target="_blank">Privacy Policy</a> and <a href="http://1105media.com/terms.html" target="_blank">Terms of Use</a>.
+<p align="center"><b><a href="mailto:bnagel@1105media.com?subject=Regarding Visualstudiomagazine.com">Problems? Questions? Feedback? E-mail us.</a></b></p>
+</div>
+            </footer>
+            
+            
+            
+            
+            
+            
+            
+    	            
+                
+                
+    </div>
+
+    
+<script type="text/javascript">
+    var gIntersitial = 20000 ;
+</script>
+<div id="intersitialMask"></div>
+<div id="intersitial">
+    <div class="adClose"><a id="adclose" href="javascript:;">Close this Advertisement</a></div>
+    <div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=S01;tile=11;sz=640x480;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=S01;tile=11;sz=640x480;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=S01;tile=11;sz=640x480;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+
+    <script type="text/javascript" language="javascript">showIntersitial();</script>
+</div>
+
+
+
+    
+    
+    
+    <div class="ad">
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random() * 100000000);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N5978/adj/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=dog_t1;tile=12;sz=100x100,1x1;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/N5978/jump/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=dog_t1;tile=12;sz=100x100,1x1;ord=123456789?" target="_blank" >
+<img src="http://ad.doubleclick.net/N5978/ad/eof.vsm/home;item=3cc4c115_65c9_4ffa_a399_b6eb479e3e1a;pos=dog_t1;tile=12;sz=100x100,1x1;ord=123456789?" border="0" alt="" />
+</a>
+</noscript>
+</div>
+
+
+
+<script type="text/javascript">
+ _bizo_data_partner_id = "309";
+</script>
+<script type="text/javascript">
+(function(){(function(){var b,a;a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=""+(window.location.protocol==="https:"?"https://sjs.":"http://js.")+"bizographics.com/insight.min.js";b=document.getElementsByTagName("script")[0];return b.parentNode.insertBefore(a,b)})();})();
+</script>
+
+
+
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+
+</html>

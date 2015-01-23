@@ -1,0 +1,37 @@
+---
+layout: post
+title: CSS로 쉽게 animation을. (in 사파리)
+date: 2008-04-02 12:08:35.000000000 -04:00
+categories:
+- BROWSER
+- CSS
+- standards
+tags:
+- css animation
+- "브라우저"
+- "사파리"
+- "웹표준"
+- safari3.1
+- web standards
+---
+<p><img src="assets/safari-logo.png" alt="safari" />
+어제 만우절날 CSS3-IE 에 놀라신 분들게 죄송한 마음으로 이번에는 제대로된 포스팅을 올립니다.  </p>  최근 <a href="http://www.apple.com/safari/">사파리 3.1</a> 이 <a href="http://docs.info.apple.com/article.html?artnum=307467">출시된 소식</a>은 이미 접하셨으리라 생각 됩니다.  그다지 큰 관심은 갖지 않았는데 3.1에서 구현 가능해진 이 CSS Animation 부분은 짚고 넘어가도 괜찮겠다는 생각이 들었습니다.  특히 CSS3 에서 구현되면 정말 좋으리라 라는 생각도 들고 말이죠.</p>
+<p>사파리 블로그에 이미 <a href="http://webkit.org/blog/138/css-animation/">소개 되었는지라</a> 많은 분들이 아실지도 모르지만 CSS Animation 이라 불리우는 역동적인 CSS 부분들이 이번 3.1에 첨가되었고 그 중에서도 Transition (전환) 에 관한 것들이 구현 가능케 되었습니다.  [이하의 모든 예제들은 사파리 3.1이 설치되어 있어야 확인하실수 있습니다.]</p>
+<p>transition-property - 어떠한 전환 속성을 작동시킬 것인지 지정 예: opacity
+transition-duration - 얼마동안 이 속성이 지속될것인지 지정ow long the transition should last.
+transition-timing-function - 어떠한 종류의 타이밍을 갖을것인지 지정.  예: linear vs. ease-in vs. a custom cubic bezier function
+transition - 물론 한번에 지정가능한 속성도 제공하는군요.</p>
+<div id="safari-example1">Google 사투리 번역은 사람이 직접 번역하는 대신 고도의 기계번역 기술을 활용해 제공되는 서비스입니다… 예를 들어 번역하고자 하는 문장을 전라도 사투리로 넣으면, 해당 문장을 다양한 사투리로 번역하여 문서를 검색하고, 검색된 문서들은 다시 전라도 사투리로 변환되어 사용자에게 제공됩니다 - Google Korea</div>
+<p>위의 div 에 마우스를 가져다 대시면 천천히 div 가 사라지는 효과를 확인하실수 있습니다.  이는 div 에다
+div {opacity: 1; -webkit-transition: opacity 1s ease-in; }
+값을 정해준 후 hover 시에 opcity 가 0으로 되도록 지정된 결과 입니다.
+div:hover {opacity: 0;} </p>
+<p>이 외에도 여러가지 효과를 줄수 있는데 간단한 transition 속성으로 많은 이득을 볼수 있습니다.</p>
+<div id="safari-example2">
+<ul>
+<li>Home</li>
+<li>About</li>
+<li>Contact</li>
+</ul>
+</div>
+<p>실무적으로야 아직 쓰이지는 못하겠지만 여러가지 생각해 볼수 있는 부분인거 같네요.  이번에 Torrey Rice가 이 CSS Animation 기능을 활용해서 SVG 와 함께 <a href="http://sitepen.com/labs/code/cssDock/">멋진 동작 예제</a>를 구현해 놓았습니다.  <a href="http://www.sitepen.com/blog/2008/03/28/svg-css-animations-fisheye-fun/">설명</a>을 곁들여서 보시면 이해가 더 쉬우실 겁니다.</p>

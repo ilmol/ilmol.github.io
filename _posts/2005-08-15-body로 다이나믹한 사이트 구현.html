@@ -1,0 +1,56 @@
+---
+layout: post
+title: body로 다이나믹한 사이트 구현
+date: 2005-08-15 17:54:11.000000000 -04:00
+categories:
+- HTML
+---
+<p>body 를 잘 쓰면  정말 다이나믹한 사이트 구현이 가능합니다.  </p>;  body값은 보통 나두는것이 평범한 사용입니다만, 신문사나 잡지사이트등 컨텐츠가 일정시간 계속 업데이트 되고 바뀌어야 하는 곳에서는 body 의 사용으로 프레젠테이션의 강점을 살릴수 있습니다.  body 값을 다이나믹하게 바꾸면서 모든 그 안에 있는 block 값들을 불러 교체가 가능하기 때문입니다.  단순히 &lt;body&gt;를 &lt;body id="big"&gt; 라고 지정해 주는것 만으로도 사이트의 레이아웃과 함께 모든것이 바뀌게 된다는것이죠.<!--more--></p>
+<p>오늘같은 광복절에는 특별히 제작되는 레이아웃들이 있습니다.  특히나 메이저 포털같은 <a href="http://empas.com">엠파스</a>의 경우 상당히 주기적으로 해더 부분이 바뀌게 되는데, 이러한 경우, 간단히 문서와 프레젠테이션의 분리로 얻는 이득의 최대한의 장점을 살릴수 있습니다.</p>
+<p>일단 단순한 예를 보겠습니다.
+이것이 뉴스 사이트라고 본다면, 보통 평범한 뉴스는 이렇게 광고가 옆에서 붙어서 나오게 된다고 합시다.
+<img src="assets/xhtml_body1.gif" width="300" height="261" alt="xhtml 변화 1" class="border1" /></p>
+<p>하지만 특별한 대형뉴스가 났을때에는 뉴스 전체가 옆칸까지 먹어서 크게 강조한다면 이렇게 되겠네요.  정확하게는 아니지만, ESPN 에서 사용하고 있는 대충의 형식입니다.  제가 흉내만 내어봅니다.
+<img src="assets/xhtml_body2.jpg" width="300" height="261" alt="xhtml 변화  2" class="border1" /></p>
+<p>이 부분은 단순히 첫번재 사이트 형식에서 xhtml 부분의 &lt;body&gt; 에 속성을 주어 &lt;body id="big"&gt; 라고 바꾸었을때에 나타나는 레이아웃입니다.  그럼 body 에 준 속성값이 무엇을 바꿀수 있냐면, 바로 선택자의 변화입니다.</p>
+<p>보통 default 레이아웃의 css 값이
+#header {width: <strong>300</strong>px;} </p>
+<p>이라면 body에 id값을 주면, 그 id 값사을 사용하여,
+<strong>body#big</strong> div#header{ width: <strong>200</strong>px;} </p>
+<p>로 바꾸어 불러버릴수 있습니다.  그렇다면 단순히 xhtml 에서 body 의 id 를 바꾸는것 만으로도 width 값이 300px 에서 200px 로 변하게 되는것이죠.</p>
+<p>body#속성이름 div#다른div속성 {값들}</p>
+<p>코딩으로 확인해 보겠습니다.
+xhtml 은 변하지 않습니다.   나중에 변화하고 싶을때에는 body 의 id 값만 바뀝니다.
+{% highlight html %}
+<body id=""></p>
+<div id="header">
+<div id="special">
+<h2>Special Content</h2>
+</div>
+<div id="ad">
+		광고
+	</div>
+<div id="news">
+<ul>
+<li>해피 광복절입니다</li>
+<li>일제의 압박에서 해방되었네요</li>
+</ul></div>
+</div>
+<p></body>
+{% endhighlight %}</p>
+<p>그리고 css 는 이렇게 정해줍니다.
+{% highlight css %}#header {float:left;width: 300px;border: 1px solid;position:relative;}
+#special {height: 200px; width: 200px;background:gray;float:left;}
+#ad {float:right; width: 100px; height: 200px;background:blue;}
+#news {clear:both;}</p>
+<p>body#big div#special {width: 300px; float:left;}
+body#big div#ad {position:absolute; width: 100px;background:blue; height: 30px;top: 200px;right: 0;}
+body#big div#news {clear:both; margin-right: 100px;}
+{% endhighlight %}</p>
+<p>이것은
+<img src="assets/xhtml_body1.gif" width="300" height="261" alt="xhtml 변화 1" class="border1" />
+이런 레이아웃을 출력케 합니다.  하지만 이벤트가 생겼거나 커다란 일을 나타낸다면, body id="big" 을 주면 금세
+&lt;body id="big"&gt;
+이렇게 바뀌게 됩니다.
+<img src="assets/xhtml_body2.jpg" width="300" height="261" alt="xhtml 변화  2" class="border1" /></p>
+<p>이것을 응용하면, 단순히 body 의 값만 바꾸는것으로 엄청난 것들을 바꾸어 버릴수 있습니다.  레이아웃, 폰트사이즈, 테마, 색상, 모든것을 말이죠.  실로 간편한 사이트 관리가 되는것입니다.  주기적으로 모습이 바뀌는 사이트라면 심각하게 고려해 볼수 있는 방법이네요.</p>

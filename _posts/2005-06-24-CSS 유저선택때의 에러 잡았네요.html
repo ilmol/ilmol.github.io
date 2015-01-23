@@ -1,0 +1,19 @@
+---
+layout: post
+title: CSS 유저선택때의 에러 잡았네요
+date: 2005-06-24 04:57:04.000000000 -04:00
+categories:
+- CSS
+---
+<p>예전에 피오넬님께서 고생고생 하시면서 겪었던 문제를 이제서야 잡았습니다.  <a href="http://pionelle.net/tt2/index.php?pl=460">피오넬님댁의 TT 버전을 보시면</a> 유저가 원하는 스킨을 고를수 있게 되어있지만, 원래의 스킨 말고 다른 옵션 스킨을 선택할시에, 즉 다른 css 파일을 선택할 시에 새롭게 로딩될때마다 잠시 원본스킨이 자꾸 로딩되었었습니다.<!--more--></p>
+<p>문제는 간단합니다.  바로 컴파일때 위에서 아래로 읽는 순서에 의해서 javascript를 먼저 읽어주기때문에 그랬더군요.  한마디로 &lt;script&gt; 부분이 스타일시트지정 link 부분보다 밑으로 내려와야 하는것입니다.  </p>
+<p><code><script type="text/javascript" src="skin.js"></script></p>
+<link rel="stylesheet" type="text/css" media="screen" href="skin.css" title="skin" />
+</code></p>
+<p>이부분에서 script 를 &lt;link&gt; 밑으로 내려주어야 하는것이죠.</p>
+<p><code>
+<link rel="stylesheet" type="text/css" media="screen" href="skin.css" title="skin" />
+<script type="text/javascript" src="skin.js"></script>
+</code></p>
+<p>이제 잡았습니다.</p>
+<p>혹시 테터라서 안되었나 라고 생각하셨던 분들 안심하시고 <a href="http://ilmol.com/wp/2005/04/25/8/">스타일시트 changer 를</a> 적용하셔도 될듯합니다. </p></p>

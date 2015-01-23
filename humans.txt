@@ -1,0 +1,5 @@
+/* SITE */
+Last Update: 2015
+Doctype: HTML5
+Components: Normalize. Fontello fonts, Pictonic fonts
+Environment: Sublime Text, Jekyll, Github Pages

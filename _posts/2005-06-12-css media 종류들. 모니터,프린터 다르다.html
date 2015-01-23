@@ -1,0 +1,45 @@
+---
+layout: post
+title: css media 종류들. 모니터,프린터 다르다
+date: 2005-06-12 12:24:37.000000000 -04:00
+categories:
+- CSS
+---
+<p>CSS 에서 media 종류들 이라함은 어떤출력장치를 쓰느냐에 따라서 css 스타일을 다르게 적용시켜 주는것들을 가르킵니다.<!--more-->  예를들어 모니터에선 여러가지 이미지들도 적용되고 멋진 화면이지만 프린트를 할때에는 간단 명료하게 프린트 되야될것들만 출력되어야 합니다.  이 두가지를 같은 스타일을 적용시켜 보여주면 안되겠죠.  프린트 모니터 말고도, 프로젝터, tv 등이 있습니다.  </p>
+<p>일단 media 사용법은 간단합니다.  원하는 스타일로 css파일을 제작후에 그 파일을 적용시켜준다던지 아니면 헤더에서 특별히 한두 부분만을 지정하여 고쳐주는 방법이 있겠습니다.  </p>
+<p>링크를 한다면 media="원하는 장치 이름"  이렇게 정해주면 됩니다.  모니터가 가장많이 쓰이니 보통 media="screen" 이 많습니다.  코드를 보겠습니다.
+<code>
+<link rel="stylesheet" type="text/css" media="screen" href="css파일경로" /></code>
+이렇게 해주면 되겠죠.  </p>
+<p>간단히 몇가지면 고치면 되는데 파일전체를 적용시킨다면 약간 효율성이 떨어지겠네요.  해서 헤더에서 스크립트를 적용 시키는 방법으로(<a href="http://ilmol.com/wp/2005/06/12/29/">헤더 스크립트적용방법 참고</a>) @media 를 쓰시면 됩니다.
+<code><head></p>
+<style type="text/css">
+  <!--
+      @media print {
+         BODY { font-size: 10pt }
+       }
+       @media screen {
+          BODY { font-size: 12pt }
+        }
+       @media screen, print {
+          BODY { line-height: 1.2 }
+        }
+  -->
+</style>
+<p></head></code>
+간단히 이해가 되실겁니다.  print 할때는 BODY를 이렇게 해라,  screen 에는 이렇게 해라, screen과 print에는 이렇게 해라 라고 정해져 있는게 보이시나요.  저렇게 간단히 지정이 가능합니다.  </p>
+<p>그럼 종류들을 보겠습니다 꽤나 많습니다.</p>
+<ol>
+<li>all - 모든 종류의 출력을 다 포함합니다. </li>
+<li>aural - 음성출력이 가능한 도구에서의 출력방법을 말합니다.  한참 후에나 쓰일듯 하네요. </li>
+<li>braille - 점자출력때의 방법이라고 하네요.</li>
+<li>embossed - 점자출력 프린터용. </li>
+<li>handheld - 손에 들수 있는 정도니 헨드폰, PDA 등을 일컫겠죠.  작은 화면임을 잘 이해해야 하겠습니다. </li>
+<li>print - 프린트 할때의 종류입니다. </li>
+<li>projection - 프로젝터에서 쏠때의 화면이네요.  예전엔 보통 파란화면 쓰던데 요즘은 많이 그래픽들이 나아졌죠 :)</li>
+<li>screen - 아시다시피 컴퓨터 모니터 스크린, 화면입니다.  </li>
+<li>tty -  pitch character grid를 쓰는 종류입니다. teletypes, terminal 등이 예겠습니다.  특별한 grid를 쓰는만큼 px(픽셀)을 쓰면 안되겠습니다. </li>
+<li>tv - 텔레비젼으로 나타날때의 스타일시트 media 종류로 정하시면 되겠네요</li>
+</ol>
+<p>참고 - <a href="http://www.w3.org/TR/REC-CSS2/media.html">http://www.w3.org/TR/REC-CSS2/media.html</a></p>
+<p>이렇게 모든것에 맞추어서 만드는건 많은 작업이지만, 프린터, handheld 정도는 맞추어 줄만 하겠습니다.  시간되시면 꼭 고려해 보시기 바랍니다.  </p>

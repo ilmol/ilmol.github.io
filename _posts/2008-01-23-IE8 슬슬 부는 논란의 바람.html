@@ -1,0 +1,29 @@
+---
+layout: post
+title: IE8 슬슬 부는 논란의 바람
+date: 2008-01-23 13:22:06.000000000 -05:00
+categories:
+- BROWSER
+- standards
+---
+<p>서막일수도 있겠죠.  IE8의 출시를 앞두고 호환성에 관련한 논란의 바람이 불고 있습니다. (Via <a href="http://www.webstandards.org/2008/01/22/microsofts-version-targeting-proposal/">WaSP</a>)  Microsoft 는<a href="http://alistapart.com/articles/beyonddoctype"> '브라우저 버전별 명시'를 제시</a>하며 개발자들에게 버전에 맞추어 확실한 렌더링을 계획하고 제작하여, 후에 버전이 변화되더라도 명시한 버전데로만 렌더링 하는 방식을 체택하자고 뜻을 모으고 있습니다.  복잡시리 하듯 보이지만 요약하자면 IE6, IE7, IE8 의 렌더링이 각각 다름으로 격는 어려움을 렌더링 해야하는 브라우저 버전을 명시하여 복잡함을 막자는 것입니다.  Aaron Gustafson 에 따르면</p>
+<p>{% highlight html %}<meta http-equiv="X-UA-Compatible" content="IE=8" />{% endhighlight %}</p>
+<p>식의 의 META를 사용하여 content="브라우저=버전" 방식을 제안하고 있습니다.  물론 이것은 IE만을 지정하는 것이 아니라 타 브라우저들에게도 적용할수 있는 방식입니다.</p>
+<p>{% highlight html %}<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4" />{% endhighlight %}</p>
+<p>이미 많은 WaSP 멤버들의 지지를 얻고 있는 제안이긴 합니다만 반대도 만만치 않습니다.  특히 웹표준계의 멋진 삼촌 Eric Meyer의 <a href="http://alistapart.com/articles/fromswitchestotargets">의견은 사뭇 다릅니다</a>.  상위호환성 원리를 위배하는 것일 뿐만 아니라 이것은 브라우저를 타임머신으로 만드는 것 밖에 되지 않는다고 맞서고 있습니다.</p>
+<blockquote><p>With version targeting, the incentive to plan ahead, to be forward-looking, is almost entirely destroyed. Instead, the browser makes a promise to always be backwards compatible. In effect, version targeting is like Time Machine for web browsers. The idea is that when IE10 loads up my IE7 page, it rewinds itself to act like IE7 did, all those years ago—no matter what changed in the meantime.
+버전별명시는 IE10이 출시된 후라해도(그동안 얼마나 발전했던 간에) IE7처럼 만들어 버릴수 있는 방식이다.</p></blockquote>
+<p>후에 에릭삼촌은 어느정도 이해가 가는 제안이긴 하지만 그래도 여러가지 문제점이 있다며 충분히 동의할수 없다 하고 있습니다.  과연 어떤 결말이 날것인지 궁금하군요.  빨리 이 제안에 동참해 달라며 Vendor들에게 요청하고 있는 마이크로소프트와 위험할수 있다는 타 의견들의 멤버들의 <a href="http://alistapart.com/comments/fromswitchestotargets/">열띈 토론이 이루어지고 있으니</a> 영어가 되시면 잠시 참여하실만도 합니다.  </p>
+<p>P.S. Digital-Web 에서 <a href="http://www.digital-web.com/news/2008/01/IE8_Version_Targeting_causes_quite_a_stir">여러 글들을 링크</a>해 놓았더군요. 약간의 설명만 번역하여 몇개를 추려 올립니다.
+<a href="http://blogs.msdn.com/ie/archive/2008/01/21/compatibility-and-ie8.aspx">'Compatibility and IE8'이라 제목 지은 마소의 입장</a>
+<a href="http://snook.ca/archives/browsers/version_targeting_ie8/">Jonathan Snook 은 환영</a>
+<a href="http://weblogs.mozillazine.org/roc/archives/2008/01/post_2.html">모질라 개발자의 의견</a>
+<a href="http://adactio.com/journal/1402/">Jeremy Keith 는 깨어졌다는 글을 남김</a>
+<a href="http://www.andybudd.com/archives/2008/01/has_internet_ex/">Andy Budd 는 브라우저벤더들에게는 기회일수 있다함</a>
+<a href="http://www.zeldman.com/2008/01/22/in-defense-of-version-targeting/">우리에게 친근한 Zeldman 의 긍정적인 입장</a>
+<a href="http://dean.edwards.name/weblog/2008/01/quotes/">Dean Edwards 의<span class="caps">WHATWG</span>의 메일링 리스트의 몇 코멘트들 정리</a>
+<a href="http://www.rachelandrew.co.uk/archives/2008/01/22/ie8-and-the-future-of-the-web/">Rachel Andrew 는 오히려 퇴락하는 것이라 함</a>
+<a href="http://webkit.org/blog/155/versioning-compatibility-and-standards/">Safari 는 찬성하지 않겠다 함</a>
+<a href="http://log.lachstock.com.au/past/2008/1/23/X-UA-Compatible-past-thoughts-of-children/">Lachlan Hardy 의 피할수 없으니 받아들여야 할것이다</a>
+<a href="http://www.isolani.co.uk/blog/standards/EndOfLineInternetExplorer">Mike Davies 의 IE의 끝이라는 글</a></p>
+<p>차니님 말씀대로 역풍이...</p>

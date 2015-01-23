@@ -1,0 +1,145 @@
+---
+layout: post
+title: "레이아웃 시리즈 #1"
+date: 2005-07-20 12:14:41.000000000 -04:00
+categories:
+- CSS
+- HTML
+---
+<p>레이아웃 시리즈를 시작하겠습니다.  레이아웃은 일단 xhtml 과 css 의 기본을 이해하고 적용하는데에 가장 접하기 쉬우면서 까다로운 부분이라 다루고 싶었습니다.  이제 점점 표준에 관한 의식도 점점 높아가면서 더 그 중요성을 느끼고 있습니다.</p>
+<p>가장 기본적인 레이아웃으로 시작해서 많이사용되는 예들로 채워보겠습니다.</p>
+<p>xhtml 은 1.0 transitional,  그리고 css 2.0 중심 입니다. </p>
+<p>아시다시피 가장 많이 쓰이는 형태가
+<img src="assets/layout1.gif" width="294" height="187" alt="레이아웃 이미지" />
+이런 형태입니다.<!--more--></p>
+<p>물론 내용을 다 생각하여 짜 맞추고 어떻게 하면 문서화에 최적화 될까 생각하면서, 상상하면서 (시멘틱) 구조화 해야 하지만 일단 레이아웃 부분만 보는 것이니 곧바로 레이아웃으로 들어갑니다.</p>
+<p>글로 설명하자면, 헤더와 중간부분, 푸터로 이루어져 있고 중간부분 안에  사이드바 그리고 콘텐트가 들어가는 형태입니다.   블로그에서도 많이 쓰이고 보통 전형적인 홈페이지 형태입니다.</p>
+<p>먼저 xhtml 부분을 제작해 보겠습니다.  문서 부분이죠.  div가 제 생각에 6개가 틀을 잡기 위해서 필요합니다. 5개도 괜찮겠지만요.</p>
+<p>모든걸 감싸기 -> &lt;div id="wrap"&gt;&lt;/div&gt;
+헤더 -> &lt;div id="header"&gt;&lt;/div&gt;
+중간 -> &lt;div id="middle"&gt;&lt;/div&gt;
+푸터 -> &lt;dif id="footer"&gt;&lt;/div&gt;
+중간안에 사이드바 -> &lt;div id="sidebar"&gt;&lt;/div&gt;
+중간안에 콘텐트 -> &lt;div id="content"&gt;&lt;/div&gt;</p>
+<p>이래서 직접 xhtml 부분을 보면 이렇습니다.</p>
+<p>{% highlight html %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title> 레이아웃 기본1 </title>
+<meta name="Author" content="ILMOL" />
+<meta name="Keywords" content="css xhtml" />
+<meta name="Description" content="Layout posting #1" /></p>
+<link type="text/css" media="screen" rel="stylesheet" href="style.css" />
+</head></p>
+<p><body></p>
+<div id="wrap">
+<div id="header"></div>
+<div id="middle">
+<div id="sidebar"></div>
+<div id="content"></div>
+</p></div>
+<div id="footer"></div>
+</div>
+<p></body>
+</html>
+{% endhighlight %}</p>
+<p>자 이걸 실행 시켜 보세요.  아직은 썰렁합니다.  css 로 이제 짜 보아야죠.</p>
+<p>800px 해상도에서도 보여질수 있도록 배려하는 마음으로 너비는 800 을 잡고 해보겠습니다.  해더는 높이가 200px,  푸터는 높이가 50px, 사이드바는 한 200px로 너비를 잡겠습니다.</p>
+<p>style.css에 이렇게 넣습니다.  </p>
+<p>{% highlight css %}
+/*기본 정의 */
+body {
+	font-family: Gulim, 굴림, Arial, sans-serif;
+	font-size: .8em;
+	text-align: center;  /*IE 5.5 */
+	margin:0;
+	padding: 0;
+	background: #fff;
+	}</p>
+<p>/* =layout - 레이아웃 부분 */
+#wrap {
+	text-align: left;
+	width: 800px;
+	margin: 0 auto; /*중간정렬*/
+	padding: 0;
+	}
+#header {
+	height: 200px;
+	width: 100%; /*불필요*/
+	margin: 0;
+	padding: 0;
+	}
+#middle {
+	margin: 0;
+	padding: 0;
+	float:left;</p>
+<p>	background: gray; /*임의로 삽입 */
+	}
+#sidebar {
+	width: 200px;
+	margin: 0;
+	padding: 0;
+	float:left;</p>
+<p>	height: 300px; /*임의로 삽입 */
+	background: blue; /*임의로 삽입 */
+	}
+#content {
+	width: 600px;
+	margin: 0;
+	padding: 0;
+	float:right;</p>
+<p>	height: 200px; /*임의로 삽입 */
+	background: black; /*임의로 삽입 */
+	}
+#footer {
+	clear:both;
+	height: 50px;
+	padding: 0;
+	margin: 0;
+	}
+{% endhighlight %}</p>
+<p>자 끝났습니다..
+약간 살펴보자면 맨 처음 body 부분에 text-align: center 를 주었습니다.  #wrap 에 정해진, margin: 0 auto; 로도 가운데 정렬이 되지만, IE 5.5에서는 먹히지 않으니 text-align:center를 body 에 주시면 정렬이 됩니다.  물론 #wrap 에서 다시 text-align:left 주시는거 잊지 마시구요.</p>
+<p>주르륵 보시면 대충 값이 어떤값들을 준것인지 다 아실겁니다.  하지만  바로 이 레이아웃의 세심하게 봐야할 부분이 바로 middle 과 sidebar, content부분입니다.  보시다시피 sidebar 와 content 에 float 값을 주었습니다.  정렬값이죠.  둘다 float:left 값을 주어도 되지만, float:left; 를 주면, IE에서는 3px 정도의 margin 이 반대편인 오른쪽에 생기게됩니다.  그래서 margin-right: -3px; 을 IE만 볼수 있게 해주어야 합니다.</p>
+<p>{% highlight css %}
+#sidebar {
+	width: 200px;
+	float:left;
+	margin: 0 -3px 0 0;
+	padding: 0;
+	}
+{% endhighlight %}</p>
+<p>이렇게 말이죠.  (이부분에 관해서 더 자세한건<a href="http://ilmol.com/wp/2005/06/22/65/"> 이 포스팅을 참조</a>) 그러다 보니 손작업이 많이 갑니다.  그런 이유로 저는 그냥 곧바로 #content를 float: right; 을 주었습니다.  한쪽은 왼쪽으로, 다른쪽은 오른쪽으로, 문제가 생기지 않죠 </p></p>
+<p>자 헌데, #middle을 보세요.  sidebar와 content를 담고 있는 #middle에도 저는 float:left;를 주었습니다  이유는 이렇습니다.  #middle은 물론 sidebar와 content를 담고 있다고 하더래도 표준에 의거하면 둘의 사이즈가 #middle보다 늘어날 경우, 그리고 <em>그들이 float값이 정해졌을 시</em>에 삐져 나가도록 되어 있습니다.(이상하죠? 하지만 삐져 나오는것이 그들이 원하는 부분입니다) 그래서 아무 배경이 없을때엔 모르시겠지만 이제 배경을 넣고 하다보면 이상하게 #middle 에적용한 배경이 보이지 않을때가 생기게 되는거죠.  바로 이 부분을 막기위해서 #middle에 float:left;를 줍니다.  그럴시에 #middle이 아무리 #sidebar나 #content가 늘어나더래도 middle은 그 둘을 감싸줍니다.   물론,,,,  ㅡㅡ;;  IE는 그것에 상관없이 #middle이 늘어나서 감싸주지만요.</p>
+<p>특별히,,  #middle에 배경을 지정하지 않거나 태두리 말고는 별 쓸모가 없다면, 빼셔도 무관합니다.  어차피 둘은 float 값 때문에 wrap안에서 아주 잘 놀고 있을테니까요.</p>
+<p>보통 의미상이나 다른 디자인상 유용한 잇점들이 많기 때문에 사용되고 있습니다.</p>
+<h3>Margin Padding 값 주기</h3>
+<p>여기까지는 대충 간단합니다.  자 여기서 margin 값이나 padding 값을 줘보겠습니다.  특히 content 부분은 그럴 경우가 생기겠죠?  이럴시에 아주 불가피한 핵을 써야 합니다.  물론 xhtml 부분으로 다시 거슬러 올라가서 content 안에 또다른 div를 넣어 그부분을 margin을 주면 모르지만, 그러기엔 약간의 소스의 지저분함이 나타나겠네요.</p>
+<p>content 에 padding 10px을 주겠습니다.  제가 저번 포스팅에서 말씀드렸듯이 IE와 다른 브라우저들이 인식하는 너비가 padding이나 border값이 들어갔을경우 틀립니다.  IE는 padding, border값을 합쳐서 width 값이 나오지만 타 브라우저들은 width 값, padding값 따로 따로이거든요.</p>
+<p>600px 너비에 padding이 10px.  padding이 좌우로 적용되니 총 20px 입니다.  그럼 IE에서는 그대로 너비가 600px이라고 해야하고, 타 브라우저들은 580px 로 해주어야 합니다.</p>
+<p>이렇게 해주세요
+{% highlight css %}
+#content {
+	padding: 10px;
+	width: 600px;  /* 모든브라우저 인식 */
+	voice-family: ""}"";  /* 여기서 부터 핵 */
+	voice-family: inherit;
+	width: 580px;
+	}
+html>body #content {
+	width: 580px;
+	}
+{% endhighlight %}
+복잡한가요?  ㅎㅎ 네,,,  압니다만 그냥 어디에 적어두세요.  </p>
+<p>#이름 {
+	width: IE에서 인식하는값;
+	voice-family: ""}"";
+	voice-family:inherit;
+	width: 올바른 값;
+	}
+html>body #이름 {
+	width: 올바른 값;
+	}</p>
+<p>이렇게 입니다. 모든 문제를 거의 막아줍니다.</p>
+<p>이제 다 됬습니다.  이렇게 한 레이아웃은 끝났네요 </p>;  원하는 곳에 메뉴를 넣고, 배경도 넣고 꾸미면 정말 멋진 페이지가 될것입니다.  </p>

@@ -1,0 +1,15 @@
+---
+layout: default
+permalink: /browser/
+---
+<article>
+<div class="contents">
+<h2>Category: Browser</h2>
+<ul class="category">{% for browser in site.categories.browser %}
+<li>
+<h3><a href="{{ browser.url }}">{{ browser.title }}</a> - {{ browser.date | date: "%b %-d, %Y" }}</h3>
+</li>
+{% endfor %}
+</ul>
+</div>
+</article>

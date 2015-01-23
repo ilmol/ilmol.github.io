@@ -1,0 +1,15 @@
+---
+layout: default
+permalink: /standards/
+---
+<article>
+<div class="contents">
+<h2>Category: Standards</h2>
+<ul class="category">{% for standards in site.categories.standards %}
+<li>
+<h3><a href="{{ standards.url }}">{{ standards.title }}</a> - {{ standards.date | date: "%b %-d, %Y" }}</h3>
+</li>
+{% endfor %}
+</ul>
+</div>
+</article>

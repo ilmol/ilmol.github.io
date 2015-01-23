@@ -1,0 +1,15 @@
+---
+layout: default
+permalink: /js/
+---
+<article>
+<div class="contents">
+<h2>Category: JS</h2>
+<ul class="category">{% for js in site.categories.js %}
+<li>
+<h3><a href="{{ js.url }}">{{ js.title }}</a> - {{ js.date | date: "%b %-d, %Y" }}</h3>
+</li>
+{% endfor %}
+</ul>
+</div>
+</article>

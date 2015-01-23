@@ -1,0 +1,25 @@
+---
+layout: post
+title: "조용히 진행되고 있는 HTML5"
+date: 2007-08-02 12:04:01.000000000 -04:00
+categories:
+- HTML
+- standards
+---
+<p>일모리네를 어느정도 구독하신 분이면 대부분 웹에대한 정보도 빠르게 얻으시는 분들이니 이미 HTML5 에 대한 이야기는 들어보셨을꺼라 짐작합니다.  HTML5는 요즘의 웹을 돌아볼때 상당히 재미있는 결과입니다.  "<a href="http://ko.wikipedia.org/wiki/해리가_샐리를_만났을_때">W3C가 웹2.0을 만났을때</a>" 라고 부제를 붙이고, HTML5의 시작은 어디인지, HTML5가 무엇인지, 미래가 무엇인지를 나누어 보겠습니다.</p>
+<h3>WHATWG의 형성</h3>
+<p><img src="assets/722720_22285860-20070801-225226.jpg" alt="what wg?" class="left" style="margin-right: 3px;" />일단 HTML5의 시작부터 풀어가야겠습니다.  HTML5의 시작은 <a href="http://www.whatwg.org/">WHATWG</a> (Web Hypertext Application Technology Working Group) 그룹에서 부터입니다.  닫혀진 W3C 멤버 그룹을 떠나 <a href="http://en.wikipedia.org/wiki/Apple_Inc.">Apple</a>, <a href="http://en.wikipedia.org/wiki/Opera_Software">Opera Software</a>, <a href="http://en.wikipedia.org/wiki/Mozilla_Foundation">Mozilla Foundation</a> 브라우저벤더들이 HTML과 그에 관련된 기술을 발전 시키고자 형성한 오픈 커뮤니티 입니다.  W3C의 지연되는 개발과 미래에 대한 대비 부족을 느낀 그들이 업계에 맞는, 혹은 현실에 맞는 표준을 지향하고자 한것이죠.  그것이 2004년 입니다.  WHATWG 커뮤니티는 Web Form2.0과 Web Applications 1.0, Web Controls1.0 스팩 제작에 힘을 쏟았습니다.  3년이 지난 올해 2007년 4월에  W3C에 자신들의 HTML을 채택해줄것을 <a href="http://lists.w3.org/Archives/Public/public-html/2007Apr/0429.html">공식 요청</a>했고 W3C는 <a href="http://lists.w3.org/Archives/Public/public-html/2007May/0909.html">얼마후 요구를 받아들이는</a> 일이 가장 최근일입니다.  업계에서는 대충 예상되었던 일이긴 했어도 상당한 진행으로 볼수 있습니다.  </p>
+<p>요청은 읽어보시면 아시겠지만
+1. W3C의 HTML Work Group 이 HTML 5를 채택함으로 다음세대 HTML 개발의 시점이 되게 하는 것
+2. 차세대 HTML 스팩의 공식 이름을 HTML 5 라고 지정하는 것
+3. Ian Hickson 이 HTML 5 스팩의 editor가 되는것
+당당하죠.</p>
+<p>W3C와 웹2.0이 만났을때의 결과가 잘 이해 되셨을 겁니다.  최근 당당히 목소리를 내었던 표준 기구 W3C조차도 웹2.0이 말해주는 웹을 통한 수많은 목소리들의 파워와 지식, 그리고 발전에 손을 들수밖에 없는 일이 된 것입니다.  물론 시각에 따라서 옛 마소의 행패와도 같지 않느냐 라고 할수 있겠지만 적어도 WHATWG은 공개 커뮤니티로써 역할을 하고 있다는 겁니다.  하지만 너무 슬퍼하지는 마세요.  아시다시피 해리와 샐리는 후에 사랑에 빠집니다...  anyway...</p>
+<h3>What is HTML5?</h3>
+<p>일단 두 HTML의 방향을 살펴봐야 합니다.  XHTML2.0은 앞으로의 웹어플들의 최대의 역량을 발휘 하는데에 기반이 될수 있는, 다른말로 하자면 다목적의 역할을 감당할수 있는 완전한 새로운 변화를 염두하고 개발에 착수된 HTML입니다.  XML 을 기반으로 다양한 웹 기반의 기술들과 모바일폰, PDA와 같은 다양한 환경에서 적용되는 문서로써의 역할을 담당하는 현신적인 언어로 개발을 하다보니 미래의 촛점이 개발의 역량을 넘어 선다는 염려가 있는 것이죠.  염려는 아시다시피 현실로 다가왔고 인력도 인력이지만 상당히 지연되고 있는 상태입니다.  그와 반대로 HTML5는 미래보다는 바로앞의 현실을 바라보고 HTML4와 XHTML1.0의 바로 다음 단계를 구축한것입니다.  현재 웹에서 사용되고 있는 포럼, Auction 등의 문서 이상의 웹 컨텐츠를 브라우저가 잘 표현해 낼수 있도록 HTML을 다듬고 나아가는 것입니다.  WebForm1.0 의 스팩을 살펴보면 아주 잘 알수 있습니다.  ebay와 amazon 웹어플을 예로 들고 있더군요.</p>
+<p>HTML 5 를 명확히 정의 하기는 힘들지만 특성과 기능들을 정리하여 보면, HTML5는 SGML을 탈피한 HTML Serialisation 이며, Web Form 2.0을 담은 Web Application 1.0 이고, HTML4, XHTML1.0, DOM2 HTML API 의 다음 버전입니다.  실질적인 추가된 태그들과 사라진 태그들을 대충 살펴보자면, section, article, header, footer, aside, nav 등의 섹션을 나누는 엘리먼트들과, phrase 엘리먼트들인 dfn, m, time, meter, progress 들, 컨텐츠에 추가되는 미디어나 데이터들을 나타내는 figure, audio, video 들도 추가되었습니다.  canvas, details, commend, menu등도 빼 놓을수 없는 추가 엘리먼트들입니다.   alternative, bookmark, external, feed, search, icon, sidebar, tag, help 등의 여러가지 링크 타입들도 관심이 가는 것들입니다.  사라진 것들은 background, align, bgcolor등의 css로 구현 가능한 것들과 shape, target, summary등의 속성들이 지워졌습니다.  또한 복잡한 Doctype이 아닌 표준임을 브라우저에게 간단히 알릴수 있을만큼의 doctype만을 표기하게 됩니다.  &lt;!doctype html&gt;  표준을 validate 하기 위해선 <a href="http://hsivonen.iki.fi/validator/html5/">conformance checker</a> 를 사용하겠네요.  XHTML 과 HTML의 차이는 doctype보다는 MIME 으로 결정되며 html/text 일때는 html로, application/xhtml+xml 이나 application/xml 은 xhtml 을 나타내게 됩니다.  이 외에도 여러 특징들과 기능들을 담고 있습니다.  멋진 차니님께서 <a href="http://www.creation.net/work/html5/html4-differences/">html4와 html5의 차이</a>를 잘 정리하셨으니 참고하시면 더욱 도움이 될듯 합니다.</p>
+<h3>HTML5의 미래</h3>
+<p>XHTML2.0과는 달리 HTML5는 순풍에 돗단듯 700명이 넘는 contributors과 함께 하루가 다르게 <a href="http://www.w3.org/html/wg/html5/">스팩들이 완성</a>이 되어가고 있습니다.  뿐만아니라 IE를 제외한 대부분의 메이저 브라우저들이 지원을 서두르고 있고 그 키를 쥐고 있다고 생각 되었던 IE조차도 지원하겠다는 방향으로 가고 있다는 소식이 들려오는 상황이니(큰 루머일 뿐이겠지만) 그 앞을 점치기에는 그리 어렵지 않다고 생각됩니다.  특히 Opera 9는 Web Forms 2.0 의 <a href="http://en.wikipedia.org/wiki/Comparison_of_layout_engines_%28HTML5%29#Web_Applications_1.0">많은 기능을 구현</a>하고 있는 상태입니다.</p>
+<p>웹개발의 중요한 발판은 브라우저의 지원이며 이번 iPhone의 사파리를 통한 3rd party 개발 오픈이 그 이유를 잘 보여주고 있습니다.  브라우저들이 나서서 지원하고자 하는 HTML을 주시해야 함은 너무나도 당연하겠죠.</p>
+<p>Is anybody ready?
+NOT REALLY.  But should start soon.  현실적인 변화의 깃점은 IE의 움직임에 따를듯 보입니다.  IE8이 그 움직임에 활력소가 될만큼 변화를 하진 않겠지만 획을 그은 2007년을 기준으로 3,4년 안에 활발해지지 않을지.  방금 언급했듯이 브라우저의 기술적인 지원이 활성화 되면 그에따른 서비스들과 기능들이 꽃을 피울것이 확실합니다.  재미있을듯 하네요.  앞으로 HTML5 이야기를 많이 나눌듯 싶습니다.</p>

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="404page">
+<header>
+<h1>404에라이 어이쿠!</h1>
+</header>
+<main class="contents">
+<p>페이지 에러입니다.  찾으시는 글의 주소가 맞지 않는거 같군요. 1/21/2015 이후로 일모리네 모든 글의 주소가 변경되었습니다. </p>
+<p>하단에 모든 글들을 나열해 놓았습니다.  정확한 글을 연결 해드릴 수 없음을 다시한번 사과드립니다.</p>
+<ul>
+{% for post in site.posts %}
+<li>
+<h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> - {{ post.date | date: "%b %-d, %Y" }}</h5>
+</li>
+{% endfor %}
+</ul>
+</main>
+</article>

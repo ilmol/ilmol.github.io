@@ -1,0 +1,119 @@
+---
+layout: post
+title: CSS3 로 HTML을 인쇄하기.부제'CSS3와 함께 춤을'
+date: 2006-04-14 15:02:28.000000000 -04:00
+categories:
+- CSS
+---
+<p>한창 일모리가 'xhtml 을 구조화 하여 문서처럼 나타내는 것이다' 라는 부분을 강조했었습니다.  그렇다면 더 나아가서 CSS 를 사용하여 스크린을 통해 보는것 뿐만이 아닌 실제로 문서처럼 html 을 전문적으로 프린트를 할수 있을까요.  <a href="http://alistapart.com">A List Apart</a> 에서 그 질문을 가지고 <a href="http://www.alistapart.com/articles/boom">직접 실험한것을 나누었습니다</a>.  html 파일과 css 파일을 받아서 직접 유저들도 실험을 해보라고 하더군요.  저도 놓칠수 없는 열정에 실험.  해봤습니다.  </p>  CSS3 가 압권입니다.</p>
+<ul>
+<li><a href="http://ilmol.com/temporary/sample.zip">html 파일과 css 파일</a>을 다운받으실수 있습니다.</li>
+<li>그리고 Prince 로 돌려서 제작된 <a href="http://people.opera.com/howcome/2005/ala/sample.pdf">PDF 파일</a>입니다.  이걸 그대로 프린트하면 되겠죠.</li>
+</ul>
+<p><a href="http://www.princexml.com/">Prince 라는 프로그램</a>은 인터넷 콘텐트(XML)를 문서화(PDF파일) 하는것입니다.  <a href="http://www.princexml.com/samples/acid2/">Acid2 테스트도 통과</a>했죠.  브라우저들이 스크린에서는 강하지만 아직까지는 인쇄에 약한 모습입니다.  그래서 Prince 를 선택했다고 하는군요.  제가 보기에도 안성맞춤입니다.<!--more--></p>
+<p>이제 시작일단 인쇄와 스크린에서 보는것의 차이들이 몇가지 있습니다.  책으로 생각하시고 보신다면 이해가 쉬우실 겁니다.  각각의 페이지에 쪽수가 들어가며 헤더와 푸터도 있고 목차도 있으며 인덱스도 들어가겠죠.  또한 링크로 연결되던 페이지들을 쪽수로 설명이 되어져야 하겠네요.  예를들어 '102쪽 그림10-2 를 참고' 처럼 말이죠.  이런것들을 염두해 두고 A List Apart 글과 함께 설명해 보겠습니다.</p>
+<h3>CSS2부터</h3>
+<p>일단 CSS2 부분에서 부터 시작합니다.  처도 처음 알게된 부분인데요.  paged 라는 media를 CSS2가 지원을 한다는군요.  해서 @page 값을 정하게 되면 일정하게 자르게 되는거겠죠.
+{% highlight css %}
+@page {
+ size: 7in 9.25in;
+ margin: 27mm 16mm 27mm 16mm;
+}{% endhighlight %}
+한국식으로는 A4 용지를 기준삼아 했을시에{% highlight css %}
+@page {
+ size: 21cm 29.7cm;
+ margin: 2cm;
+}{% endhighlight %}</p>
+<p>이렇게 됩니다.</p>
+<p>그 후에 단원이나 부록같은것이 끝났을시에 다음 새 페이지가 시작할때까지 공백을 넣어야 하겠죠.  page-break 이라는 값 입니다.  해서</p>
+<p>{% highlight css %}
+div.chapter, div.appendix {
+ page-break-after:always;
+}{% endhighlight %}
+가 들어가야하겠구요.</p>
+<p>첫 커버페이지 후에 공백페이지의 삽입이 필요하니
+{% highlight css %}
+div.titlepage {
+ page: blank;
+}{% endhighlight %}
+를 넣어줍니다.</p>
+<h3>CSS3</h3>
+<p></p>그리고 이제부터  헤더 푸터 등을 삽입하는 CSS3 를 사용하겠습니다.  제 블로그에서도 몇번밖에는 언급하지 않았던 CSS3 라서 많이 생소하실듯 합니다.  그래서 기초가 중요한것이겠죠.  CSS2 의 기본이 안되어있다면 정신 없으실수도 있습니다.자, 일단 인쇄시에 페이지가 2개가 한꺼번에 보여집니다.  왼쪽, 오른쪽.  그래서 왼쪽 페이지에는 Cascading Style Sheets 문구를 왼쪽 위에 삽입을 합니다.
+<a href="http://static.flickr.com/53/128247232_2a0ff962ef_o.gif"><img title="page" alt="page" src="assets/128247232_2a0ff962ef_m.jpg" /></a></p>
+<p>{% highlight css %}
+@page: left {
+ @top-left {
+  content:  "Cascading Style Sheets";
+ }
+}{% endhighlight %}</p>
+<p>네 @page: left 안에  @top-left 가 들어있습니다.  즉 왼쪽 페이지(@page:left) 의 왼쪽위 (@top-left) 에 Cascading style sheets 라는 문구를 넣어라가 content 부분이겠네요.  응용해서 오른쪽 페이지 중간위에 Korea 를 넣는다면</p>
+<p>{% highlight css %}
+@page: right {
+ @top-center {
+  content: "Korea";
+ }
+}{% endhighlight %}
+가 되겠습니다.</p>
+<p>그리고는 완전 공백 페이지에는 Cascading Style Sheets 라는 문구가 들어가면 안되니
+{% highlight css %}
+@page blank : left {
+ @top-left {
+  content: normal;
+ }
+}{% endhighlight %}</p>
+<p>이라고 정해줍니다.  이렇게 정함으로해서 PDF 파일을 보시면 아시겠지만 2번째와 4번째 페이지에는 아무것도 인쇄되지 않았습니다.</p>
+<h3>STRING 문자열~</h3>
+<p>일단 죄송스럽습니다.  html 공부하시면서 이거는 안하셔도 될지 알았지만 어쩔수 없군요 </p> 정신을 바짝 차리시고 보셔야 할듯 싶습니다.  일단 사용도를 말씀드리자면 각 페이지의 오른쪽 윗 부분에 각 단원의 타이틀, 제목이 들어있습니다.  네 그부분을 언제나 일정하게 스타일을 주려면 문자열을 불러야 합니다. 그래서,{% highlight css %}
+h1 {
+ string-set: header content();
+}{% endhighlight %}</p>
+<p>일단 header 라는 문자열에 단원 제목을 지정합니다.  단원이 바뀔때마다 새로운 문자가 header에 저장이 되겠네요.  그후에 이제 오른쪽에 나타나는 페이지의 오른쪽 윗부분에 그 단원의 타이틀이 표기가 되게 합니다.  header 는 단원의 문자값이고 first 는 header 에 저장된 첫번째 문자열 입니다.  다시 말하면 제일 첫번째 단원이겠죠.</p>
+<p>{% highlight css %}
+@page :right {
+ @top-right {
+  content: string(header, first);
+ }
+}{% endhighlight %}</p>
+<h3>Page Number 쪽수</h3>
+<p>여기까지 이해가 되셨다면 나머지도 편히 이해가 되실꺼라 생각이 됩니다.   각 페이지의 number 는 이렇게 넣으면 되겠네요
+{% highlight css %}
+@page :left {
+ @bottom-left {
+  content: counter(page);
+ }
+}{% endhighlight %}헌데 PDF 파일을 보시면 아시겠지만 처음 몇장은 목자도 들어가고 중요한 페이지들이라 로마숫자로 되어있습니다.  그래서 그 중요한 부분을 "front-matter" 로 써서 이렇게 나타냅니다
+{% highlight css %}
+@page front-matter :left {
+ @bottom-left {
+  content: counter(page, lower-roman);
+ }
+}{% endhighlight %}
+lower-roman 부분은 list-style-type 의 값들과 같으니 골라서 사용할수 있겠네요.</p>
+<h3>Reference 참조 방식의 변화</h3>
+<p>제가 언제나 언급합니다만 링크는 인터넷의 꽃입니다.  하지만 링크가 웹상에서는 자유로이 연결되어 있지만 인쇄에는 "몇페이지를 참고하세요" 라는 말밖에 넣지 못합니다.  그렇다면, 그것을 표현하기 위해서는 링크가 가리키고 있는 부분이 어느 페이지에 있는지 알아야 합니다.  그걸 일일히 다 정해줄수 없기때문에 프로그램이 알아서 표현해줄수 있도록 해 주어야 합니다.<a class="pageref" href="#figure">페이지를 참조하세요</a>
+라고 링크가 되어 있을때에</p>
+<p>{% highlight css %}
+a.pageref::before {
+ content: target-counter(attr(href), page)
+}{% endhighlight %}
+라고 정해주는거죠.  풀어보자면 ::before 나 ::after 는 꽤 많은 분들이 이해하고 계실것입니다.  pageref 라는 클라스 *전에* 어떤어떤걸 넣어라 라는 표현입니다.  그 '어떤어떤' 것은 content: 다음에 나와있죠.  링크가 가리키는 페이지를(target-counter) 출력하게 하는 것입니다.  다시 말하면 target-counter라는 함수가 href 속성이 가리키고 있는 "page" 를 가지고 오는 것이죠.  약간의 프로그래밍이 나옵니다 우후후후 ㅡㅡ;;;</p>
+<h3>목차부분의 출력</h3>
+<p>목차부분은 위의 부분처럼은 어렵지 않겠죠.  각 단원의 타이틀과 함께 그 단원이 시작되는 페이지를 가리키면 되니까요.  여기서 새로운것이 있다면 제목과 페이지수 사이에들어가는 무늬 입니다.일단</p>
+<p>&lt;ul class="toc">
+  &lt;li>&lt;a xhref="http://ilmol.com/wp/#intro" mce_href="http://ilmol.com/wp/#intro">Introduction/a>&lt;/li>
+  &lt;li>&lt;a xhref="http://ilmol.com/wp/#html" mce_href="http://ilmol.com/wp/#html">&lt;abbr title="HyperText Markup Language">HTML&lt;/abbr>&lt;/a>&lt;/li>
+&lt;/ul>
+라고 단원들을 정해준 후에 무늬와 함께 페이지를 넣어줍니다.</p>
+<p>{% highlight css %}
+ul.toc a::after {
+ content: leader('.') target-counter(attr(href), page);
+}{% endhighlight %}
+ul 클라스의 toc 에 첨가된 링크에는 ... 과 함께 링크가 가리키는 페이지 숫자를 넣어라 라는 부분입니다.  leader 는 타포그라피에서 문자적인 엔트리를 페이지 숫자와 연관지어주는것을 말합니다.  이렇게 말이죠
+Introduction.................1
+HTML..........................3</p>
+<h3>정리</h3>
+<p>대충 마무리를 잡았습니다. CSS3 가 너무 당황스럽게 복잡해 졌다고 느끼셨나요 </p>;;  보시다시피 html 을 인쇄하는것은 꽤 높은 가능성이 있습니다.  Cross-browsing 뿐만이 아닌 Cross-publish 의 가능성을 보여주는 부분이었다고 생각이 됩니다.  아직 완벽이라고는 부를수 없지만 앞으로 발전되어갈수록 완벽에 가까운 일을 해낼수 있을것입니다.  인쇄 뿐만이 아닌 PDA, TV 등등 말이죠.
+CSS 로 이제 많은 디자인을 쉽게 표현할수 있게 되어가고 있습니다.  CSS3 를 적용하며 꽤나 유연성이 높은것을 느끼셨다고 생각이 됩니다.   당연한 연결이겠지만 CSS 가 유연해 지려면 HTML 이 얼마나 구조적으로 짜여져야 하는지도 보셨겠지요.   앞으로 웹표준의  필요성의 토론이 아닌 어떻게 대쳐하고 미래를 꾸며갈지가 더 중요하겠다는 생각이 요즘 들고 있습니다.  이제 겨우 CSS2 XHTML 이 퍼져가고 있는 상황에 CSS3 와 XHTML 2.0 들은 어떤 변화를 가지고 올지 궁금도 하네요.  아직 한창 이른 주제이긴 합니다만, 뭐가 다가올지 알고 있다면 준비하는게 경쟁력 아닙니까 </p>;;;;</p>
+<p>위에서 언급은 했지만 그래도 다시 표기합니다.
+참조글:  <a href="http://www.alistapart.com">A List Apart</a> -   <a href="http://www.w3.org">Printing a Book with CSS: Boom!
+W3C</a> - <a href="http://www.w3.org/TR/2004/CR-css3-page-20040225/">CSS3 Paged Media Module</a></p>

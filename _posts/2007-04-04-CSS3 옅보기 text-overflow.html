@@ -1,0 +1,48 @@
+---
+layout: post
+title: CSS3 옅보기 text-overflow
+date: 2007-04-04 23:19:22.000000000 -04:00
+categories:
+- CSS
+---
+<p>앞으로 시간이 남는데로 CSS3 를 정리하고 소개해야겠습니다  물론 xhtml2 vs html5 이야기도 나누고 말이죠.  가끔은 다른데에 눈이가서 </p></p>
+<p>CSS3 이야기를 잠깐 하자면 아직도 권고안 마련에 한창입니다.  속도가 느린만큼 한창이라는 말이 어울릴지 모르지만 여러 모듈이 꾸준히 각각의 페이스에 맞춰서 개발중에 있습니다.  아직까지는 확정된 recommendation 이 나오지 않은 상태이며 과연 제대로 가고 있기는 한건지 걱정이 앞서네요.
+<!--more--></p>
+<h3>text-overflow</h3>
+<p>소개해드릴 <a href="http://www.w3.org/TR/2001/WD-css3-text-20010517/#text-overflow-props">text-overflow</a> 는 그 단어 뜻대로 text 가 overflow, 즉 넘칠때의 취하는 엑션을 담당하게 됩니다.  overflow 속성이 값을 가지고 있을때, 예를들어  overflow: hidden; 등일때 text-overflow 가 적용이 가능케 됩니다.  블락엘리먼트에 모두 적용 가능합니다.</p>
+<p>overflow 는 단순히 글자가 엘리먼트의 크기에 영향을 주지 않도록 예방하는 정도였다면 text overflow는 보이는 텍스트 이상의 글이 들어있음을 알리는 기능입니다.  엘리먼트 크기 이상의 글이 있다면 뒤에 "..." 으로 표기되는 식이죠.</p>
+<h3>text-overflow-mode</h3>
+<p>text 가 엘리먼트 보다 많을때 이하의 값을 정해줄수 있습니다.</p>
+<p>clip, ellipsis, ellipsis-word, inherit </p>
+<p>clip 은 단순히 엘리먼트 테두리에서 글자가 잘리는 것이고
+ellipsis 는 테두리에 닿을 정도가 되면 'text-overflow-ellipsis' 속성에서 정해준 string 이 표기가 됩니다.  기본값은 "..." 이구요.
+ellipsis-word 는 위의 ellipsis와 비슷하지만 테두리에 닿을 정도가 되면 아무곳에서나 자르는것이 아니라 마지막 단어에서 자르게 됩니다.  예제에서 좀더 명확하게 설명하겠습니다.</p>
+<h3>text-overflow-ellipsis</h3>
+<p>text-overflow-mode 의 값이 ellipsis 일때 들어갈 string 을 정해줍니다.  url 을 지정해 줄수도 있으므로 이미지를 삽입할수도 있겠죠.  대신 string 이 들어갈때는 엘리먼트의 폰트크기와 같습니다.</p>
+<p>&lt;ellipsis-end&gt; uri, &lt;ellipsis-after&gt; uri, inherit
+세가지 값을 갖습니다.  말씀드린데로 uri 는 이미지의 경로를 나타냅니다.
+&lt;ellipsis-end&gt; 는 각각의 line 이 잘릴때 들어가는 string 을 지정합니다.
+&lt;ellipsis-after&gt; 는  text 가 잘릴때 들어가는 string 을 지정하며 ellipsis-end 와 ellipsis-after 가 같은곳에 표기되게 될 경우 ellipsis-after만 표기됩니다.</p>
+<h3>text-overflow</h3>
+<p>단축된 속성입니다.  순서는 text-overflow-mode 다음 text-overflow-ellipsis 순서대로 오게됩니다.</p>
+<h3>예제</h3>
+<p>현재 이 부분을 지원하는 브라우저는 오페라와 webkit 입니다.  오페라에서 오페라 전용인  -o-text-overflow 로 지원을 하구요.  Webkit 은 부분적으로 지원합니다.</p>
+<p>"오늘도 즐거운 하루를 보내시기 바랍니다"
+라는 문구를 작은 엘리먼트안에 넣으면서 보겠습니다.</p>
+<p>{% highlight html %}</p>
+<div id="example1">오늘도 즐거운 하루를 보내시기 바랍니다</div>
+<div id="example2">오늘도 즐거운 하루를 보내시기 바랍니다</div>
+<div id="example3">오늘도 즐거운 하루를 보내시기 바랍니다</div>
+<p>{% endhighlight %}</p>
+<p>html 부분입니다.  css 를 지정하면
+{% highlight css %}
+#example1 {text-overflow-mode: clip; width: 200px; overflow:hidden;white-space : nowrap; }
+#example2 {text-overflow-mode: ellipsis; width: 200px; overflow:hidden;white-space : nowrap; }
+#example3 {text-overflow-mode: ellipsis-word; width: 200px; overflow:hidden;white-space : nowrap; }
+{% endhighlight %}</p>
+<p>이미지로 만든것과 브라우저가 실행하는지 확인할수 있도록 직접 넣었습니다.  대부분의 브라우저는 단순히 overflow:hidden; 부분만 적용됩니다.</p>
+<div style="text-overflow-mode: clip; -o-text-overflow: clip; width: 200px; overflow:hidden;margin-bottom: 3px;border: 1px black solid;white-space : nowrap;">오늘도 즐거운 하루를 보내시기 바랍니다</div>
+<div style="text-overflow-mode: ellipsis; -o-text-overflow: ellipsis; width: 200px; overflow:hidden;margin-bottom: 3px;border: 1px black solid;white-space : nowrap;">오늘도 즐거운 하루를 보내시기 바랍니다</div>
+<div style="text-overflow-mode: ellipsis-word; -o-text-overflow: ellipsis-word; width: 200px; overflow:hidden;margin-bottom: 3px;border: 1px black solid;white-space : nowrap;">오늘도 즐거운 하루를 보내시기 바랍니다</div>
+<p>하지만 밑의 이미지처럼 보여야 하겠죠.
+<img src="assets/446094480_fd6df4349e_m.jpg" alt="example image" /></p>

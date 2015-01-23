@@ -1,0 +1,15 @@
+---
+layout: default
+permalink: /etc/
+---
+<article>
+<div class="contents">
+<h2>Category: etc</h2>
+<ul class="category">{% for etc in site.categories.etc %}
+<li>
+<h3><a href="{{ etc.url }}">{{ etc.title }}</a> - {{ etc.date | date: "%b %-d, %Y" }}</h3>
+</li>
+{% endfor %}
+</ul>
+</div>
+</article>

@@ -1,0 +1,100 @@
+---
+layout: post
+title: "구조적인 CSS 만들기. 정리."
+date: 2005-11-30 11:24:38.000000000 -05:00
+categories:
+- CSS
+---
+<p>CSS 를 쓰는데에 대한 절대적인 방법은 없습니다.  그리고 그것이 문제가 되는것도 아닙니다.  하지만 그래도 어떠한 일관된 방식으로나 어떠한 규칙을 정해서 쓴다면 한마디로 구조적인 CSS 를 쓸수 있다면 여러모로 플러스가 되지 않을까 생각이 듭니다.  예전에 후니님께서도 이러한 고민을 하셨듯이</p>
+<blockquote cite="http://hooney.net/archives/2005/05/05/css-royal-road/"><p>내가 만들지 않은 CSS를 수정하는 것이 생각보다 쉽지 않다. 머랄까.. Xhtml는 공개된 원론적인 부분에 따라 구조화되어 가는 것에 비해서 CSS는 개발자의 개성을 많이 따르는 것 같다.  -<a href="http://hooney.net/archives/2005/05/05/css-royal-road/">후니</a></p></blockquote>
+<p>꽤나 많은 스타일로, 입맛에 맞는대로, 적혀지는게 css 이겠지만 이 안에서 조금이나마 개선된 방법을 사용하면 좋겠다 싶어서 나누고자 합니다.<!--more--></p>
+<h3>첫번째 전체적인 틀을 잡기</h3>
+<p>일단 커다란 그림을 보면, css 는 기본태그값설정, 레이아웃, 그리고 그밖의 것들 등으로 나눌수 있습니다.  보통은 기본태그값 설정 부분이 제일 위에 오며, 그 밑으로 이제 레이아웃 부분이 따라오고 마지막 즈음에 나머지가 불려진다고 볼수 있겠습니다.  레이아웃부분과 나머지 부분이 순서가 바뀌기도 합니다.</p>
+<p>{% highlight css %}
+/*기본태그값 */
+body {
+ background: #fff url(images/hi.gif) no-repeat;
+ font: 0.8em/1.6em 돋움, Dotum, AppleGothic, verdana, sans-serif;
+ margin:0;
+ padding:0;
+ }
+ a {
+	text-decoration:none;
+	color:#e63;
+	padding:0.5em 0;
+	}
+ a:hover {
+  color:#9b4;
+  }</p>
+<p>/*나머지 */
+.left {
+  float:left;
+  }</p>
+<p>/*레이아웃 */
+#main {
+ margin: 50px 10px 20px 10px;
+ padding: 0;
+ line-height: 150%;
+ }
+ #left {
+  float:left;
+  width: 300px;
+  }</p>
+<p>{% endhighlight %}</p>
+<p>대충 이런식입니다.  다시 풀어서 보면,
+---기본값---
+---레이아웃과 별개로 사용되는값---
+---레이아웃---
+이러한 방식으로 순서를 정해 놓으면 나중에 찾기도 편하며 이해하기도 훨씬 수월합니다.  이것이 제일 첫번째로 이루어져야 하는 부분입니다.  문제는 보통 레이아웃 부분이 엄청나게 깁니다.  보통 블로그 스킨 css 는 200 에서 300줄 정도 나오는듯 싶습니다.  괜히 많이 쓴거 같아서 뿌듯할때도 있더군요. </p>
+<h3>코멘트를 사용하여 더욱 구조적으로</h3>
+<p>이러한 엄청나게 길어지는 레이아웃 부분을 잘 정리할수 있도록 코멘트 부분을 잘 의미있게 써주어야 할텐데요, 이부분에 있어서 권장하는 스타일이 있습니다.
+코멘트 사용시 보통  </p>
+<p>/* 레이아웃 */ </p>
+<p>식으로 하는데요.  이 부분이 명확하게 보일수 있도록</p>
+<p>/*레이아웃
+-----------------------------------------------------*/ </p>
+<p>식으로 줄을 만들어 잘라주는것이죠.  사용해 보시면 알겠지만 꽤나 깔끔합니다.  그리고 영어로 쓰시게 된다면 </p>
+<p>/* =layout
+-------------------------------------------------*/</p>
+<p>으로 앞에 = 을 붙여주어 나중 겁색때에 찾기 쉽도록 해 주는것또한 간단한 팁 이겠네요.  <a href="http://hooney.net/blog/wp-content/themes/so-basic/style.css">후니님의 css</a> 가 이것을 아주 잘 나타내고 있습니다.  </p>
+<h3>한단계 더! 일모리의 사용법</h3>
+<p>아쉽게도 많은 부분 구조적인 css 사용에 대해서 위의 권장사항만이 나와있습니다.  "기본값, 나머지, 레이아웃 식의 순서로 적게하여 알아볼수 있게 하며 코멘트를 잘 사용하여 페이지를 잘 나누라"  라는 것이죠.  하지만 제가 사이트와 스킨, 테마들을 제작하면서 점점 포괄상태가 되어가는걸 느꼈습니다.  레이아웃이 복잡해 지면 복잡해 질수록 비슷한 이름에 헛갈리는 속성들, 찾는것도 한두번이요 수십번 이름을 찾게 될 때에 엄청난 불편함이 몰려오더군요.  안되겠다 싶어 찾은 방법이 css 의 레이아웃 구조조차 구조적으로 바꾸는 방법입니다. </p>
+<p>레이아웃대로  header, content, sidebar, footer 로 나누어 그안의 속성을 속성인것처럼 확실히 나타내는 것 입니다.  설명보다는 예제가 낫겠죠.  지금 제 사이트를 보시면 해더, 콘텐츠, 사이드바 로 나뉘어져 있습니다.  헤더 안에는 여러 다른 레이아웃 값들이 들어가며 콘텐츠 또한 그러합니다.  구조적으로 일단 이름만 적어보죠 </p>
+<p>headerwrap
+-header
+---title
+---menu
+------menu ul
+------menu ul li
+------menu_forum
+------menu_archive
+------menu_sitelog
+------menu_contact
+------menu_english
+middle
+-contentwrap
+---content
+------posttitle a
+------posttitle
+------post
+------writing</p>
+<p>보시기에 아주 이해도 잘 되며 머리도 덜 아프실겁니다.  middle 안에 contentwrap 이 있고 그 아래 content이 있으며 content 아래 writing ul li, posttitle 등등이 들어있다는게 한눈에 들어옵니다.  이러한 장점을 그대로 CSS 에 넣어, 기본 값들을 한줄에 넣는것입니다.  특히나 모니터가 크신 분들은 이렇게 사용하시기 편하실꺼라 생각이 됩니다.</p>
+<p>{% highlight css %}
+#headerwrap {height: 95px;}
+  #header {width: 100%; height: 95px; background: url(images/title.gif) no-repeat left top;}
+     #title {display:none;}
+     #menu {position: absolute; top:63px; left:47px; width:312px; height: 23px;}
+        #menu ul {margin: 0; padding: 0;}
+        #menu ul li {margin: 0; padding:0;float:left;list-style:none;}
+        #menu ul li a {text-decoration:none;height: 23px;text-indent: -5000px;display:block;}
+        #menu ul li a:hover {background: url(images/arrowdown.gif) no-repeat 48% top;}
+        #menu_home,#menu_about {width: 34px;}
+        #menu_forum {width: 37px;}
+        #menu_archive {width: 47px;}
+        #menu_sitelog {width: 39px;}
+        #menu_contact {width: 42px;}
+        #menu_english {width: 79px;}
+{% endhighlight %}
+헤더부분만 넣었는데요, 이 structure 구조의 장점은 속성중심이 아닌 레이아웃 중심이라고 볼수 있습니다.  예전 방식은 속성중심이었습니다.  속성을 잘 알아볼수 있도록 속성을 각각의 속성마다 한줄에 넣어 알아보기 쉽게 하였는데요, 이 방법또한 버그를 잡기 좋다거나 하는 장점이 있지만, 위에서 말씀드렸듯이 웹사이트 구조를 css 에서 이해하기란 여간 머리가 아픈게 아니며, 값이 늘어나면 늘어날수록 머리가 아파오는 단점을 가지고 있습니다.  하지만 위에서 소개한 구조를 잘만 사용한다면 xhtml 과 css 의 연관성을 더욱 증폭시킬수 있으며 특히나 그룹프로젝트가 진행될 때에 서로가 이해하기 쉬운 방법으로 접근할수 있다고 생각이 됩니다.</p>
+<p>*값이 많아서 길어지는 경우에는 2줄 3줄로 써도 무관합니다.  제작하면서 언제나 느끼는거지만, 그리 긴 속성을 가지고 있는것들은 많지 않으며 몇몇 그나마 많다고 생각되는것들을 2줄로 만들면 오히려 더 강조하는 부분이 되므로 좋더군요.  이 <a href="http://ilmol.com/wp/wp-content/themes/ilmol_publish/style.css">블로그의 css 를</a> 살펴보시면 되겠습니다. </p></p>
+<p>*여러 CSS 단축속성을 잘 알아 사용하면 커다란 이득이 되겠네요.  <a href="http://hooney.net/archives/2005/04/22/css-shorthand-properties/">후니님께서 잘 소개하고 계십니다</a>.</p>

@@ -1,0 +1,111 @@
+---
+layout: post
+title: "새창띄우기 접근성 넘버투"
+date: 2006-06-25 14:17:36.000000000 -04:00
+categories:
+- HTML
+- JS
+- userfriendly
+---
+<p>예전에 <a href="http://ilmol.com/wp/2006/01/01/135/">새창띄우기에 관한 포스팅을 올렸을때</a> 많은 분들이 다양한 의견을 남겨 주셨었습니다.  못읽어보셨다면 꼭 여러의견을 읽어보시고 다른 생각들 나누어 주시면 감사하겠습니다.  </p>
+<p>사용자의 측면에서 사용자에게 선택권이 주어지기 위해선 target="_blank" 가 없어져야 하는데, 반대를 보면 선택권의 자유때문에 새창을 선호 하는 이들에게 불편함이 올수 있습니다.  물론 자유와 불편함의 선택이라면 자유이지만 불편함 또한 해소할수 있다면 더 좋겠죠.  유저에게 최대한 선택권을 주는한에서 여러 이득을 얻을수 있는 방법이라고 생각합니다.
+<!--more-->
+일단 이 방법은  최근 멋진 사이트 디자인으로 뜬 <a href="http://www.uxmag.com/">ux magazine 이라느 사이트</a>에서 사용한 방법입니다.  오른쪽 맨 하단에 보면</p>
+<blockquote><p>"Open in new window?  Select this option if you want to have all external links open in a new window" - 새창으로 여시겠습니까?  외부링크를 새창으로 뜨게 하시고 싶으시면 이 체크박스를 누르세요"</p></blockquote>
+<p>라는 문구가 있습니다.  말 그대로 체크박스에 체크하게되면 외부링크는 새창으로 뜨게 되는것이죠.</p>
+<p>방법은 간단합니다.
+1. javascript 를 넣는다 (쿠키확인과 외부링크띄우기)
+2. html 에 체크박스를 넣어준다
+3. 외부링크를 표기한다</p>
+<p>{% highlight javascript %}
+/*	-------------------------------------------------------------
+	function getCookie(), setCookie(), deleteCookie()
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	쿠키를 확인합니다
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/</p>
+<p>		<!--
+		function getCookie(CookieName) {
+			var start = document.cookie.indexOf(CookieName + '=');
+			var len = start + CookieName.length + 1;
+			if ((!start) && (CookieName != document.cookie.substring(0,CookieName.length)))
+				return null;
+			if (start == -1)
+				return null;
+			var end = document.cookie.indexOf(';',len);
+			if (end == -1) end = document.cookie.length;
+				return unescape(document.cookie.substring(len,end));
+		}</p>
+<p>		function setCookie(CookieName,value,expires,path,domain,secure) {
+			document.cookie = CookieName + "=" +escape(value) +
+			( (expires) ? ";expires=" + expires : "") +
+			( (path) ? ";path=" + path : "") +
+			( (domain) ? ";domain=" + domain : "") +
+			( (secure) ? ";secure" : "");
+		}</p>
+<p>		function deleteCookie(CookieName,path,domain) {
+			if (getCookie(CookieName))
+				document.cookie =
+				CookieName + '=' +
+				( (path) ? ';path=' + path : '') +
+				( (domain) ? ';domain=' + domain : '') +
+				';expires=Thu, 01-Jan-1970 00:00:01 GMT';
+		}
+		//-->
+/*    -------------------------------------------------------------
+    function setLinkAttributes()
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Description:    setLinkAttributes는 모든 링크를 찾아
+                      새롭게 정할수 있습니다.  external 은
+                      _blank 를 붙여주게 됩니다
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Credits:        Script found on Site Point (I think)
+                    http://www.sitepoint.com
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */</p>
+<p>        <!--
+        function setLinkAttributes(switchLinks) {
+            if (switchLinks == "true") {
+                if (!document.getElementsByTagName) return;
+                var anchors = document.getElementsByTagName("a");
+                    for (var i=0; i<anchors.length; i++) {
+                    var anchor = anchors[i];</p>
+<p>                    if (anchor.getAttribute("href") && ( anchor.getAttribute("rel") == "external" || anchor.getAttribute("rel") == "nofollow" ) ) {
+                        anchor.target = "_blank";
+                    }
+                }
+            } else {
+                if (!document.getElementsByTagName) return;
+                var anchors = document.getElementsByTagName("a");
+                    for (var i=0; i<anchors.length; i++) {
+                    var anchor = anchors[i];</p>
+<p>                    if (anchor.getAttribute("href") && ( anchor.getAttribute("rel") == "external" || anchor.getAttribute("rel") == "nofollow" ) ) {
+                        anchor.target = "_self";
+                    }
+                }
+            }
+        }</p>
+<p>        function toggleLinkAttributes() {
+            var ExpireLongTerm = new Date();
+            var ExpireLongTermValue = new Date(ExpireLongTerm.getTime()+(1000 * 60 * 60 * 360000));</p>
+<p>            if ( getCookie("externalLinks") == "true" ) {
+                setLinkAttributes("false");
+                setCookie("externalLinks","false",ExpireLongTermValue);
+            } else if (getCookie("externalLinks") == "false") {
+                setLinkAttributes("true");
+                setCookie("externalLinks","true",ExpireLongTermValue);
+            } else if ( !getCookie("externalLinks") ) {
+                setLinkAttributes("true");
+                setCookie("externalLinks","true",ExpireLongTermValue);
+            }
+        }
+        //-->
+{% endhighlight %}
+js 코드와 함께  체크박스를 html 에 넣어주면 기본은 잡힌것입니다.
+{% highlight html %}
+<input type="checkbox" onchange="toggleLinkAttributes();" id="toggleLinks" />
+{% endhighlight %}</p>
+<p>마지막으로 외부링크에는  rel="external" 을 붙여줍니다.
+{% highlight html %}
+<a href="링크주소" title="링크입니다" rel="external">외부링크</a>
+{% endhighlight %}
+이 링크들에는 유저가 약간은 더 편하게 사용할수 있는 권리가 부여되는 것이죠.  유저의 사용의 유연성을 위해서 조금더 신경을 쓴다면 더 나아질수 있는 실질적인 부분이라고 생각하네요.</p>
+<p>이 방식을 선택하여 방문자에게 선택권을 주는것, 일모리는 오늘도 의견을 기다립니다.  </p>;</p>

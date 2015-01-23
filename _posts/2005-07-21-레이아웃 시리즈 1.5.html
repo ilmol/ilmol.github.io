@@ -1,0 +1,98 @@
+---
+layout: post
+title: "레이아웃 시리즈 1.5"
+date: 2005-07-21 09:25:09.000000000 -04:00
+categories:
+- CSS
+- HTML
+---
+<p>이번에는 A2님의 조언을 수용해서 다른 레이아웃을 단순한 CSS 만으로 바꾸어 보겠습니다.  이것은 css의 레이아웃 구조만 잘 이해하고 있다면 특별히 어려운 부분은 아니라고 봅니다.</p>
+<p>전혀 xhtml부분은 건드리지 않았습니다.  단순히 약간의 포지셔닝을 첨부하여 바꾸었습니다.<!--more--></p>
+<p>결과물은 이렇습니다.
+<img src="assets/layout1_5.gif" alt="레이아웃 강좌 그림" /></p>
+<p><a href="http://php.chol.com/~ppk314">하늘이님께서 제작하신 테터의 테마(스킨)가</a> <strong>약간</strong>은 이러한 형태입니다.   왼쪽에 사이드 바가 있고,  헤더 콘텐트 푸터가 오른쪽부분에 위치하는것이죠.  특히나 sidebar 는 position으로 제작되기때문에 자바스크립트로 스크롤함에 따라 위아래로 움직이는것 또한 구현 문제 없겠네요.</p>
+<p>그럼 얼만큼 바꾸면 될까요.  네,  4가지밖에(사가지로 읽지 마시고 네가지로 읽어주세요 ㅡㅡ) 바뀐것이 없습니다.  </p>;</p>
+<p>{% highlight css %}
+/*기본 정의 */
+body {
+	font-family: Gulim, 굴림, Arial, sans-serif;
+	font-size: .8em;
+	text-align: center;  /*IE 5.5 */
+	margin:0;
+	padding: 0;
+	background: #fff;
+	}</p>
+<p>/*레이아웃 부분 */
+#wrap {
+	text-align: left;
+	width: 800px;
+	margin: 0 auto;
+	padding: 0;
+	position:relative; /* ### 첨부된 부분 */
+	}
+#header {
+	height: 200px;
+	margin: 0 0 0 200px;
+	padding: 0;
+	background: red;
+	}
+#middle {
+	margin: 0;
+	padding: 0;
+	float:right;</p>
+<p>	background: gray; /*임의로 삽입 */
+	}
+#sidebar {
+	width: 200px;
+	margin: 0;
+	padding: 0;
+	float:left;
+	/* #### 첨부된 부분  ### */
+	position:absolute;
+	top:0;
+	left:0;
+	/* 첨부 끝 */</p>
+<p>	height: 300px; /*임의로 삽입 */
+	background: blue; /*임의로 삽입 */
+	}
+#content {
+	width: 600px;
+	margin: 0;
+	padding: 0;
+	float:right;</p>
+<p>	height: 200px; /*임의로 삽입 */
+	background: black; /*임의로 삽입 */
+	}
+#footer {
+	height: 50px;
+	padding: 0;
+	margin: 0;
+	clear:both;</p>
+<p>	background: green;/*임의로 삽입 */
+	margin-left: 200px;  /* ## 첨부됨 */
+	}
+{% endhighlight %}</p>
+<p> ## 을 붙여서 첨부된 부분을 나타내 보았습니다.
+ #wrap  부분에 position: relative;
+ #sidebar  부분에  position:absolute;  top:0; left:0;
+ #header 부분에 왼쪽 200 마진
+ #footer 부분에 왼쪽 200 마진</p>
+<p> 자 설명해 보겠습니다.
+ #wrap 부분에는 position: relative 를 주었습니다.  나중에 sidebar에 position: absolute을 줄때에 바로 relative 값을 준곳 안에서 위치를 찾기 때문에 그렇습니다.  </p>
+<p> 그래서 sidebar에서는 position: absolute; 을 주면서 위치는 왼쪽 맨 위로 올렸네요.  이것은 position 즉 위치하는것 이기 때문에 지금 header는 줄어든것이 아니고 sidebar에 200px이 가려진 것입니다.  그러하니 수동으로 줄여줘야겠죠.  그래서 #header에 200 px margin을 왼쪽에 주었습니다.  width를 직접 제어하는것이 아닌 margin으로 제어하게 되는거네요 잠깐 케스케이딩 효과를 보겠습니다.  효과라고 할수는 없지만,,,</p>
+<p>#header {
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	background: red;
+	margin-left: 200px; /*### 첨부된 부분*/
+	}</p>
+<p>margin 이 2번 불려졌습니다.  충돌이 생길까요?  네 아닙니다.  위에서부터 아래로 컴퓨터가 읽어가면서 겹치는것은 후에 나온것으로 겹쳐 버리기 때문입니다.
+margin: 0; 는 margin-top, margin-left, margin-right, margin-bottom이 다 0 이라고 짧게 설명한 것이기 때문에 후에 margin-left: 200px;을 주었으니 margin-left만 영향을 받고, 나머지 셋은 그대로 0으로 됩니다.</p>
+<p>그렇다면 이렇게 하면?
+#header {
+	height: 200px;
+	height: 300px;
+	}</p>
+<p>네.  height은 300px;이 됩니다. </p>
+<p>이런 하나의 xhtml을 가지고 css로 응용하여 보여주는것은 <a href="http://www.csszengarden.com/tr/korean/">젠가든에서 아주 잘 나타내어 주고 있습니다. </a> 처음 이곳에 대해 들어보셨다면 꼭 가서 구경하시기 바랍니다.</p>

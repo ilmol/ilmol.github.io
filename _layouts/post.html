@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article>{% if page.youtube %}
+<div class="video-container">
+<iframe width="560" height="315" src="http://{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
+</div>{% endif %}{% if page.vimeo %}
+<div class="video-container">
+<iframe src="//player.vimeo.com/video/{{ page.vimeo }}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>{% endif %}{% if page.featured %}
+<img src="{{ page.featured }}">{% endif %}
+
+<header>
+<h2>{{ page.title }}</h2>
+</header>
+<aside>
+<ul>
+<li>{{ page.date | date: "%b %-d, %Y" }}</li>
+<li>{% if page.categories %}{{ page.categories }}{% endif %}</li>
+</ul>
+</aside>
+<main class="contents">
+{{ content }}
+</main>
+<footer></footer>
+</article>

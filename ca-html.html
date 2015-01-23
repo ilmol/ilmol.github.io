@@ -1,0 +1,15 @@
+---
+layout: default
+permalink: /html/
+---
+<article>
+<div class="contents">
+<h2>Category: HTML</h2>
+<ul class="category">{% for html in site.categories.html %}
+<li>
+<h3><a href="{{ html.url }}">{{ html.title }}</a> - {{ html.date | date: "%b %-d, %Y" }}</h3>
+</li>
+{% endfor %}
+</ul>
+</div>
+</article>

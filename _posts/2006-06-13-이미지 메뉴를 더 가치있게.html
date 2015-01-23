@@ -1,0 +1,106 @@
+---
+layout: post
+title: "이미지 메뉴를 더 가치있게"
+date: 2006-06-13 00:39:41.000000000 -04:00
+categories:
+- CSS
+- userfriendly
+---
+<p>W3C 에서 권고하는 디자인(프레젠테이션)과 문서(컨텐츠)의 분리는 많은 이득을 가지고 옵니다.  <a href="http://blog.repl.net/web/2006/06/css.html">물론 반론도 있지만요</a> </p>;;  분리로 인해 디자인은 더욱 자유로울수 있으며 훨신 높은 유연성을 가질수 있게됩니다.  문서 또한 문서대로 의미에 맞는 태그안에 분류하여 의미를 부여하고 문서에 충실할수 잇는 효과를 불러올수 있습니다.  지난번 CSS 옷벗는날(css naked day) 에 각자의 블로그 스타일시트를 꺼 놓아서 문서와 디자인의 분리를 명확히 보여주었던 일도 있었죠.  하지만 이러한 장점들 앞에도 장애물이 있습니다.  이미지가 대부분 사용되는 메뉴 혹은 네비게이션 부분입니다.</p>
+<p>문제는 이렇습니다.  이미지로 텍스트를 대체하면 접근성에 문제가 되니 이미지를 포기해야 하고 텍스트를 쓰자니 글꼴이 받쳐주질 않아 이러지 저러지도 못하고 메뉴 이미지에 title 넣는 정도로 만족을 하는 경우가 많습니다.  혹은 이미지 맵을 사용하는 경우도 많구요.  이런 애매한 경우를 간단한 CSS 로 손을 보면 접근성에 어긋나지 않도록 어느정도 커버가 가능하니 한번 살펴보겠습니다.  예제는 제 블로그 메뉴를 보아도 되고 맨밑에 링크를 첨부해 놓았습니다.
+<!--more--></p>
+<h3>text-indent</h3>
+<p>여기서 중요하게 사용이 될 속성은 text-indent 입니다.  문단이 시작할때에 첫 문장이 몇칸정도 공간을 둔 후에 시작하는데 사용할수 있는 text-indent 입니다.   </p>
+<p>{% highlight css %}
+div#hello {
+ text-indent: 3em;
+}
+{% endhighlight %}
+hello 라는 div 의 안에 있는 글자를 3em 정도 띄고 시작하라 라는 말이되겠죠.</p>
+<p>이것을 응용하여 #hello 에 3000px 을 주면, 글자는 div의 위치에서 3000px 이 떨어진 곳에서 시작을 하게 됩니다.  다시말하면 모니터 화면 밖에 위치하고 있겠죠.  물론 div 자체의 위치는 변하지 않습니다.</p>
+<h3>메뉴만들기</h3>
+<p>text-indent 를 이해하셨으면 대충 감이 잡히셨으리라 생각됩니다.  차근차근 단계적으로 설명하겠습니다.
+일단 알려진 3가지 방법을 소개하겠습니다.  텍스트대체 이미지들은 이 방법들을 약간씩 변화시켜 사용하고 있으니 이것들만 아셔도 문제없을거라 생각됩니다.</p>
+<ol>
+<li><strong>Phark revisited 방법</strong>
+먼저 html 에는 의미적으로 맞게 단순히 링크와 텍스트만 넣습니다.  예를들어 이렇게 넣습니다.
+{% highlight html %}</p>
+<div id="menu">
+<ul>
+<li id="menu_home"><a href="index.html" title="첫페이지로 이동">첫페이지로</a></li>
+<li id="menu_intro"><a href="introduce.html" title="소개페이지로 이동">소개합니다</a></li>
+</ul>
+</div>
+<p>{% endhighlight %}
+menu 라는 div 안에 리스트를 넣어서 각각의 리스트에 링크를 담은 메뉴들을 넣었습니다.  그리고는 링크를 담고 있는 리스트들에 id 로 고유이름을 정해 주었네요.</p>
+<p>그리고 이제 css 가 모든걸 하게 합니다.</p>
+<p>{% highlight css %}
+/* menu 라는 div 의 li(리스트) 안에 들어있는
+링크는 모든 텍스트를 모니터에서 치운다 */
+#menu li a {
+ text-indent: -5000px;
+}</p>
+<p>/* 이제 각각의 링크에 이미지를 준다. */</p>
+<p>/*첫번째 메뉴에 배경을 넣는다 */
+#menu_home a {
+ background: url(home.gif) no-repeat 0 0;
+}
+/*마우스를 메뉴에 놓았을때에 이미지가 변하게 한다 */
+#menu_home a:hover {
+ background: url(home_hover.gif) no-repeat 0 0;
+}</p>
+<p>/*두번째 메뉴에 배경을 넣는다 */
+#menu_intro a {
+ background: url(intro.gif) no-repeat 0 0;
+}
+/*마우스를 메뉴에 놓았을때에 이미지가 변하게 한다 */
+#menu_intro a:hover {
+ background: url(intro_hover.gif) no-repeat 0 0;
+}
+{% endhighlight %}</p>
+<p>텍스트가 모니터 밖에 있으니 배경이미지만 보일것이고 hover 때에 다른 배경이미지를 보여주면 js 를 쓰지 않고도 간단히 마우스 오버 효과가 나타나게 됩니다.  이것은 css 만 트릭을 준것이기 때문에 스타일을 껐을때, css 를 껐을때엔 모니터 밖으로 나갔던 텍스트가 돌아오게되니 문서적인 부분은 문제가 되지 않습니다.</li>
+<li><strong>FIR(Fahrner Image Replacement) 방법</strong>
+두번째 방법은 메뉴 글자들이 text-indent 로 모니터 밖에 존재하는것이 싫으신 경우입니다.  별로 큰 변화는 업고 단지 위 html 부분에서 링크안의 텍스트에 &lt;span&gt; 을 넣어 주는겁니다.
+{% highlight html %}</p>
+<div id="menu">
+<ul>
+<li id="menu_home"><a href="index.html" title="첫페이지로 이동"><span>첫페이지로</span></a></li>
+<li id="menu_intro"><a href="introduce.html" title="소개페이지로 이동"><span>소개합니다</span></a></li>
+</ul>
+</div>
+<p>{% endhighlight %}</p>
+<p>그후 css 에서 text-indent 를 사용하는대신  span 에다가 display:none; 을 적용시켜주는 방법이 있겠습니다.
+{% highlight css %}
+#menu li span {
+ display:none;
+}
+{% endhighlight %}
+text-indent 를 사용하지 않아도 되는 깔끔함이 있지만 html 자체에 불필요한 span을 넣어주어야 한다는게 결점이겠습니다.</li>
+<li><strong>Leahy/Langridge 방법</strong>
+마지막으로 약간은 복잡할수 있는 방법입니다.  이것은 overflow 와 padding 을 사용한 방법입니다.  대표적으로 SXSW 사이트가 사용하고 있죠.</p>
+<p>아이디어는 이렇습니다.  list 의 높이(height)값을 0으로 설정한후 padding을 메뉴이미지 높이만큼 준 후에 overflow되는것들은 hidden 하라고 설정을 하는것입니다.  이렇게 설정을 하면 텍스트가 height 밖으로 위치하지만 overflow:hidden 이기에 보이지 않게 되는 것이죠.
+{% highlight html %}</p>
+<div id="menu">
+<ul>
+<li id="menu1"><a href="index.php" title="Home">Home</a></li>
+<li id="menu2"><a href="intro.php" title="Intro">Intro</a></li>
+</ul>
+</div>
+<p>{% endhighlight %}</p>
+<p>그 후 css 는 이렇게 설정해 주면 됩니다
+{% highlight css %}
+/* 배경 이미지가 50px 의 height 을 가지고 있다고 가정 */
+#menu li a {
+	display: block;
+	height: 0px !important;
+	height /**/: 50px;
+	padding: 50px 0 0 0;
+	overflow: hidden;
+}
+#menu1 a {background: url(home.gif) no-repeat;}
+#menu1 a:hover {background: url(home_hover.gif) no-repeat;}
+{% endhighlight %}
+이런식으로 응용해 주시면 됩니다.  이미지를 많이 쓰고 싶지 않다면 한개의 이미지에 hover 했을때와 아닐때의 이미지를 합치셔서  background-position 값을 조절하시면 편하겠죠.
+</li>
+</ol>
+<p>거의 대부분의 메뉴들이 이미지(혹은 플래쉬)로 형성되어있는 상황인 만큼 이러한 css 의 <a href="http://www.nexus.com.pl/">응</a><a href="http://www.blackconvoy.com/">용</a><a href="http://photos.houserdesign.com/">법</a>도 괜찮다고 생각됩니다.  후에 맑은고딕이 많은 변화를 주겠지만 지금상황으로써는 약간의 코딩이 좀 들어가더래도 쓸만하겠네요.</p>

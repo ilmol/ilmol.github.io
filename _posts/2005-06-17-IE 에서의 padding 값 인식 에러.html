@@ -1,0 +1,46 @@
+---
+layout: post
+title: IE 에서의 padding 값 인식 에러
+date: 2005-06-17 03:43:18.000000000 -04:00
+categories:
+- CSS
+---
+<p>실제로 홈페이지를 제작하시다가 격는 아주 머리아픈 경우입니다.  바로 인터넷 익스플로러, Internet Explorer, IE 에서 원래 CSS 에서 의도한대로 렌더링을 하지 않고 다르게 이해를 하는경우입니다.  많은경우 DIV가 깨지기도 하는데요, 이 이유와 해결책을 잠깐 보겠습니다. <!--more--></p>
+<p><img src="assets/CSS_ierror.gif" width="272" height="338" alt="IE padding error" /></p>
+<p>보시다시피 css 에서 제작자가 의도한데로 width 를 정해놓지만 <strong>ie 에서 읽어들일때(IE 5.x 와 quirks 모드의 IE6)에는 그 width 안에 padding 값과 border 값이 같이 계산되어서 렌더링</strong>이 됩니다.
+*quirk 모드 는 DOCTYPE 이 제대로 잡히지 않아 렌더링이 올바르게 되지 않는것을 일컫습니다.  DOCTYPE 만 제대로 된다면 IE6도 렌더링은 제대로 되게 됩니다.</p>
+<p>예를 들어보겠습니다.
+&lt;div id="content"&gt;&lt;/div&gt;
+를 해 놓고 너비는 300px 에다가 padding-left 를 한 20px 로 주고 싶습니다.
+그렇다면 보통의 css 렌더링은  너비 300px + padding값 20px 을 주니 총 너비는 320px 로 측정해야겠죠.  하지만 IE 에서는 너비값 300px 에다가 그 안에 padding값 20px 이 들어가니 총 너비는 그대로 300px 입니다.  그리고 그 안에 div는 작아졌겠죠.  280px 로 말입니다.  이것을 고치는 법은, css 를 핵 하는 법입니다.  계산을 거꾸로 해서 오히려 IE 에서는 너비를 320px 로 이해하게 만들면 20px 로 padding 을 주고 나머지 300px 은 div 내용이니  원래의 의도대로 렌더링을 해주니까요.</p>
+<p><a href="http://search.barnesandnoble.com/booksearch/isbnInquiry.asp?userid=u569YbPBU9&isbn=0764579851&itm=3">CSS Hacks and Filters</a> 와 타 <a href="http://www.alistapart.com/topics/css/">ALA</a> 같은 CSS 페이지에서 설명해주고 있는 방법을 소개해 드립니다.</p>
+<p>일단  원래의 css 코딩을 적습니다.
+<code>#content {
+   width: 300px;
+   padding-left: 20px;
+   }
+</code></p>
+<p>그리고 다음줄에 ie 해킹을 넣습니다.
+<code>*html #content {
+   width: 320px;
+   /*padding은 안적어도 되는것이 위에서 이미 불러주었기때문에 괜찮습니다*/
+   }
+</code>
+이 해킹은 *html 을 붙임으로써 다른 브라우저는 인식을 못하고 ie 5.x 버전에서 이해를 하게 되는 부분입니다.  하지만 문제가 있습니다.  이 해킹은 모든 ie 브라우저에 적용이되면서 Mac 에서의 ie 5와 그 이상버전에게 적용이 되어버립니다.  Mac 의 <strong>Internet Explorer 5와 그 이상, 그리고 IE 6는 은 원래가 css 의도대로 렌더링이 되거든요</strong>.  그럼 그 버전에서는 다시 깨지게 됩니다.  그러니, 위의 코딩에다 한줄을 더 넣어서  이렇게 넣습니다.</p>
+<p><code>*html #content {
+   width: 320px;
+   w\idth: 300px;
+   }</code></p>
+<p>w\idth 부분이 들어갔죠?  백슬래쉬\ 를 넣으므로써   고쳐질수 있습니다.  </p>
+<p>정리합니다.  padding은 ie 5.x 안에서 다르게 인식되므로 약간의 해킹이 필요합니다.  그래서 예로 width: 300px 에 왼쪽 padding 이 20px 일 경우 이렇게 적습니다.</p>
+<p><code>#content {
+   width: 300px;
+   padding-left: 20px;
+   }
+* html #content {
+   width: 320px;   /* IE 5.x 버전이 인식 그리고 mac ie, ie6도 인식 */
+   w\idth: 300px;  /* Mac ie 와 IE6만이 다시 랜더링 */
+   }</code></p>
+<p>border 도 ie 에서는 width 안에 포함되니 border 쓰실때에도 잘 크기를 조절하셔서 쓰시기 바랍니다.
+height 을 Mac 의 IE 만 이해하게 하려면 width 는 w\idth 였듯이 he\ight  으로 쓰시면 됩니다.</p>
+<p>css 사전 및 초보 소개 부분을 적다가 <a href="http://daybreaker.info/">daybreaker</a>님 질문으로 부랴부랴 포스팅합니다.  서둘러 적다보니 에러부분있으면 지적부탁드립니다.   그리고 <a href="http://crizin.net/">crizin</a> 님덕분에 더 자세히 설명할수 있었으니 감사드립니다.</p>

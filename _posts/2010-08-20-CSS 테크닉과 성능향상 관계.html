@@ -1,0 +1,44 @@
+---
+layout: post
+title: CSS 테크닉과 성능향상 관계
+date: 2010-08-20 08:24:08.000000000 -04:00
+categories:
+- CSS
+tags:
+- "@extend"
+- css
+- CSS3
+- oocss
+- sass
+---
+<p>작년에 David Hyatt 이 <a href="http://www.shauninman.com/archive/2008/05/05/css_qualified_selectors">Shawun Inman</a> 의 글에서 이러한 댓글을 달았었다.</p>
+<blockquote><p>The sad truth about CSS3 selectors is that they really shouldn’t be used at all if you care about page performance. Decorating your markup with classes and ids and matching purely on those while avoiding all uses of sibling, descendant and child selectors will actually make a page perform significantly better in all browsers.
+CSS3 선택자에 대한 슬픈 사실은 페이지 성능 향상에 조금이라도 신경을 쓴다면 전혀 사용하지 말아야 한다는 것이다.  순수하게 클라스와 아이디 선택자를 사용하며 자식 선택자, 하위 선택자, 인접 선택자를 사용하지 않으면 모든 브라우저에서 확연하게 성능 향상을 볼 수 있다.</p></blockquote>
+<p>David Hyatt은 모던 브라우저들의 개발에 영향을 주며 카미노를 만들고 불여우 파이어폭스를 Blake Ross 와 같이 만들어간 사람인 만큼 저 멘트에 대한 여파가 컸었다.  여러 <a href="http://blog.archive.jpsykes.com/153/more-css-performance-testing-pt-3/">테스팅</a>도 진행되었고 하나같이 결론은 차이는 'significant' 확연하게 차이가 나는 것이 아니므로 남용하지 않는다면 실용적인 사용에도 문제가 되지 않는다고 의견들이 모아졌었다.  오히려 그 시간에 다른 부분에서, 예를들어 JS 향상을 위해 손 보는것이 오히려 더 효율면에서 낫다라고 누군가 언급했었던 기억이 난다.</p>
+<p>여기서 최근 <a href="http://screwlewse.com/2010/08/different-css-techniques-and-their-performance/">재미난 테스팅을 SCREWLEWSE.COM 에서 진행</a>했다.  CSS 선택법, 사용법에 대한 카테고리를 나누어 그것이 브라우저 성능 상태와 어떤 연관성이 있을까라는 발상에서 시작 되었는데 일단은 CSS 테크닉에 있어서 나누어 놓은 3가지 방법을 살펴보아야 한다.</p>
+<ol>
+<li><strong>OOCSS</strong> 한창 주목받았던 그리고 꾸준히 접목되고 있는 아이디어.  기본 룰을 담은 class 를 부르고 세밀한 부분을 다른 클라스에 담아 복수 클라스를 부르는 방법.  Object Oriented CSS 객채지향 CSS 로 소개도되고 잘 알려진 것으로 안다.
+<p>.ilmol 에 기본 속성을 정의해 주고 .ilmol-1 .ilmol-2에  각각 세밀한 부분을 넣은 후에 html에서 class="ilmol ilmol-1" 처럼 복수의 클라스들을 불러주는 방식.</p>
+<p>{% highlight css %}
+.ilmol {margin: 10px 25px; font-size: 100%; background: black;}
+.ilmol-1 {color: red;}
+.ilmol-2 {color: yellow;}
+{% endhighlight %}</li>
+<li><strong>Sass @extend</strong> 는 OOCSS를 좀더 세분화 한 것이라고 보면 된다.  기본 룰을 담을 클라스를 새로 만들지 않고 단순히 여러 클라스를 불러 기본 룰을 정의 한 후 나중에 하나하나 세밀하게 룰을 적용하는 방법.
+<p>.ilmol-1, .ilmol-2 {속성} 을 정의한 후 나중에 .box1 과 .box2를 정의해 주면됨.</p>
+<p>{% highlight css %}
+.ilmol-1, .ilmol-2 {margin: 10px 25px; font-size: 100%; background: black;}
+.ilmol-1 {color: red;}
+.ilmol-2 {color: yellow;}
+{% endhighlight %}</li>
+<li><strong>Long / Bloated</strong> 그냥 각각의 클라스에 알아서 스타일을 주는 방식
+<p>{% highlight css %}
+.ilmol-1 {margin: 10px 25px; font-size: 100%; background: black;color: red;}
+.ilmol-2 {margin: 10px 25px; font-size: 100%; background: black;color: yellow;}
+{% endhighlight %}</li>
+</ol>
+<p>이 세가지와 CSS가 없는 스타일을 합하여 4가지들에 각 브라우저들 마다의 <a href="http://www.screwlewse.com/labs/css-performance-test.php">테스팅을 진행</a> 하였다.  그래프상 높을수록 시간이 오래걸린다는 것이니 성능에는 반비례한다.</p>
+<p><img src="assets/20100819-d5bpqu92sqbcgd4b254yy51k3i.jpg" alt="" />
+from screwlewse.com</p>
+<p>위의 그래프가 보여주듯이 Sass 테크닉이나 oocss 테크닉이 평범하게 사용되는 기법과는 확연한 차이를 보여주고 있다.  특별히 oocss는 모든 브라우저에서 가장 빠르게 읽혔음을 볼수 있는데 Cascading Style Sheet 이라는 법칙인 만큼 oocss 가 적용되지 않았나 생각이 들었다.</p>
+<p>재미있게 보셨으리라 생각되고 이 테스팅이 절대 보통하는 테크닉이 잘못되었다거나 속도가 현처히 느리다라는 결론이 아니다.  여러 테크닉을 이해하는데에 있어서 이론적인 결과물을 보여주는 것이다.  적어도 일모리에겐 어느정도의 브라우저마다의 CSS 입력방식에 대한 팁을 선사해주는 부분에서 깨닳음을 얻었다고나 할까?</p>

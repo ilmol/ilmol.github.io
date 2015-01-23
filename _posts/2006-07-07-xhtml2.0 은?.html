@@ -1,0 +1,39 @@
+---
+layout: post
+title: xhtml2.0 은?
+date: 2006-07-07 12:51:14.000000000 -04:00
+categories:
+- HTML
+---
+<p>xhtml1.1 까지도 지키시려는 분들, 수고하십니다.  시간이 남아서 xhtml 2.0 에서 달라지는것들을 소개합니다.  현재 예전 html 의 호환성(backward competability)을 완전히 배제하게 될수도 있는 이 권고안에 대해 나누어 지는 토론이 많다고 하는군요.
+<!--more--></p>
+<ul>
+<li>HTML 에서 사용되고 있는 FORM 폼양식들은 XForms 라는 XML 기반의 호환성이 뛰어난 스펙을 가진것들로 대체됩니다.</li>
+<li>새롭게 nl 이 추가됩니다.  이 nl 은 navigation list 의 줄임말로 navigation, 즉 소위 말하는 메뉴들을 담당하게 됩니다.
+{% highlight html %}<nl></p>
+<li>home</li>
+<li>guestbook</li>
+<p></nl>{% endhighlight %}
+</li>
+<li>모든 엘리먼트들은 링크로 사용이 가능케 됩니다.  즉,
+{% highlight html %}</p>
+<h3><a href="abcd.html">ABCD</a></h3>
+<p> <!-- xhtml 1.x 시절 --></p>
+<h3 href="home.html">ABCD</h3>
+<p>  <!-- xhtml2.0 시대 -->
+{% endhighlight %}
+코드가 아주 간결해집니다.  물론 그보다 의미를 더욱 살릴수 있겠죠.
+</li>
+<li>링크뿐만이 아닌 모든 엘리먼트들은 src 의 대체 미디어 링크가 가능합니다.
+<p>{% highlight html %}
+<div src="highschool.jpg" type="image/jpeg">High School</div>
+<p>{% endhighlight %}
+</li>
+<li>이미지 태그가 변형됩니다.  <strong>alt 값이 빠지고</strong> 열기와 닫기로 말이죠.
+<p>{% highlight html %}
+<img src="assets/browser.jpg" />브라우저
+{% endhighlight %}</li>
+<li>단일 h 태그가 제공됩니다.  단일 h 태그를 넣으면 어느 위치에 담겨 있느냐에 따라 결정됩니다.</li>
+<li>i, b, tt 의 사용이 금지됩니다.</li>
+</ul>
+<p>물론 굵직한 것들만 소개했습니다만, XHTML 2 의 공개는 꽤나 커다란 움직임이 될꺼 같습니다.  시멘틱, 의미를 더 살리는 코딩이 될꺼 같네요.  기대됩니다.</p>

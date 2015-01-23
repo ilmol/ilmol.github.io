@@ -1,0 +1,55 @@
+---
+layout: post
+title: IE8 베타 드디어 출시, 해결책, 새기능
+date: 2008-03-06 05:49:39.000000000 -05:00
+categories:
+- BROWSER
+---
+<p><img src="assets/20080305-tweymfkft231y6efn58u86y2mu.jpg" alt="ie8" class="center" /></p>
+<p>역시 루머아닌 루머가 맞았습니다.  <a href="http://www.microsoft.com/windows/products/winfamily/ie/ie8/readiness/default.htm">베타1 버전이 출시</a>되었군요.   <a href="http://www.microsoft.com/windows/products/winfamily/ie/ie8/readiness/Install.htm">Server 2003, Vista, XP SP2 버전</a>까지 나와있습니다.  아시다시피 베타 버전이라는 점 유념하시구요.  다운로드시 마이크로소프트 다운로드 센터의 명시를 보니 이렇게 설명되어 있습니다.</p>
+<blockquote><p>이 베타는 모든 이들에게 오픈이지만 특별히 개발자들과 디자이너들이 새 툴과 새 레이아웃 엔진등을 테스트 하는 것에 있다.  웹사이트를 개발하지 않을 시에는 <strong>Emulate IE7 버튼을 눌러 IE7 에서 서핑하듯 돌아올수 있다.</strong></p></blockquote>
+<p>아마도 IE7 엔진을 담고있는 이득을 여기서 보는듯 하군요.  아무튼 오늘 블로고스피어 뿐만 아니라 수많은 개발자들, 유저들 가운데서 IE8 이야기로 후끈후끈 할듯 보입니다.  특히 IE8 의 표준모드는 ACID2 테스트를 통과하지 못하는 지라 못내 아쉬움이 많이 남긴 합니다.  그래도 많은 발전이라고 기쁘게 받아들이며 일단 이곳저곳을 테스팅 중입니다.</p>
+<p>덧: 현재 제 사이트도 그러하지만 </p>  많은 사이트들이 form 부분에서 상당수 깨지고 있습니다.  혹시나 공통적인 해결점이 있다면 알리도록 하겠습니다.</p>
+<p>덧2: 버전지정을 통한 대충 대충 어느정도 해결점을 찾음.</p>
+<h3>버전타게팅을 사용한 편법</h3>
+<p>이 버전지정 테크닉은 아마도 빠르게 번질 "IE8에서 사이트가 깨지는것을 해결하는" 편볍 해결책으로 나올듯 싶습니다.  여러가지 테스트를 해본 결과 이전에 말씀드린 <a href="http://ilmol.com/wp/2008/01/29/357/">버전타게팅</a>이 제대로 작동하는듯 보입니다.  다시말해서 meta 태그를 사용하여 ie7 렌더링 엔진을 사용하도록 하면서 ie8 표준모드를 사용치 않도록 함으로 해서 깨어진 ie8 의 사이트를 제대로 보이게 하는 것이죠..  특히나 대형 커뮤니티 사이트나 포털등은 지금이라도 ie8에서 깨지는 것을 일단은 막고 차후에 고치는 방향으로 가는것도 좋다고 생각이 됩니다.  편볍 해결법은 이렇습니다.</p>
+<p>{% highlight html %}
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+{% endhighlight %}</p>
+<p>이 코드를 해더에 삽입을 하면 되지만, 주의해야할 부분은 ie7 코멘트핵을 쓰셨다면 ie8 핵을 지정한후 ie7 스타일시트를 그대로 옮겨와야 합니다.  여러 테스팅을 해본결과 ie7 렌더링을 하게되지만 브라우저는 ie8 이므로 ie8 코멘트핵을 이해하더군요.
+{% highlight html %}
+<!--[if IE 7]></p>
+<link type="text/css" rel="stylesheet" href="styleie7.css" />
+ <![endif]-->
+ <!--[if IE 8]></p>
+<link type="text/css" rel="stylesheet" href="styleie7.css" />
+ <![endif]-->
+{% endhighlight %}</p>
+<p>혹은 ie 핵을 잘 쓰시는 분이라면 "ie7 과 그 이상" 이라는 핵을 설정해 주면 위와 같은 효과를 내겠죠.  [if IE 7] 을 [if gte IE 7] 으로 바꿔주면 되습니다.
+{% highlight html %}
+<!--[if gte IE 7]></p>
+<link type="text/css" rel="stylesheet" href="styleie7.css" />
+ <![endif]-->
+{% endhighlight %}</p>
+<p>일단 웹의 진보적인 성격과 웹표준의 발전으로 볼때에 한 버전에만 머무는 버전지정은 그다지 추천하고 싶지는 않지만 일단은 IE8이 베타버전인만큼 버전지정을 통하여 IE8 표준모드에 맞는 사이트가 개발될때까지 IE7 렌더링으로 채택하는 것이 바른 방향이라고 생각됩니다.  그저 버전지정으로 머무는것보다는 앞으로 꾸준히 발전할 익스플로러를 보면서 표준을 채택한 웹개발의 방향을 바라보는것이 맞다고 생각됩니다.</p>
+<h3>새로운 기능들</h3>
+<p>마이크로소프트는 웹사이트를 통하여 새로운 기능들을 5가지로 소개하고 있습니다.</p>
+<h4>"Activities"</h4>
+<p>"Activities 는 어느 웹페이지에서든지 빠르게 필요한 서비스를 사용할수 있도록 돕는 서비스 입니다." 라고 말하고 있네요.  </p>
+<p><img src="assets/ScreenActivities.png" alt="Activities" /></p>
+<p>2가지 종류의 "활동"을 보통 담당하게 될텐데 첫번째는 "찾기" 류의 기능으로 어떠한 정보를 찾는것을 말합니다.  웹사이트의 주소를 보고 곧바로 지도에서 찾도록 하던지 구글에서 직접 정보를 찾아서 보여주는 것이죠.  두번째인 "보내기" 부분은 웹사이트의 컨텐츠를 어디론가 보내는 역할입니다.  예를들어 자신의 블로그나 이메일로 보낸다거나 하는 기능이겠죠.</p>
+<p>특징은 유저들이 직접 "Activities" 를 지원하는 서비스들을 선택하여 사용할수 있다는 것입니다.  아마 네이버도 들어가겠죠?</p>
+<h4>WebSlices</h4>
+<p>Slice 가 '자르다'의 뜻인만큼 웹의 어느 필요한 부분을 자르다 라는 의미를 내포하고 있는거 같습니다. 이는 피드 리더기를 브라우저에 실용화하여 적용시킨듯 하군요.  즐겨찾기 기능처럼 피드를 WebSlice 로 툴바부분에 선택해 놓으면 피드가 업데이트 될때마다 사이트에 방문하지않고도 툴바의 링크를 클릭함으로도 피드를 읽어볼수 있는 기능입니다.
+<img src="assets/ScreenWebSlicePreview2.png" alt="webslices" /></p>
+<h4>즐겨찾기바</h4>
+<p>이름과 약간의 기능들이 추가된 툴바 입니다.  즐겨찾기를 해 놓은 사이트들 뿐만 아니라 여러 다른 문서들 예를들어 워드, 엑셀, 파워포인트 문서들도 즐겨찾기를 해 놓을수 있군요.
+<img src="assets/ScreenFavoritesBar.png" alt="favoritebar" class="toobig" /></p>
+<h4>자동 크래쉬 복구 기능</h4>
+<p>ACR 이라고 불리운다는군요.  약간 아이러니 한 기능이 아닐까 했는데요 </p>  브라우저가 갑자기 다운된다거나 탭이 담고 있는 사이트가 다운될때  복구되는 기능입니다.
+<img src="assets/ScreenCrashRecovery.png" alt="recovery" class="toobig" /></p>
+<h4>향상된 피슁 필터</h4>
+<p>피슁기능에 "Safety Filter" 기능이 더 생긴 것입니다.  더욱 안전한 서핑을 위함이라고 하는군요.
+<img src="assets/ScreenSafetyFilter.png" alt="better filter" /></p>
+<h3>내 사이트를 IE8에 최적화</h3>
+<p>Activities, WebSlices 등의 적용방법들과 함께 CSS2.1 준수, 더 나은 AJAX 개발, DOM 코어 향상, API 선택자, 플랫폼 기능향상, Circular 메모리 누출 경감, HTML 향상과 ACID2, 그리고 Namespace 와 Protected Mode API 지원의 부분들을 이야기 하고 있습니다.  이 부분들은 계속 업데이트 하겠습니다.</p>

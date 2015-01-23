@@ -1,0 +1,14 @@
+# Site settings
+title: 일모리와 웹표준
+email: ilmol.com@gmail.com
+description: 웹디자인, Front-End, 웹표준 이야기가 소소하게 나누어 지는 블로그 입니다.
+baseurl: ""
+url: "http://ilmol.com"
+twitter_username: ilmol
+# Build settings
+markdown: redcarpet
+redcarpet:
+  extensions: ["footnotes"]
+paginate: 25
+paginate_path: "page:num/"
+permalink: "/:year/:month/:title.html"

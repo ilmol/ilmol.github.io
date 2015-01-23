@@ -1,0 +1,24 @@
+---
+layout: post
+title: "이미지 리사이징 쉽게 쉽게"
+date: 2005-06-15 13:59:52.000000000 -04:00
+categories:
+- CSS
+---
+<p>css 에서 간단히 이미지 리사이즈를 제공하긴 합니다.  :)
+auto 기능입니다.  auto는 여기저기서 많이 보셨겠지만..<!--more--></p>
+<p>이렇게 쓸수가 있네요.  간단합니다.</p>
+<p><code>img { width: 200px; height: auto; }</code></p>
+<p>이건데요.  너비를 200px 로 만들고 <strong>height은 그 비율에 맞추어서 보여주어라 라는 뜻</strong>입니다.   만약 저 문구 그대로를 css 파일에 넣으신다면 모든 이미지들의 너비는 200으로 바뀌게 됩니다.  </p>
+<p>특정 div 에 쓰는 그림에만 효과를 주고 싶다면 &lt;div class="width200"&gt;  이렇게 이름을 정한후
+css 에서 <code>  .width200 img { width: 200px; height: auto; } </code> 이것을 넣어주면 됩니다.</p>
+<p>직접 html 안에 쓰고 싶다면 <code><img src="assets/sunset.jpeg" alt="sunset" style="width: 100px;height:auto;" /></code>
+로 정해주면 되겠네요.   style="width: 100px;height:auto;"  부분이 들어갔네요.  </p>
+<p>실제로 적용한 이미지 입니다.
+<img src="assets/sunset.jpeg" alt="sunset" style="width: 100px;height:auto;" /></p>
+<p>원본이미지
+<img src="assets/sunset.jpeg" alt="sunset" /></p>
+<p>width만 100으로 정해진 그림도 가능하긴 하네요
+<img src="assets/sunset.jpeg" alt="sunset" style="width: 100px;" /></p>
+<p>이미지 출처:  <a href="http://www.mandalas.freeserve.co.uk/catalogue.html">www.mandalas.freeserve.co.uk</a>
+<ttag word=”tag word”></p>

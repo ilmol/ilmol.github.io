@@ -1,0 +1,29 @@
+---
+layout: post
+title: "웹표준의 오해 토론 #2"
+date: 2006-06-14 11:18:10.000000000 -04:00
+categories:
+- standards
+---
+<p><a href="http://ilmol.com/wp/2006/06/12/236/">제 이전글에 이어</a> 버즈삼구님께서 <a href="http://blog.repl.net/web/2006/06/css.html">긴 포스팅으로 덧글을 다시 남기셔서</a> 짧은 덧글로는 힘들거 같네요. </p>;;
+(대한민국 토고를 이겼으니 프랑스도 잡기를 기원하며... 불가능 이겠지만서도. 공은 둥근데다 이번엔 가장둥근 공이니.. </p>)</p>
+<p>현석님께서 지적하셨지만 일단 첫 인용부터 약간은 변역을 잘못하신거 같아서 제가 다시하겠습니다.</p>
+<blockquote><p>Using markup improperly -- not according to specification -- hinders accessibility. Misusing markup for a presentation effect (e.g., using a table for layout or a header to change the font size) makes it difficult for users with specialized software to understand the organization of the page or to navigate through it. Furthermore, using presentation markup rather than structural markup to convey structure (e.g., constructing what looks like a table of data with an HTML PRE element) makes it difficult to render a page intelligibly to other devices (refer to the description of difference between content, structure, and presentation).</p>
+<p>즉, 테이블 레이아웃은 디자인의 쉽고 어려움과는 전혀 상관없이 프로그램에서 데이터를 알기가 힘들고, PC 이외의 다른 기기에서 렌더(HTML을 실제 이미지로 변환하는 것)의 어려움이 있다는 것입니다. 즉, 코드의 확장성을 염두에 둔 가이드라인이라는 것입니다. XHTML로 디자인을 하면 코드 변경없이 모바일에서도 서비스가 된다고 생각하면 쉽습니다. Google은 모바일용 웹사이트에서 XHTML을 지원하고 있습니다.
+</p></blockquote>
+<p>번역하자면 이렇습니다.
+"마크업을 상황에 맞게 해라 - 스펙에 꼭 맞추어서 하는것이 아닌 - 접근성을 떨어뜨린다.  (왜냐면) 보여주기 위한 (presentation effect) 마크업을 할때엔 (테이블로 레이아웃을 짜는것) 특별히 제작된 소프트웨어로(예로 스크린리더) 웹서핑을 하는 이들에게 불편함을 줄수 있기 때문이다.  더 나아가서 Structural(구조적인) 마크업 보다 '보여주는 마크업' 으로 구조할때에 타 기기들과 호환성이 떨어지기 때문이다."
+<!--more-->
+즉, 버즈삼구님께서 이해하신 것과는 정 반대의 의도가 담긴 문단입니다.  테이블을 레이아웃에 사용하는 것이나 여러가지 권고안에 맞지 않게 마크업을 하게 되면 그만큼 손해가 있기 때문에 하지 말아야 한다는 의미인 것이죠.  그러므로 그 다음에 전개되는 버즈삼구님의 여러 이유들</p>
+<blockquote><p>위의 글에서 CSS라는 것은 웹표준과는 그다지 상관없고, XHTML과 합쳐질 때 표준이 된다는 사실을 알았습니다.</p></blockquote>
+<blockquote><p>위의 이야기는 실제로 일리가 있어 보입니다. 하지만, 실전에서 이렇게 사용되는 경우가 관리가 부담되는 개인 웹사이트 외에 있을까요?</p></blockquote>
+<blockquote><p>위의 글에서 CSS+XHTML 문서를 이용해야 되는 이유는 콘텐츠의 재활용(확장성)에 있다는 것을 W3C문서에서 알 수 있었습니다. 그 말은 내가 만드는 페이지가 다른 디바이스에 나오거나 같은 디바이스라도 틀린 디자인이 보여져야 할 때에만 의미가 있다는 말입니다.</p></blockquote>
+<p>은 약간 사실과는 멀다고 할수 있습니다.  말씀하신데로 W3C에서 발췌하신 부분은 사실상 표준이라고 쓰이는 것이죠.  Documents being apart from Presentation 문서와 디자인의 분리인 것입니다.  실례를 들자면 <a href="http://ilmol.com/wp/2006/06/13/234/#comment-6408">Prak 님께서도 flickr 이야기를 하셨고</a>, ESPN.com 또한 몇초안에 레이아웃이 변형되어야 하는 부분에서 XHTML, CSS 잇점으로 그것을 가능케 합니다.  ESPN 의 뉴스크기에 따라서 댓문이 바뀌는 현상이 바로 그것입니다.  후니님께서 좋아하시는 <a href="http://adobe.com">adobe 사의 홈페이지</a>도 마찬가지 입니다.  20개정도 되는 각각 나뉘어진 css 로 수천개의 문서들을 관리하게 됩니다.  메뉴는 메뉴데로 사이드바는 사이드바 대로 각각의 css 가 제작되어있죠.</p>
+<p>xhtml+css 이야기를 잠깐 하자면 css 의 c 가 Cascading 입니다.  즉 겹쳐진다는것인데 그 의미는 위의 어도비사 홈페이지와 같이 필요한 부분은 계속 겹치고 겹쳐서 다시말해서 합쳐져서 힘을 발휘 한다는 것입니다.  메뉴는 메뉴데로 css 를 제작하고, 사이드바는 사이드바대로 제작되며 header 부분은 그것대로 제작하여 그것들을 합치면 하나의 큰 스타일이 되는것이죠.  대신 세분화 되었기 때문에 몇천개의 페이지에 메뉴를 바꾸게 되더래도 일일히 손댈 필요 없이 메뉴를 담당하는 css 만 열어서 수정해주면 모든 페이지에 적용이 되어버립니다.  이 케스케이딩을 제대로 활용할줄 아는 사람이 그만큼 더 효율성을 가진다고 할수 있으며 그것이 이 문서와 디자인의 분리에 큰 장점중의 하나입니다.  그래서 더욱 후니님의 "<a href="http://hooney.net/2006/04/309/">뫼 산(山) CSS 디자인 프로세스</a>" 가 필요하지 않을까 생각하네요.</p>
+<p>모바일의 지원여부는 모바일 자체의 flaw, 결함이지 웹표준 마크업의 결함이 아닙니다.  <a href="http://opera.com">오페라</a>가 야심차게 준비한 미니오페라 브라우저를 탑제한 모바일폰에서는 확실히 알수 있습니다. 즉 문서와 디자인의 분리로 인해 가져오는 이득이 '있다' 라는 것입니다.  이것을 바꾸어 말하면, 웹표준이 안따라 주기 때문에 다시 모바일 홈페이지를 제작해야 하니 다른 방법을 제시하라 보다는 모바일 기기들이 표준을 지원하지 않기 때문에 오는 불이익이 있으니 모바일 제작회사에게 표준을 준수를 지원하라는 요구가 들어가야 한다는 것입니다. </p>
+<p>마지막으로, </p>
+<blockquote><p>일모리님이 지적하신 오페라로 제대로 보여지는 웹사이트 제작이 실질적으로 불가능하다는 이야기는 예전 저의 경험에서 나온 것입니다. 테이블을 쓸 때 전 보통 IE, 파이어폭스, 그리고 오페라에서 테스트를 하곤 했는데, CSS만으로 제작할 때 오페라에서 디자인을 같게 만드는 것이 불가능하게 생각되었기 때문입니다. 이 것은 개인적인 경험입니다.</p></blockquote>
+<p>꾸준한 표준 사이트 제작을 하고 있는 저 또한 실제 경험에서 한 말입니다.  오페라의 특성을 잘 이해하며 마크업을 하게되면 특별히 치우치는일 없이 잘 제작할수 있습니다.  오히려 기능들을 표현하는데 너무나도 힘들었을 뿐입니다.  Presentation 을 말씀하신다면 예, 가능합니다.  만약 '불가능' 이라면 웹표준계에서 오페라를 환영치 않았겠죠.  힘든건 사실입니다.  까다롭죠.  그렇다고 '불가능'이라고 하시기엔 너무나 많은 사람들이 '가능'하게 하여 마크업을 하고 있습니다.</p>
+<p>지적할부분은 지적해 주시고 방문하신 분들도 생각을 나누어 주셨으면 합니다.  이번에 '인용' 기능도 달았으니 모두함께 즐겁게 토론의 장을,,, ;;;</p>
+<p>덧. <a href="http://www.nmindplus.com/2006/06/12/misunderstanding/">nmind님께서 SEO 에 관해서</a>도 약간 언급하셨군요.</p>
+<blockquote><p>참고로 구글같은 검색엔진이 가장 좋아하는 웹문서는 웹표준으로 제작된 문서입니다. 사람뿐만 아니라 검색로봇에게도 친절한, 알기쉬운 페이지가 바로 웹표준으로 제작된 페이지입니다. </p></blockquote>

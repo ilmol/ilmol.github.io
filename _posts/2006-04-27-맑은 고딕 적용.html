@@ -1,0 +1,25 @@
+---
+layout: post
+title: "맑은 고딕 적용"
+date: 2006-04-27 09:10:30.000000000 -04:00
+categories:
+- DESIGN
+---
+<p>CDK 분들과 '롱혼' 이야기를 하던때, </p>
+<p>"이번에는 정말 폰트가 한개라도 들어있다면"</p>
+<p>이라는 바람으로 MSN 에서 한숨을 푹푹 쉬었던 때가 있었는데, "<a href="http://goodhyun.com/archives/2006/04/a_20u_u_i_nac_a.php">비스타의 가장 매력적인 ‘기능’은 ‘폰트’일지도 모르겠다.</a>" 라는 말이 나올정도로 맘에드는 한글폰트가 첨가되어 나온다는건 환영할만한 일이 아닐수 없겠죠.  '맑은 고딕체'.  새롭게 출시될 <a href="http://microsoft.com">마이크로소프트</a>사의 비스타 OS 에 첨가되어 나올 폰트가 그나마 썰렁했던 <a href="http://www.likejazz.com/29866.html">웹2.0에 맞는 한글 폰트의 구세주</a>로 사용될꺼 같습니다.</p>
+<p>현재 SEO(Search Engine Optimization) 의 장점이나, 사이트의 구조적인 관리를 위한 문서와 스타일의 분리등의 트랜드로 폰트의 중요성이 더욱 부각되고 있는 만큼, 맑은고딕은 꽤나 중요한 시기에 들어오는 폰트라고 생각이 됩니다.  이미지로 대쳐가 되는 많은 '제목' 들이 text-indent 의 도움을 받지 않아도 되는것은 큰 수학이겠죠.  글자대쳐 이미지가 감소하니 접근성이 향상되는건 당연하겠습니다.  물론 그 종류의 다양성이 아직 많이 부족(Serif 체라도 하나 더 더해진다면... 좋긴 하겠습니다만)하다는 아쉬움이 있지만 이게 어딥니까~<!--more--></p>
+<p>해외에서는 많은 좋은 예를 찾아볼수 있습니다.  <a href="http://ajaxian.com">ajaxian</a>, <a href="http://www.mstefan.com/blog/">only a blog</a>, <a href="http://www.shauninman.com/plete/">Shaun Inman</a> 등등, 오히려 확대될수록 아름답게 보이는건 정말 부러운 부분이었습니다.  누구는 &lt;img&gt; 로 도배하는데 누구는 &lt;h2&gt; 로 간단히 표현하다니 불공평하죠.  이제 저런 사이트 부럽지 않게 제작되어질 앞을 생각하니 즐겁습니다.  likejazz님 말씀대로 정말 환영할 일입니다.</p>
+<p>이런 즐거움을 조금이라도 누려본다고 일모리네 글제목들에 적용을 시켜봤습니다.  아직 전체글에 적용할만한 시기는 아니고 그래도 제목 정도는 폰트 크기도 크고 bold 가 적용되어 있는지라 써 놓을만 하다고 판단해서 넣어놨습니다.  맑은 고딕체가 있으시면 잘 보이시리라 생각됩니다.  혹 타 블로그 분들 혹은 웹사이트 제작자께서 사용하기 원하시면 맑은고딕의 사용설정을 이렇게 해주시면되겠네요.   letter-spacing 을 잘 맞추어 주면 더 괜찮습니다.</p>
+<p>{% highlight css %}
+body{
+ font-family: 맑은 고딕, "Malgun Gothic";
+ letter-spacing: -0.05em;
+}
+{% endhighlight %}
+일단 malgun gothic, malgun 등은 먹히지 않기 때문에 '맑은 고딕'으로 사용하시면 되겠습니다. [ 흠... ]</p>
+<p><img src="assets/fonts1.gif" class="left" alt="segoe" />이야기를 넘기자면 이번 비스타 위도우에는 <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/UxGuide/UXGuide/Resources/WhatsNewInVista/Fonts.asp">시스템 기본폰트가 Segoe UI(발음: 씨고) 입니다</a>.  San-serif 의 ClearType 에 적합, 기본사이트 9pt 그리고 Aero 라는 테마를 통해 새로운 테마 글자도 첨가된다고 합니다.  그밖에 첨가되는 백터폰트들이 Meiryo for Japanese, Malgun Gothic(오예!), Microsoft JhengHei for Chinese (Traditional), Microsoft YaHei for Chinese (Simplified), Majalla UI for Arabic, Gisha for Hebrew, and Leelawadee for Thai 입니다.  그밖에 폰트<a href="http://blogs.msdn.com/michkap/archive/2006/04/04/567881.aspx">리스트들도 확인해 보시길</a>.</p>
+<p>참고가 될수도 있고 아닐수도 있긴 하기도 하는 것인데, 맑은고딕은 파란 Paran 어딘가에서 다운로드 받을수 있다고 하는 소문이 어디선가 돈다고 하는것을 제가 확인해보려다 못하고 계속듣기만 해서 돌고 있다는것만 짐작과 함께 말씀을 드릴까 말까 하다 어떻게 하다보니 적게되는거 같기도 하고 잘 모르겠습니다.</p>
+<p>덧:
+"Finally, Segoe UI is just one part of the extended Segoe family of typefaces. This family also includes contextual cursive handwriting fonts (Segoe Script), a hand drawn non-cursive font (Segoe Print), special fonts for TV use (Segoe TV), a symbol font for hardware decals (Segoe HW) and a fourteen member set used for branding and corporate communications.</p>
+<p>“One final note: The original Segoe fonts were not created for or by Microsoft. It was an existing Monotype design which we licensed and extensively extended and customized to meet the requirements of different processes, apps and devices.” - <a href="http://www.windowsvistaweblog.com/2005/12/06/windows-vista-font-update/">Vistablog</a></p>

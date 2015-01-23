@@ -1,0 +1,17 @@
+---
+layout: post
+title: '"IE 에서 보여지기엔 아깝다."'
+date: 2005-06-30 23:00:44.000000000 -04:00
+categories:
+- ETC
+- standards
+---
+<p>Too cool for IE 켐페인을 <a href="http://blog.paularms.com/article/too-cool-for-internet-explorer">paulasaurus rex 에서 시작</a>했습니다. (via <a href="http://seph.ws/mt/archives/2005/06/just_plain_unco.htm">Stephan Geyer</a>)</p>
+<p>오른쪽 하단에 위치하게될 이 베너는 too cool for IE, 즉 '내 홈페이지는 IE에서 보여지기엔 아깝다' 라는 뜻을나타내면서 IE를 놀리고 있네요.  ㅎㅎ  특히나 IE 에 맞추어 만들기 싫은 디자이너가 인터넷 익스플로러에서 깨져 보이던 말던 알아서 하라고 하는 배짱을 나타내기도 합니다.   크흐,,,  저도 달고 싶은 유혹은 상당합니다.  </p>  베너도 이뻐서 말이죠.<!--more--></p>
+<p><img src="assets/1.png" alt="Too cool for IE" /></p>
+<p>소스 코드를 잠깐 보면, 코멘트 핵을 썼습니다.  이부분이 css 파일이 아닌 xhtml 안에 들어가는 소스인데 그저 코멘트로 보이는 저 부분이 바로 핵 부분입니다.
+<code><!--[if IE]>
+<a id="tooCool" href="http://www.w3junkies.com/too_cool.php">Too Cool for Internet Explorer</a>
+<![endif]--></code></p>
+<p>&lt;!--[if IE]&gt; 부분이 바로 코멘트핵 의 시작입니다.  그리고 마지막은 &lt;![endif]--&gt; 로 끝내주게 됩니다.  이 사이에 들어간 부분은 다른 브라우저에서는 코멘트로 인식이 되며 IE 에서만 인식이 되게 됩니다.  네.  IE 에서만 보여주고 싶은 xhtml 코드가 있다면 이것을 잘 사용하시면 되겠죠 </p>  물론 버전에 따라서도 지정해 줄수 있습니다.  이 코멘트 핵 부분은 다음 포스팅에 자세히 올려보겠습니다.</p>
+<p>과연 png 알파랑은 멀리 떨어져 사는 ie 에 투명부분을 어찌 보이려 하는것인지는 모르겠지만, 아무튼 IE에 화딱지가 나신 분들은 지르셔도 될듯합니다.   전체 코드는 위의 paulasaurus rex 댁에 가보시면 나와있습니다.  ZIP 파일로도 제공하는군요.</p>

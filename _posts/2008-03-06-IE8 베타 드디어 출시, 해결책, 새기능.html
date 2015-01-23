@@ -1,0 +1,40 @@
+---
+layout: post
+title: "왜 IE8은 ACID2를 통과하지 못할까"
+date: 2008-03-06 15:35:16.000000000 -05:00
+categories:
+- BROWSER
+- HTML
+- standards
+---
+<p>아시다시피 IE8의 엔진이 ACID2 를 통과하였다는 발표가 사방에 퍼졌던때를 기억하실 것입니다.  그리고 오늘 IE8 을 다운받으신후 ACID2 테스팅 사이트에서 깨져있는 Smily Face 를 보셨을 것이구요.  이러한 가운데 왜 <a href="http://blogs.msdn.com/ie/archive/2008/03/05/why-isn-t-ie8-passing-acid2.aspx">IE8이 처음과는 다르게 깨져있는가</a>를 설명하는 IE블로그를 보고 제가 설명만 하기 보다는 이미 상당한 표준인식이 자리잡아가고 있는 여러분들에게 번역하고자 합니다.</p>
+<p>자려했는데 오늘밤에 고쳐야할 친한 동생의 컴퓨터가 있는지라 포멧하면서 기다리는 동안 키보드를 두드리고 있습니다..  ㅠㅠ</p>
+<h3>원문 <a href="http://blogs.msdn.com/ie/archive/2008/03/05/why-isn-t-ie8-passing-acid2.aspx">IEblog: why isn't ie8 passing acid2?
+왜 ie8이 acid2 를 통과하지 않는걸까?</a></h3>
+<p><img src="assets/Acid2.png" alt="ie8 acid2" /></p>
+<p>비록 IE8 베타1이 ACID2를 통과한다 했지만 몇몇분들은 위의 이미지처럼 깨져있는것을 보셨을 것입니다.  해서 약간의 설명이 필요하다 생각했습니다.  IE8 은 ACID2 테스트를 <a href="http://www.webstandards.org/files/acid2/test.html">http://www.webstandards.org/files/acid2/test.html</a> 사이트에서 통과하였습니다. (참고로 이곳은 acid2 테스팅을 위한 인기높은 사이트입니다.  현재 접속이 힘드실수 있습니다.) 웹에는 이 acid2 테스트가 가능한 여러 사이트들이 있으며 제가 최근 본 acid2 서비스 사이트는 <a href="http://acid2.acidtests.org">http://acid2.acidtests.org</a> 입니다.</p>
+<p>IE8 은 Active X 컨트롤의 크로스 도메인 보안 확인 기능으로 인해 ACID2의 "복사본" 사이트의 테스트를 통과하지 못했습니다.  IE가 Object 태그의 HTML 컨텐츠를 자체적으로 돌리지 않고 IE의 렌더링 엔진을 Active X 처럼 구동하여 HTML 컨텐츠를 보여주므로 동일한 크로스 도메인 보안 확인또한 적용(다르게 해석하면 거치게) 되는 것입니다.</p>
+<p>그렇다면 어떻게 ACIDTEST.ORG 카피(역: 카피라고 자꾸 강조하는군요) 가 OBJECT fallback 을 어떻게 이해하여 스마일얼굴의 눈을 처리하는지 보겠습니다.</p>
+<p>&lt;object data="data:application/x-unknown,ERROR"&gt;
+<span class="highlight">&lt;object data="http://www.damowmow.com/404/" type="text/html"&gt;</span>
+                &lt;object data=”data:*the eyes DATAURI* …&gt;
+&lt;/object&gt;
+&lt;/object&gt;</p>
+<p>IE 는 위의 하이라이트된 라인 부분의 OBJECT fallback 과정을 멈추게 됩니다.  이 일에 참여했던 팀과 나는 이것이 바른 작동이라 결정내렸으며 이유는 이 크로스 도메인 컨텐트가 404 HTTP 에러코드의 실패한 리소스 인지 혹은 다른 표준의 한 부분이 실패를 알리는 부분인지 알기 위해서 네비게이션을 허락해야하기 때문이죠.  호환성을 유지하며 기본적으로 보안을 유지하기 위해서 원래 웹저자들이 원하지 않았을지도 모르는 fallback 물러서는걸 발동하고 싶지 않았습니다. 제일 안전한 해결책과 함께 시작했으며 이제 앞으로 이 부분을 미래 베타를 위해 안전하게 조금 느슨하게 하는 것을 고려하고 있습니다.</p>
+<p>이제 www.webstandards.org 가 제공하는 공식 ACID2 테스트 페이지를 보겠습니다. </p>
+<p>&lt;object data="data:application/x-unknown,ERROR"&gt;
+<span class="highlight">&lt;object data="http://www.webstandards.org/404/" type="text/html"&gt;</span>
+     &lt;object data="data:*the eyes DATAURI *&gt;
+&lt;/object&gt;
+&lt;/object&gt;</p>
+<p>보시다시피 (역: ACID2 를 통과했을때의) 테스트 도메인이 같으며 고로 모든것이 잘 돌아갑니다.  아시다시피 http://webstandards.org (앞에 www 가 없음을 주목) 라는 네비게이션을 허락합니다.  이것 또한 크로스 도메인 접근 이죠.  www.webstandards.org != webstandards.org 처럼말입니다.  이것 또한 ACID2 테스트가 맨위의 그림처럼 깨어지게 보이게 할 것입니다.  그러므로 테스트 시에는 www.webstandards.org 를 타입하기 바랍니다.</p>
+<p>Phil Nachreiner
+Internet Explorer Developer</p>
+<h3>음....</h3>
+<p>번역이 잘 되었나 모르겠습니다.  일단 ie8 이 Active X 컨트롤의  크로스도메인 보안 체크를 하므로  www.webstandards.org 라는 공식적인 페이지에서만 smily face 가 완성이 된다는 해명으로 볼수 있겠네요.</p>
+<p>이 부분에 대한 <a href="http://blogs.msdn.com/ie/archive/2008/03/05/why-isn-t-ie8-passing-acid2.aspx#8059324">Ian Hickson(acid2와 acid3 개발) 의견</a>입니다.</p>
+<blockquote><p>But if it's failing -- for whatever reason, cross-domain or not -- you should fallback. Hence the current behaviour is still a bug. :-)</p>
+<p>(BTW why would it be a cross-domain problem? This should be exactly the same as an iframe, which can cross domains fine.)</p>
+<p>하지만 일단 (acid2 테스트를) 실패했다 어떠한 이유에서건 크로스 도메인이든 아니든 말이다.  그러므로 현재 동작상태는 버그이다. :-)</p>
+<p>(헌데 그것이 왜 크로스 도메인 문제인가?  이건 크로스도메인이 가능한 iframe과 동일한 것이다.)
+</p></blockquote>

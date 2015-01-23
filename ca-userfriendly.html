@@ -1,0 +1,15 @@
+---
+layout: default
+permalink: /userfriendly/
+---
+<article>
+<div class="contents">
+<h2>Category: UX UI AX</h2>
+<ul class="category">{% for userfriendly in site.categories.userfriendly %}
+<li>
+<h3><a href="{{ userfriendly.url }}">{{ userfriendly.title }}</a> - {{ userfriendly.date | date: "%b %-d, %Y" }}</h3>
+</li>
+{% endfor %}
+</ul>
+</div>
+</article>

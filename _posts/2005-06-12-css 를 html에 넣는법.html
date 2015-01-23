@@ -1,0 +1,59 @@
+---
+layout: post
+title: css 를 html에 넣는법
+date: 2005-06-12 11:47:16.000000000 -04:00
+categories:
+- CSS
+- HTML
+---
+<p>CSS를 XHTML에 적용하는 법은 3가지가 있습니다.<!--more--></p>
+<ol>
+<li>XHTML 안에서 필요한 부분에 직접 사용하는 방법.</li>
+<li>XHTML 헤더에 넣어서 사용하는 방법.</li>
+<li>그리고 외부 .CSS 파일을 XHTML로 불러들여와서 사용 하는 방법 이 있습니다.</li>
+</ol>
+<p>그리고 적용 순서가 있다면 3, 2, 1 순서대로 적용이 되기에 그대로 우선순위가 적용이 되겠죠.  외부에서 불러오는 파일이 가장 낮고 그다음 헤더에서의 정의된것이 그 다음, 그리고 직접 문서에 적용하는것이 가장 높게 우선순위가 적용됩니다.</p>
+<ol>
+<li>HTML 안에다 직접 넣는 방법은 스타일을 적용시키고자 하는곳에 가서 그대로 적어 쓰면 됩니다.
+{% highlight css %}
+<div>구조적인 사고방식</div>
+<div style="color: red;text-weight:bold;">구조적인 사고방식</div>
+<p>{% endhighlight %}</p>
+<p>직접 적용을 하였습니다.</li>
+<li>헤더에 넣어서 사용하는 법은 이러합니다.
+{% highlight css %}<html>
+<head></p>
+<style type="text/css">
+	<!--
+	div {
+		color: blue;
+		text-weight:bold;
+		}
+	-->
+</style>
+<p></head>{% endhighlight %}
+만약 1번과 2번이 동시에 씌여졌다면 어떤것이 적용되어 출력될까요?   네 위에서 설명드렸듯이 1번, 직접 씌인것이 마지막으로 렌더링되어 출력되게 됩니다.</html></li>
+<li>마지막으로 외부 css파일을 안으로 불러들이는 것인데 이 안에서 2가지로 나뉘어 집니다.  링크하는법과 헤더에서 쓰는것처럼 불러들이는 법인데 후자는 2번의 방법과 거의 같은 맥락이라고 보면 되겠네요.
+<ul>
+<li>링크하는법을 보면 가장 평균적으로 많이 쓰이는 경우라 익숙하신 분들도 많으실텐데, 바로
+<link />를 쓰는 방법입니다.  </p>
+<link rel="stylesheet" type="text/css" href="css파일주소" title="이름" media="screen" />
+<p>파일을 정해주어서 나타내는것이죠.</li>
+<li>헤더에서 쓰는것처럼 불러들이는 방법은 이렇습니다.  <head> 안에 2번처럼 들어가는데 그 안에 코드들 대신 @import 을 쓰는것입니다.
+{% highlight css %}<head></p>
+<style type="text/css">
+   <!--
+        @import url(http://css주소);
+        @import "http://주소";
+   -->
+</style>
+<p></head>{% endhighlight %}</p>
+<p>2번과 같지만 @import로 파일을 저 안으로 불러들이는 것입니다.</head></li>
+</ul>
+</li>
+</ol>
+<p>너무나도 기본적인 정보이지만 방법들중 어떤것에 우선순위가 오는지는 다시 정리할 필요가 있다고 생각해서 올렸습니다.  </p>
+<p><ins datetime="2005-06-12T10:24:53+00:00"><strong>첨가: 2005/6/12</strong> 이론적으로만 설명이되어서 호환성에대해 다루지 않았네요.  <a href="http://www.getografik.com/">jay님</a>께서 잘 설명해 주셨습니다.  특히나 구 버전들은 여러가지 제약이 따릅니다.  여러가지 @import를 썼을때라던지, " 이냐 '  이냐라던지 말입니다.
+간단히 한국에서 많이 쓰는것들로 요약을 하자면</ins></p>
+<p><ins datetime="2005-06-12T10:36:39+00:00">모든 호환성을 고려할때에 <strong>@import ("주소");</strong> 와 <strong>@import (주소);</strong>  따옴표 없이 가 가장호환성이 높습니다.</ins>
+<ins datetime="2005-06-12T10:36:00+00:00">정확한 정리는 jay님이 추천해 주신 <a href="http://www.dithered.com/css_filters/css_only/index.php">http://www.dithered.com/css_filters/css_only/index.php</a> 이곳에서 확인 하시기 바랍니다.</ins></p>

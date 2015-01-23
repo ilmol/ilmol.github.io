@@ -1,0 +1,33 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+//colors
+$color-brand: #4ab10d;
+
+$color-bg-base: #fff;
+$color-bg-side: #fff;
+$color-font-base: #333;
+$color-font-aside: #666;
+$color-link: #333;
+
+//size
+$size-font-base: 110%;
+$size-font-title: 2.7em;
+
+$size-width-sidebar: 200px;
+$size-width-content: 760px;
+$size-padding-article-side: 100px;
+
+$size-tablet: 800px;
+
+//other
+$font-family-base: "Apple SD Gothic Neo", "나눔바른고딕", NanumBarunGothic, "나눔고딕", NanumGothic, "Malgun Gothic", "Apple SD Gothic Neo", Verdana, Arial, sans-serif;
+$font-family-date: Georgia, serif;
+$spacing-unit: 30px;
+
+//screen-size
+$handheld: 980px;
+
+@import "base", "fonts", "layout", "article";

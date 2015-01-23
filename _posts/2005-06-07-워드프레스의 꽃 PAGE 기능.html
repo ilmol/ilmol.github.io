@@ -1,0 +1,81 @@
+---
+layout: post
+title: "워드프레스의 꽃 PAGE 기능"
+date: 2005-06-07 11:23:25.000000000 -04:00
+categories:
+- PRODUCT
+tags:
+- "워드프레스"
+---
+<p>각각의 블로그 툴들은 그것들만의 독특한 장점들이 있습니다.
+<a href="http://nzeo.com">제로보드</a>와 연동되는 <a href="http://zog.co.kr">조그</a>나 간단한 설치에 깔끔한 <a href="http://tattertools.com">테터</a>나 모든 블로깅툴에는 특징들이 있는데,  바로 이 특징을 이야기 할때에 워드프레스에서 빼 놓을수 없는 기능이 바로 PAGE 기능이 아닐까 싶네요.   워드프레스 버전 1.5부터 시작되어 정말 많은 유저들에게 사랑을 받고 있는 기능입니다.  정적인듯 하면서도 정적이 아닌 하지만 시간에 구애받지 않고, MT처럼 템플릿을 사용할수 있으며 메뉴처럼 페이지안에 또다른 페이지를 연결시킬수도 있는 멋진 기능입니다.  새로운 콘셉이기 때문에 저도 처음에는 이해를 충분히 하지 못했고, 알고나서는 놀랄수 밖에 없었던 기억이 납니다.<!--more--></p>
+<p><font color="#ff0000">참고: 페이지라고 표시할경우에는 보통 말하는 문서, 페이지 를 일컫고, PAGE 라고 표기된것이 워드프레스의 기능중 하나인 PAGE 를 나타내겠습니다.</font></p>
+<ul>
+<li><strong>정적이 아니면서 정적이다?</strong>
+PAGE 기능은 by definition, 웹의 정의로는 정적이 아닙니다.  정적, Static 이다 함은 </p>
+<blockquote><p>Static pages are those which have been created once and do not have to be regenerated every time a person visits it. In contrast, dynamic pages do need to be regenerated every time they are viewed; code for what to generate has been specified by the author, but not the actual page itself. These use extensive PHP code which is evaluated each time the page is visited, and the content is thus generated on the fly, upon each new visit. - <a href="http://codex.wordpress.org/Pages">codex.wordpress.org</a></p></blockquote>
+<p>즉 방문자가 들어왔을때에 페이지 자체안에서 보여줄때에 정적이고 데이터베이스를 가지고 오거나 방문자가 그 페이지를 읽기 때문에 스크립트가 돌아간다던지 방문자에 대해 무언가가 돌아갈때에 정적이 아니라고 말할수 있습니다.  물론 그래서 <em>PAGE 는 정적이 아닙니다.</em></p>
+<p>하지만, 정적인 아닌것 가운데에 정적인 의미로 사용되는것이 바로 이 PAGE 기능입니다.  정적인것의 의미 자체는 codex.wordpress.org에 따르면 "변함이 없는것" 으로 정의되고 이 PAGE 기능이 WP 유저들에겐 그 테두리 안에서 의미적으로 사용되기 때문입니다.  예를들어 자신을 소개 하는 PAGE 를 만들었을때에, 보통의 포스팅은 새로운 포스팅들로 업데이트되고 밀려가지만 소개페이지는 정적이라는 의미상에서 유지가 되며 포스팅으로 인식되기보다 하나의 정적인 페이지로 인식이 되어지기 때문입니다.  소개페이지는 소개페이지니까요.
+codex.wordpress.org가 잘 정리해 주고있습니다.</p>
+<p><strong>"PAGE는 정적인 문서를 포함하지만 동적으로 표현된다" </strong></p>
+<p>아마 그래서 더욱 PAGE라는 기능이 매력적으로 다가 오는게 아닌지 모르겠습니다.
+MT 유저분들께서는 '저게 무슨 정적인거야?' 라고 하실지 모르겠습니다만, MT에서의 정적인 표현과 WP에서의 표현의 차이를 이해해 주시기를 부탁드립니다  :)</li>
+<li><strong>PAGE는 보통의 포스팅과 다른점은 무엇일까?</strong>
+포스팅은 특정한 틀 안에서 돌아갑니다.  일정한 하나의 테마 안에서 포스팅들이 나열되며 시간별로 나뉘어 지고, 주제별로 나뉘어 집니다.  하지만 PAGE 는 바로 이 틀에 구애받지 않습니다.  시간이나, 카테고리나, 심지어 스킨에도 구애받지 않습니다.  물론 일관성을 위해서 스킨디자인 안에 돌리겠지만 원한다면 완전히 다른 페이지를 구연할수 있습니다.  MT 에서 사용하는것처럼 각각의 PAGE 에 블로그 스킨과는 다른 템플렛을 적용시킬수 있기 때문입니다.</p>
+<p>제가 사용한 PAGE의 템플렛 적용을 예로 보겠습니다.
+<img src="assets/PAGE1.gif" width="362" height="392" alt="PAGE" /></p>
+<p>그림에서 보이듯이 1-1 에서 PAGE의 템플렛을 정해주면 그 템플렛을 만든데로 그대로 바뀌어 나오면서 1-2에서 처럼 바뀌어졌습니다.  제가쓴것은 간단한 옆 메뉴 바꾸기 그리고 배경색 바꾸기지만, 원한다면 새로운 디자인에다가 메뉴도 빼고 글만 넣을수도 있는 완전 새로운 템플렛이 적용이 가능한 것입니다.</li>
+<li><strong>PAGE의 이용 예제들은?</strong>
+그렇다면 PAGE는 이렇게 마음대로 사용이 가능하게 됩니다.</p>
+<ol>
+<li>PAGE 가 주로 많이 이용되는소개 페이지같은 하나의 메뉴로써 쓸수가 있습니다.  Permlink 퍼머링크 표현하는 방식을 관리자옵션에서 바꾸어 주면 주소또한 깔끔하게  http://계정/워드프레스주소/페이지이름/  으로 바꾸어 지기 때문에 멋지게 쓸수가 있습니다.   보시다시피 제 메뉴에 About 페이지의 주소는 http://ilmol.com/wp/about/  으로 되어 있죠.</li>
+<li>혼자만의 페이지로 쓸수도 있습니다.  인터넷만 있으면 어느곳이든 워드프레스 관리자로 접속해서 자신만의 개인공간으로도 쓸수 있습니다.  출력하지 않고 말이죠.  누군가의 포스팅에서 보았습니다만, 소설을 쓴다고 하면 소설을 저장하고 쓰고 할수 있는 멋진 저장공간이 되겠네요.  특히 "저장하고 계속 글쓰기" 모드가 있어서 글 쓰다가 저장 한번씩 눌러주고 글을 쓸수 있으니 안전하기도 합니다.</li>
+<li>강좌페이지로도 사용을 할수가 있습니다.  PAGE 는 Sub PAGE 를 제공하기 때문에 어떤 특정 PAGE 밑에 소PAGE 를 넣어서 하나의 홈페이지 처럼 써버릴수가 있습니다.  강좌로써 더할나위 없는 기능이죠.  페이지 안에 작은 페이지.  이 또한 여러가지로 응용되서 쓰일수 있겠습니다.  예로,
+<ul>
+<li>Tatter Tools
+<ul>
+<li>Intro</li>
+<li>Tools</li>
+<li>Plug-in</li>
+</ul>
+</li>
+<li>WordPress
+<ul>
+<li>Intro</li>
+<li>Tools</li>
+<li>Plug-in</li>
+</ul>
+</li>
+</ul>
+<p>라고 링크를 만들면 각각의 주소는
+http://ilmol.com/wp/Tatter_Tools/
+http://ilmol.com/wp/Tatter_Tools/Intro_tt/
+http://ilmol.com/wp/Tatter_Tools/Tools/
+http://ilmol.com/wp/Tatter_Tools/Plug-in/
+http://ilmol.com/wp/WordPress/
+http://ilmol.com/wp/WordPress/Intro_wp/
+http://ilmol.com/wp/WordPress/Tools_wp/
+http://ilmol.com/wp/WordPress/Plug-in/
+로 되겠습니다.  정말 괜찮죠.  </p>;;</p>
+</li>
+<li>PAGE가 정적으로 쓰이는걸 이용해서 블로그를 처음에 접속했을때에 특정하게 만들어진 PAGE 를 먼저 보여줄수 있습니다.  물론 "<a href="http://www.semiologic.com/projects/static-front/">Static front page</a>" 플러그인을 써야 하지만 PAGE 가 있기에 가능한것이죠.  거의 모든것이 PAGE 라는 기능으로 구연되는것입니다.</li>
+<li>특정 스크립트들을 돌려서 보여주게 쓸수 있습니다.  PHP 나 다른 스크립트들은 글을 쓰는 INPUT 박스 안에 넣으면 돌아가지 않지만 템플릿으로 넣어 돌리게 되면 어떤것이든 가능합니다.  예로 소개페이지에 자신의 사진들이 랜덤하게 돌아가면서 나오게 하고 싶다면 간단히 템플렛으로 만들어서 그 특정소개페이지에 적용시켜주면 됩니다.  더 나아가면 그 페이지 자체를 게임페이지로 만들수도 있겠습니다.  ㅎㅎ  ;</li>
+</ol>
+</li>
+<li><strong>PAGE 사용방법?</strong>
+"글쓰기" 를 누르면 포스트를 쓰는것과 PAGE 를 쓰는것이 있습니다.  PAGE 를 눌러서 글을 작성하시고 그 글의 타이틀을 자신의 워드프레스 주소에 붙이면 PAGE 의 주소가 됩니다.  제목을 about 으로 정하였다면 주소는
+http://워드프레스주소/about/ 이 됩니다.
+</li>
+<li><strong>PAGE 템플렛 사용방법.</strong>
+다이나믹한 출력을 위해서 템플렛 사용은 중요합니다.  하지만 그 중요한만큼 만들기가 어렵지 않습니다. </p>
+만들고 싶은데로 템플렛을 만든후 그 파일안에
+<code><?php /*
+Template Name: about
+*/
+?></code>
+를 넣어줍니다.   about 이 템플렛 이름이 된겁니다.
+이제 이 템플렛을 사용하고 싶은 페이지를 열어 밑에즈음에 있는 Page Templete 을 고릅니다.  한국어 wp는 써보지 않아서 어떻게 곰님께서 번역하셨는지 모르지만 고르시면 about 이라고 보일겁니다.  이걸 고르시고 저장하면 그 페이지에 이제 about 템플렛이 적용된것입니다. 간단하죠 </p>;;
+</li>
+</ul>
+<p>여러가지 PAGE 기능들, 특징들을 소개해 드렸습니다.
+이 말고도 더 많은 기능들과 특징들이 있을것입니다.  멋지게 자신이 쓰고 싶은데로 사용하실수 있겠죠.  PAGE 라는 기능으로 워드프레스의 질을 한층 높여준건 당연할수 밖에 없겠습니다.  이런 럭셔리한 기능을 잘 쓰시길 바라며 멋지게 발전하는 블로거들이 되시기 바랍니다.  </p>

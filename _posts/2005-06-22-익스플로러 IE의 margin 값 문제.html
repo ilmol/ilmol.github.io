@@ -1,0 +1,42 @@
+---
+layout: post
+title: "익스플로러 IE의 margin 값 문제"
+date: 2005-06-22 14:02:55.000000000 -04:00
+categories:
+- CSS
+---
+<p>고질적인 IE의 문제 계속됩니다.  3px 의 문제 입니다.  무언가 <a href="http://ilmol.com/wp/2005/06/17/38/">padding 값도 잡은거 같은데</a> IE에서 이상하게 깨지는 경우가 있습니다.  이것은 전 포스팅에 다룬 PADDING 의 DIV 안쪽의 문제가 아닌 바깥쪽의 문제가 되는데요, FLOAT 값과 만나는 경우 입니다.   <!--more-->저도 이 페이지를 디자인 하는중에 많이 격은 문제 인데요.  특히 2개 이상의 DIV들이 하나의 DIV 안에 들어가 있는 경우, WIDTH 가 넉넉하지 않으면 곧바로 밑으로 내려가게 되는 문제입니다.  그래서 제 SIDEBAR 도 수도없이 내려갔다 올라갔다를 반복했었습니다.  너비의 여유를 두면서 고치긴 했지만 <a href="http://www.webmasterworld.com/forum83/2696.htm">여러 포럼</a>과 CSS Hacks를 참고하면 float을 적용한쪽에서 3px 정도의 공간이 생겨버린다고 하더군요.  실제로 적용하고 돌려본 결과 정확하게 3px이 에러가 납니다.</p>
+<p>예를들어보겠습니다. #SIDEBAR와 #CONTENT 이 2개가 서로 좌우로 정렬되고 이 둘은 #WRAP 안에 들어갑니다.</p>
+<p>#CONTENT {width: 200px;float: left;}
+#SIDEBAR { width: 100px; }
+그러니 총 300px의 값이 #WRAP 의 너비가 되야하지만 그렇게 될 경우에 문제가 생겨버립니다.
+<img src="assets/study4.gif" width="361" height="832" alt="3px problem" /></p>
+<p>이것을 고치는 법은 <strong>IE가 읽을때에만</strong> float이 들어간 곳에 margin값을 -3px 로 해주면 되겠네요.  (물론.  너비를 늘려주면 고쳐집니다.  ㅡㅡ;;;)</p>
+<p>즉, <code>#CONTENT {
+	float: left;
+	width: 200px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	}
+#SIDEBAR {
+	width: 100px;
+	margin: 0;
+	padding: 0;
+	}
+* html #CONTENT {
+	margin-right: -3px;
+	}
+*html #SIDEBAR {
+	margin-left: 0px;
+	}</code></p>
+<p>* html #CONTENT 에서 margin-right: -3px 을 주었습니다.  * html은 무엇인지 아시죠?  <a href="http://ilmol.com/wp/2005/06/17/38/">이곳을 참고하시기 바랍니다</a>.  </p>
+<p>물론.  * html 말고도 IE 에만 적용하는 다른 방법들이 있습니다만, 나중에 나누기로 하겠습니다.</p>
+<p><ins datetime="2005-06-22T05:45:29+00:00">첨가: #SIDEBAR의 float 값을 right 으로 주면서 정렬값으로 문제를 잡을수 있겠습니다.  jay님께서 상기시켜 주셨네요. 물론 2개의 element 만이 정렬을 한다는 가정한에서 입니다.  2개이상 float:left 를 주면서 right 값을 주어야 하는 경우가 생기겠지만, <a href="http://tjpark.com">TJpark님</a>께서 코멘트 남겨주셨듯이 absolute 값을 포지션에 주어서 쓸수도 있겠습니다.</ins></p>
+<blockquote><p>실제 복잡한 레이아웃의 서비스를 코딩할경우에는 1,2px로 아쉬울경우가 생길거같습니다
+그래서 인데..
+contents부분은 그냥 float 형태로 두고..
+sidebar같은경우는 float 대신 position:absolute로 우측에 정렬시키는건 어떨까요?
+겹칠지언정.. 내려가지는 않을거 같아서여 </p>;; -TJpark</p></blockquote>
+<h3>한가지더</h3>
+<p><strong>그리고 또하나의 margin 에러가 있습니다.</strong>  margin과 float이 같은방향으로 설정될때에 2배의 margin 이 생기게 되는데요, <a href="http://hyeonseok.com/home/archive_css.php">신현석님께서 잘 설명해 놓으셨네요</a>.  </p></p>

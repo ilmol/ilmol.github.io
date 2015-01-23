@@ -1,0 +1,25 @@
+---
+layout: post
+title: IE 익스플로러 패밀리, MIX06
+date: 2006-05-20 11:16:50.000000000 -04:00
+categories:
+- BROWSER
+---
+<p>컴퓨터 포멧후 잊고있었던 IE5.5 엔진과 IE6 엔진을 다시 깔아  IE7 베타2, ie6, ie5.5 를 동시에 가동중이다.  특히나 IE 5.5로 요즘은 서핑중인데 최근 제작되는곳들중 layout이 깨지는곳이 꽤 되어 조금은 안타깝다.  보통 <a href="http://ilmol.com/wp/2005/06/17/38/">padding 의 잘못된 사용으로 특성을 제대로 이해하지 못할경우</a> 이런 현상이 많다.  폰트크기도 조절이 안된경우도 비일비재 하다.  IE6에서 퀄크모드로도 이런 현상이 일어나기도.  최대한 사이트 제작자에게 이 부분을 알리려고 하지만 가끔 contact 정보를 찾기 쉽지가 않는경우 그저 지나쳐버린다.  앞으로 점점 잊혀질 5.5 이라해도 꽤 많은 숫자가 아직까지 사용하고 있기에 돌봐줄 필요는 있다.<!--more--></p>
+<h3>구 익스플로러들의 미래?</h3>
+<p>현재 5.5의 사용은 윈도우2000 때문인 경우가 대부분인데 이러한 현상이 내년 상반기에 윈도우 비스타가 출시된 후에도 계속될듯하다.  IE7이 비스타에 장착되어 나오면서 크게 사용자는 늘겠지만 6.0은 XP 가 사라질때까지 약 2년에서 길게는 4년까지도 사용자가 남아있을꺼라 짐작된다.  물론 그때즈음이면 IE6 이하 버전에 맞는 전용 CSS 가 구현될 가능성이 높다.  이유인즉 IE7에는 여러 CSS 에러들이 잡힌건 물론이고, 가장 큰 이유일꺼라 생각되는 부분이 바로 디자인 감각이 뛰어난 한국 사이트들에서 PNG(portable network graphics) 이미지의 사용을 극대화 할것이기 때문이다.  말도 안될꺼라 생각할지 몰라도 PNG 사용가능만으로도 충분히 디자이너들이 IE7 과 비 IE7 의 CSS를 나눌수 있다.  왜 PNG? 라고 생각하신다면 여러 <a href="http://user.fundy.net/morris/?photoshop27.shtml">예제들을 살펴보면 느낄수 있지 않을까</a>.  그 파워를 아시는 분들은 <a href="http://msdn.microsoft.com/workshop/author/filter/reference/filters/alphaimageloader.asp">AlphaImageLoader 필터</a>까지 <a href="http://hyeonseok.com/pmwiki/index.php/Javascript/PNG">해보려했던 기억도</a> 있다.  물론 <a href="http://www.psnnet.net/wp/?p=119">개선될 부분이 없는건 아니지만</a>...</p>
+<h3>벌래 잡는것으로는 족하지 않다</h3>
+<p>아시다시피 웹상에 인터넷익스플로러 브라우저에 '비표준 브라우저' 의 딱지가 붙기 시작했던 이유가 CSS 의 랜더링 문제가 컸었다.  소위 CSS 버그라고 불리우는 것들 때문인데 <a href="http://sessions.mix06.com/view.asp?sessionChoice=2001&disc=&pid=NGW042&yearChoice=2005">MIX06 동영상</a>을 보며 여러가지 일모리네에서 다루지도 못한 많은 버그들이 잡힌것을 보여주고 있었다.  정말 <a href="http://hyeonseok.com/soojung/entry.php?blogid=158">환영 할만한 일</a>이다.  머리골을 아프게했던 <a href="http://www.positioniseverything.net/explorer.html">BOX문제나 MARGIN 에러, 여러 줄줄이 리스트들</a>이 개선되었는데, 문제는 아니 일모리가 실망했던 부분은, 문제점들이 개선된 브라우저이지 특별히 '앞서가는' 개척 브라우저는 아니라는 점이다.  개선되었다고는 하지만 LAYOUT 에 관련된 CSS 는 이미 개발이 거의 끝난 상태라고 말하고 있었고, 이러한 부분에 있어서는 올해말 발표되어 나올 BETA3 와 정식발표본의 차이는 그리 크지 않을 거라는 것이다.  현재 언급되고 있는 개발 부분은 </p>
+<ul>
+<li>background-attachment:fixed 가 body 이외에도 적용 가능</li>
+<li>Fixed positioning 의 가능</li>
+<li>A 태그에만 적용되었던 HOVER 가 모든 태그에 적용</li>
+<li>선택자의 확장 first-child, adjacent, attribute, and child selectors</li>
+<li>CSS3 의 attribute 선택자인 prefix, suffix and substring</li>
+<li>align 의 개선</li>
+</ul>
+<p>등등이다. 그리고 이미 <a href="http://hyeonseok.com/soojung/browser/2005/10/13/180.html">현석님의 블로그를 통해 소개</a>되었던 * html, _property, /**/ comment bug 등등의 개선(?)이 큼직한 움직임들이다.  </p>
+<p>곧 '개척 브라우저'들은 <a href="http://www.techcrunch.com/2006/03/19/firefox-20-alpha-released/">파이어폭스2.0 버전이 나올 계획</a>이며 <a href="http://opera.com/download/index.dml?ver=9.0b">오페라9 또한 출시</a>된다.  특히 오페라 9 베타의 최근 빌드는 <a href="http://www.howtocreate.co.uk/operaStuff/acid/">ACID2 도 통과한 상태</a>이다.  사파리와 함께 이들은 꾸준한 업그레이드로 CSS3 의 지원도 활발히 이루어질꺼라 예상이 된다.  버전의 업그레이드 보다는 보안패치가 더 많이 나오는 IE 라는점을 감안할때 평균 수준밖에 되지 않는 브라우저라는것이, 그리고 대부분의 방문자는 IE7 을 쓸거라는것이 씁슬한 미소를 짓게 한다.</p>
+<h3>IE7 의 출시후는?</h3>
+<p>일단 불행하게도 IE5.5 를 무시할수 없을듯 하다.  그리고 MS 의 특성상 IE7 출시 후에도 IE6의 보안 패치는 꾸준히 2, 3번 나오지 않을까 싶다.  IE7의 보안업데이트는, 별로 언급하지 않아도 될것이라 생각된다.  최근 웹표준과 관련된 코딩을 맡는 직책을 퍼블리셔라고 지칭하는데 IE7과 6에 맞도록 제작하는것이 그리 쉽지는 않을듯 짐작해 본다.  물론 HACK 에 의존하지 않고 먼길이지만 돌아서라도 제대로 코딩하던 습관과 노하우로 제작해왔던 퍼블리셔에겐 그리 큰 문제가 아닐수도 있다.  하지만 자질구래한 LIST 의 차이점이나 작은 margin 의 1px 를 심각하게 본다면 그리 쉽지 않을듯.  최악의 상황은 ie6, ie5.5,<a href="http://space.dungg.com/tt/137"> ie7 핵</a> 까지 핵을 써주어야 하는 일태니 정말 미워질태다.</p>
+<p>여태까지의 행보로 봤을땐 꽤 큰 스탭이지만 만족할수 없다.  꾸준히 발전하는 IE 가 되길 바래본다...</p>

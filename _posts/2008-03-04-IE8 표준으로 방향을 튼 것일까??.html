@@ -1,0 +1,17 @@
+---
+layout: post
+title: IE8 표준으로 방향을 튼 것일까??
+date: 2008-03-04 23:37:14.000000000 -05:00
+categories:
+- BROWSER
+- standards
+---
+<p>일모리네에서 IE8 의 Version Targeting 에 관한 번역글들(<a href="http://ilmol.com/wp/2008/01/29/357/">Doctype을 넘어</a>, <a href="http://ilmol.com/wp/2008/02/20/362/">IE8의 버전지정 2차 공방</a>) 을 접하시면서 최근 한달간 이루어졌던 공방을 보셨을 것입니다.  오늘 IE 팀의 블로그에 이에대한 <a href="http://blogs.msdn.com/ie/archive/2008/03/03/microsoft-s-interoperability-principles-and-ie8.aspx">공식 입장이 발표</a>가 되서 화제입니다.</p>
+<p><img src="assets/20080304-c8ea17u9bcj3riwfwwpkdmimt6.jpg" alt="ie logo" class="sidenote" />아시다시피 IE8의 방향은 웹을 깨지 않는, 즉 IE7의 렌더링을 기본으로 삼으면서 원하는 개발자들에게는 IE8의 소위 "표준 렌더링 모드"를 선택할수 있도록 하는 것이었습니다.  IE6 에서 IE7으로 넘어오며 깨어진 수많은 사이트들이 더이상 브라우저 업그레이드를 통해 깨어지지 않도록 "배려" 한다는 명분 아래 IE8은 새로운 버전과 ACID2 를 통과한 렌더링 엔진을 갖고 있으면서도 하위버전으로 렌더링이 되는 방향을 택하려 했었던 것이죠.</p>
+<p>이제 이 방향을 틀어 IE팀은 원래 계획이었던 Version Targeting을 중심으로 한 호환성 유지 보다는 IE8 이 Standard Mode, 표준 모드를 기본모드로 택하게 되면서 IE 가 배려하고자 했던 IE6 이나 IE7 에 종속적인 사이트들을 감싸기 보다는 표준 준수를 권장하는 미래 지향적인 표준의 브라우저로 거듭날 것이라는 입장을 알린 것입니다.  그 입장이 사실인지 아닌지는 잘 모르겠지만 일단 웹표준 커뮤니티에서는 "<strong>일단은</strong>" 기쁘게 받아들이고 있는 뉴스가 되었습니다.</p>
+<blockquote><p>
+In light of the Interoperability Principles, as well as feedback from the community, we’re choosing differently. Now, IE8 will show pages requesting “Standards” mode in IE8’s Standards mode. Developers who want their pages shown using IE8’s “IE7 Standards mode” will need to request that explicitly (using the http header/meta tag approach described here).</p></blockquote>
+<h3>하지만 아직 이르다</h3>
+<p>아마 이 뉴스에 가장 크게 반응 할 그룹은 웹개발자들 소위 퍼블리셔로 불리는 그룹과 사이트를 소유하고 있는 그룹일 것입니다.  퍼블리셔/ui 개발자들은 상호연동성(Interoperability)을 선택한 IE8 과 함께 표준으로 변화된 사이트들을 제작하는 것이 꿈만 같은 일이겠으나 꾸준히 남아있을 IE6와 IE7 잔재들 가운데 과연 사이트 관리자가 투자를 통한 표준지향을 선택하게 될까요?</p>
+<p>이슈는 이것입니다.  IE8 이 표준렌더링 모드를 기본으로 탑제하지만 IE7 의 렌더링 모드를 Version Targeting 을 통해 제공하게 됩니다.  IE6와 IE7에 종속적인 사이트들이 IE8이 출시 되었을때 IE7 때처럼 새 브라우저에 맞는 개발을 선택하기 보다는 현재 유지되고 있는 IE7 의 렌더링을 메타태그 한줄로 사용할수 있게 되면서 IE8 표준모드 대신 불완전한 표준 브라우저 IE7 렌더링 엔진을 사용할 가능성이 상당히 높습니다.  또한 IE8 이 출시 된 후 라고 하더래도 IE7 과 IE6 의 브라우저 점유율의 변화가 급격히 찾아오지 않는한 IE8 표준 모드에 맞추어 사이트를 개발하게 된다면 IE7, IE6에서 깨어지는 현상을 피할수 없으므로 하위버전 또한 고려하여 사이트 개발을 진행해야 하니 과연 IE가 어느정도의 위험을 감수하는 것인지.</p>
+<p>IE8 이 표준모드를 기본모드로 탑제 했다고 하지만 앞으로 버전지정(version targeting) 기술의 잔재가 어디까지 어떻게 이어질지는 두고 봐야할 문제인듯 싶습니다.</p>

@@ -1,0 +1,37 @@
+---
+layout: post
+title: "덧글의 질을 높이자"
+date: 2006-06-13 10:44:24.000000000 -04:00
+categories:
+- PRODUCT
+tags:
+- "워드프레스"
+---
+<p>몇가지 변화된 부분들이 있습니다.  일단 <a href="http://ilmol.com/wp/2006/06/09/232/">덧글에 대한 토론</a>을 내어놓은 후에 꾸준히 고민중입니다.  <a href="http://sangsangbox.net/678">여러 의견들도 있었구요</a>, 아무튼 이에대한 하나의 결과입니다.  덧글을 달때에 본문을 쉽게 인용할수 있는기능, 이전 덧글을 쉽게 인용할수 있는 기능들을 즉각 이곳에 적용시켜 놓았습니다.
+<img src="assets/166134613_570fc9056c.jpg?v=0" alt="인용" />
+<!--more--></p>
+<ul>
+<li>인용링크를 첨가하여 <a href="http://www.damagedgoods.it/wp-plugins/quoter/">클릭시에 덧글란 안에 인용글이 저절로 생기게</a> 해 놓았고, 어느곳이던지 마우스로 드래그 하여 선택된 부분을 인용할수있는 버튼또한 덧글란 바로 위에 삽입해 놓았습니다.  더 편한 토론이 이루어 질꺼라고 생각합니다.  :)
+<p>이 워드프레스 플러그인은 모든 워프 유저들께서 사용하셨으면 하는데, 설치법도 간단합니다.  <a href="http://www.damagedgoods.it/wp-plugins/quoter/">다운받으셔서</a> 플러그인을 활성화 시킨후에 admin->option->quote 에서 출력할 문구를 마음대로 바꾸시면 됩니다.  comment.php 를 약간 건드려 보셔야 되는데  워드프레스를 사용하신다면 잘 아시겠죠. </p>
+<p>3가지를(혹은 2가지를) 넣으시면 됩니다.</p>
+<ol>
+<li>글에 달린 덧글을 인용할수 있기를 원한다면 각각의 덧글에 '인용하기' 버튼을 달아야겠죠.  comment.php 를 여셔서
+&lt;?php if (function_exists('quoter_comment')) { quoter_comment(); } ?&gt;
+를 넣고싶은곳에 넣으면 됩니다.  저는 &lt;?php comment_author_link() ?&gt;  &lt;?php comment_date('F jS, Y') ?&gt; 옆에 넣었습니다.
+</li>
+<li>덧글 말고 어떤 글의 일부던지 인용을 할수 있게 하는 것은
+&lt;?php if (function_exists('quoter_page')) { quoter_page(); } ?&gt;
+를 넣으면 됩니다.  저는 textarea 윗부분에 삽입했네요.
+</li>
+<li>자 이제 위의 구문들을 실행했을때에 실질적으로 출력이 되어야 하겠죠.  &lt;textarea&gt;와 &lt;/textarea&gt;를 찾아서 넣어줍니다.
+&lt;?php if (function_exists('quoter_comment_server')) { quoter_comment_server(); } ?&gt;
+저는 이렇게 넣었습니다.
+{% highlight php %}
+<textarea name="comment" id="comment" rows="15" tabindex="4"><?php if (function_exists('quoter_comment_server')) { quoter_comment_server(); } ?></textarea>
+{% endhighlight %}
+</li>
+</ol>
+<p>이렇게 함으로써 방문자가 편안히 인용문구를 쓸수 있겠죠.  일모리네도 토론이 더욱 활성화 되기를 바래봅니다.</li>
+<li>예전에 덧글란에 링크 주소를 넣어도 링크가 저절로 생성되지 않게 되어있었는데 풀어놓았습니다.  단순히  http://ilmol.com 이라고 적으면 링크로 업데이트됩니다.</li>
+</ul>
+<p>테터에도 이러한 플러그인이 존재하는지 모르겠습니다만, 이번 플러그인으로 인해 여러모로 덧글의 질 향상에 도움이 될꺼라 생각합니다.</p>

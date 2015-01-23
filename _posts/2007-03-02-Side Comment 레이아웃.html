@@ -1,0 +1,30 @@
+---
+layout: post
+title: Side Comment 레이아웃
+date: 2007-03-02 15:12:02.000000000 -05:00
+categories:
+- CSS
+- HTML
+- userfriendly
+---
+<p>저자가 컨텐츠에 직전 간단한 코멘트나 주석을 곧바로 달아주는 방식은 이미 프린트 디자인 에서는 널리 퍼진 레이아웃 방식 입니다.  제가 가끔보는 The Elements of Typographic Style 의 한 페이지 입니다.  오른쪽에 글이 있고 왼쪽에 주석이나 예제가 표시되어 있죠.
+<img src="assets/407485653_a454ce62bb.jpg?v=0" alt="책의 일부 부분" />
+<!--more--></p>
+<h3>장점? 유용?</h3>
+<p>장점은 저자가 원하는 간단한 설명이나 간단한 주석 혹은 코멘트를 방문자가 쉽게 알아볼수 있도록 표현이 가능 하다는 것입니다.  책을 읽으면서 이러한 레이아웃을 볼 때에 블로그나 웹컨텐츠에 적용하면 좋겠다는 생각은 했었지만 깊게 생각해 본적은 없었습니다. 어느 특정 위치에 원하는 문구나 덧글은 넣을수 있지만 글을 쓰다가 아무곳이나 원하는 위치에 갯수에 관계받지 않고 side comment를 달아야 한다는 것이 issue 였습니다. </p>
+<p>생각해보면 너무 간단 합니다만.  </p>  약간의 float과  negative margin을 넣어서 표현하는 방식입니다.  글을 써가면서 css나 다른것을 건드리지 않는점이 좋은점일수 있겠네요.</p>
+<p><a href="http://ilmol.com/example/sidecomment/test1.html">예제 페이지를 일단 보시면</a> 이해하기 편하실듯 합니다.  왼쪽의 빨간 부분이 저자의 간단한 코멘트가 달린 부분입니다.  회색은 전체 글이 표현되는 부분이며 흰색은 p 의 문단 부분입니다.  xhtml 코드를 직접 보시거나 style을 끄는것이 가능한 브라우저로 보시면 흐름이 어떻게 되는지 이해가 되실겁니다.</p>
+<h3>사용법</h3>
+<p>레이아웃에 삽입하는 방법은 간단 합니다.  CSS에
+{% highlight css %}.add {float:left; margin-left: -100px; width:80px;}{% endhighlight %}
+를 지정해 놓으시고, 글을 쓰다가 주석이나 덧글을 넣어야 하는 부분에 어느곳이나
+{% highlight html %}<span class="add">덧글 내용</span>{% endhighlight %}
+를 삽입 하시면 됩니다.  img를 삽입하신다면 img의  class 값만 add로 하시면 되겠습니다.</p>
+<p>Side Comment에 왼쪽으로 여백을 -100을 주게되면 레이아웃 밖으로 -100px 위치하게 되고 float값 때문에 레이아웃에 영향을 주지 않게 됩니다.  물론 글을 담는 블락엘리먼트의 padding-left 값을 .add 의 margin-left값 보다 많이 주셔야 합니다. </p>
+<p>후에 print.css 를 지정해 줄때도 이러한 방식으로 표현하셔도 되고 끄고 싶으시면 display:none;을 넣어주시면 전혀 문제가 없겠습니다.</p>
+<h3>발전 가능?</h3>
+<p>물론 이것은 간단한 기본 방법이고 여기서 더욱 개발을 해야겠죠.  혹시 TT 라면 지정값을 만드셔서 [SC] 코멘트 [/SC] 라고 하실수도 있구요.  물론 배포시 기본값을 display:none:  으로 해놓고 스킨제작자가 display: block; 으로 풀어주면 될듯 합니다.  워프라면 첫 페이지는 display:none;으로 되어 있다가 글을 제대로 읽기 클릭시에 display:block 으로 보여주는 방식도 있구요.</p>
+<p>이슈가 없는건 아닙니다.  Feed Reader에서 모든 CSS 스타일을 끄게 된다고 할 때에 이 부분이 Side Comment 부분 이라는 것을 표현하기가 힘들다는 것입니다.  저는 지금은 단순히 [  내용  ] 대괄호로 나타내었습니다만, 여러가지 표현의 방법을 생각해 봐야겠네요.  </p>
+<p>잘만 사용된다면 유저가 글을 읽을시에 상당히 도움이 될꺼라 생각됩니다.  곧(과연 언제.......) 일모리네 레이아웃을 그렇게 바꿀듯 합니다만, 즐거운 레이아웃이 될듯 하네요.  both author and the readers </p></p>
+<p>위의 예제를 응용해서 약간 손질을 본 <a href="http://ilmol.com/example/sidecomment/test.html">레이아웃 입니다.  확인해보세요 </p></a></p>
+<p>HAPPY READING~~</p>

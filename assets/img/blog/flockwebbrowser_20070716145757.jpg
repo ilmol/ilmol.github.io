@@ -1,0 +1,121 @@
+<!DOCTYPE html><html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US" prefix="og: http://ogp.me/ns#"><head>	
+	<meta charset="utf-8" />
+	<meta name="Author" content="Apple Inc." />
+	<meta name="viewport" content="width=1024" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+	<link rel="stylesheet" href="http://images.apple.com/ac/globalheader/1.0/styles/globalheader.css" type="text/css" />
+<title>Apple - Downloads</title><meta name="omni_page" content="downloads - index" /><meta name="Description" content="The hottest downloads on Apple.com." /><link rel="stylesheet" href="http://images.apple.com/global/styles/base.css" type="text/css" /><link rel="stylesheet" href="http://images.apple.com/downloads/styles/downloads.css" type="text/css" /><script src="http://images.apple.com/global/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script><script src="http://images.apple.com/global/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script><script src="http://images.apple.com/global/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script><script src="http://images.apple.com/global/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script><script src="http://images.apple.com/global/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script><script src="http://images.apple.com/global/scripts/feedstatistics.js" type="text/javascript" charset="utf-8"></script><script src="http://images.apple.com/global/scripts/lib/sizzle.js" type="text/javascript" charset="utf-8"></script><script src="http://images.apple.com/global/ac_base/ac_base.js" type="text/javascript" charset="utf-8"></script><script src="http://images.apple.com/downloads/static/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script></head><body class="overview downloads" id="overview">
+
+<nav id="globalheader" class="globalheader" role="navigation" aria-label="Global Navigation" data-hires="false" data-analytics-region="global nav" lang="en-US">
+	<div id="gh-content" class="gh-content">
+		<ul class="gh-menu">
+			<li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle"><button id="gh-svg-icons" class="gh-svg-wrapper"><span class="gh-text-replace">Menu</span></button></li>
+			<li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home"><a href="/"><span class="gh-text-replace">Apple</span></a></li>
+		</ul><!--/gh-menu-->
+		<div class="gh-nav">
+			<div class="gh-nav-view">
+				<ul class="gh-nav-list">
+					<li class="gh-tab gh-tab-apple"><a class="gh-tab-link" href="/"><span class="gh-tab-inner"><span class="gh-text-replace">Apple</span></span></a></li>
+					<li class="gh-tab gh-tab-store"><a class="gh-tab-link" href="http://store.apple.com/us"><span class="gh-tab-inner"><span class="gh-text-replace">Store</span></span></a></li>
+					<li class="gh-tab gh-tab-mac"><a class="gh-tab-link" href="/mac/"><span class="gh-tab-inner"><span class="gh-text-replace">Mac</span></span></a></li>
+					<li class="gh-tab gh-tab-iphone"><a class="gh-tab-link" href="/iphone/"><span class="gh-tab-inner"><span class="gh-text-replace">iPhone</span></span></a></li>
+					<li class="gh-tab gh-tab-watch"><a class="gh-tab-link" href="/watch/"><span class="gh-tab-inner"><span class="gh-text-replace">Watch</span></span></a></li>
+					<li class="gh-tab gh-tab-ipad"><a class="gh-tab-link" href="/ipad/"><span class="gh-tab-inner"><span class="gh-text-replace">iPad</span></span></a></li>
+					<li class="gh-tab gh-tab-ipod"><a class="gh-tab-link" href="/ipod/"><span class="gh-tab-inner"><span class="gh-text-replace">iPod</span></span></a></li>
+					<li class="gh-tab gh-tab-itunes"><a class="gh-tab-link" href="/itunes/"><span class="gh-tab-inner"><span class="gh-text-replace">iTunes</span></span></a></li>
+					<li class="gh-tab gh-tab-support"><a class="gh-tab-link" href="/support/"><span class="gh-tab-inner"><span class="gh-text-replace">Support</span></span></a></li>
+					<li id="gh-tab-search" class="gh-tab gh-tab-search">
+						<div id="gh-search" class="gh-search" role="search">
+							<form action="/search/" method="post" class="gh-search-form" id="gh-search-form" data-search-recommended-results='{"url":"/global/nav/scripts/shortcuts.php","requestName":"recommendedResults","queryName":"q","dataType":"xml"}' data-search-suggested-searches='{"url":"/search/instant/getSuggestions","requestName":"suggestedSearches","queryName":"query","queryParams":{"model":"marcom_en_US","locale":"en_US"},"dataType":"json"}'>
+								<div class="gh-search-input-wrapper">
+									<label for="gh-search-input" class="gh-text-replace">Search apple.com</label>
+									<input type="text" name="q" id="gh-search-input" class="gh-search-input" placeholder="Search apple.com" />
+								</div>
+								<button disabled="disabled" type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="gh-text-replace">Search apple.com</span></button>
+								<button disabled="disabled" type="reset" id="gh-search-reset" class="gh-search-reset"><span class="gh-text-replace">Reset</span></button>
+							</form>
+						</div>
+						<a class="gh-search-magnify" href="/search/"><span class="gh-text-replace">Search apple.com</span></a>
+					</li>
+				</ul>
+			</div>
+		</div><!--/gh-nav-->
+	</div>
+</nav><!--/globalheader-->
+
+<script src="http://images.apple.com/ac/globalheader/1.0/scripts/globalheader.js" type="text/javascript" charset="utf-8"></script>
+
+<div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+
+
+	
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+<script type="text/javascript">
+/* RSID: */
+
+var s_account="appleglobal,appleusxdownloads"
+
+</script>
+
+
+	<script type="text/javascript" src="http://images.apple.com/metrics/scripts/s_code_h.js"></script>
+
+
+
+<script type="text/javascript">
+
+s.pageName=AC.Tracking.pageName()+" (us)";
+s.channel="www.us.downloads"
+
+	s.prop1="www.us.macosx.downloads.homepage"
+
+
+
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code = s.t();</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div><nav id="productheader" data-hires="true"><h1><img src="http://images.apple.com/downloads/static/downloads-index/localnav/headline_image.png" width="306" height="40"alt="Downloads" /></h1></nav><div id="main" class="main" role="main" data-hires="true"><div class="hero"><section class="appstore"><div class="section-container"><div class="details"><header><img  class="icon" src="http://images.apple.com/downloads/static/downloads-index/hero/appstore/icon_image.jpg" width="86" height="86" alt=""  /><h1><img   src="http://images.apple.com/downloads/static/downloads-index/hero/appstore/headline_image.png" width="420" height="54" alt="The Mac App Store"  /></h1><h2><img   src="http://images.apple.com/downloads/static/downloads-index/hero/appstore/subhead_image.png" width="420" height="66" alt="Great apps for your Mac. 
+ Right on your Mac."  /></h2></header><p>Browse and download thousands of apps for your Mac — from your Mac. Shop for apps by category, read user reviews, and buy apps in one simple step.</p>
+<p class="linkp"><a class="more " href="/osx/apps/app-store.html">Learn more about the Mac App Store</a></p><p class="linkp"><a class="more " href="http://developer.apple.com/programs/mac/">Learn how to submit apps</a></p></div><img  class="hero-screen" src="http://images.apple.com/downloads/static/downloads-index/hero/appstore/hero_image.jpg" width="742" height="426" alt=""  /></div></section><section class="itunes"><div class="section-container"><div class="details"><header><img  class="icon" src="http://images.apple.com/downloads/static/downloads-index/hero/itunes/icon_image.jpg" width="80" height="80" alt=""  /><h1><img   src="http://images.apple.com/downloads/static/downloads-index/hero/itunes/headline_image.png" width="314" height="53" alt="iTunes"  /></h1><h2><img   src="http://images.apple.com/downloads/static/downloads-index/hero/itunes/subhead_image.png" width="314" height="66" alt="You’ve never been so easily entertained."  /></h2></header><p>iTunes is the easiest way to organize and enjoy the music, movies, TV shows, apps, and books you already have — and shop <span class="nowrap">for the</span> ones you want to get. You can even listen to free streaming radio stations with <span class="nowrap">iTunes Radio.</span></p>
+<p class="linkp"><a class="more " href="/itunes/">Learn more about iTunes</a></p><p class="linkp"><a class="button" href="/itunes/download/">Download</a></p></div><img  class="hero-screen" src="http://images.apple.com/downloads/static/downloads-index/hero/itunes/hero_image.jpg" width="656" height="392" alt=""  /></div></section></div><section class="tiles selfclear"><article class="tile ios"><img  class="icon" src="http://images.apple.com/downloads/static/downloads-index/tiles/ios/icon_image.jpg" width="76" height="84" alt=""  /><h2><img   src="http://images.apple.com/downloads/static/downloads-index/tiles/ios/headline_image.png" width="236" height="29" alt="iOS 8"  /></h2><p>With amazing new capabilities and updates to features you use every day, iOS 8 is the biggest iOS release ever.</p>
+<ul class="links"><li><a class="more " href="/ios/">Learn more about iOS 8</a></li></ul></article><article class="tile osx"><img  class="icon" src="http://images.apple.com/downloads/static/downloads-index/tiles/osx/icon_image.jpg" width="76" height="84" alt=""  /><h2><img   src="http://images.apple.com/downloads/static/downloads-index/tiles/osx/headline_image.png" width="248" height="29" alt="OS X Yosemite"  /></h2><p>The latest version of OS X features an elegant design, includes enhancements to the apps you use most, and enables your Mac and iOS devices to work together in new ways.</p>
+<ul class="links"><li><a class="more " href="/osx/">Learn more about OS X</a></li></ul></article><article class="tile safariextensions"><img  class="icon" src="http://images.apple.com/downloads/static/downloads-index/tiles/safariextensions/icon_image.jpg" width="96" height="84" alt=""  /><h2><img   src="http://images.apple.com/downloads/static/downloads-index/tiles/safariextensions/headline_image.png" width="248" height="29" alt="Safari Extensions"  /></h2><p>Safari extensions are a great way for you to add new features to Safari. Built by developers, Safari extensions use the latest web technologies. Browse our gallery and install the ones you want with a click.</p>
+<ul class="links"><li><a class="more " href="http://extensions.apple.com/">Browse gallery</a></li></ul></article><article class="tile softwareupdates"><img  class="icon" src="http://images.apple.com/downloads/static/downloads-index/tiles/softwareupdates/icon_image.jpg" width="90" height="84" alt=""  /><h2><img   src="http://images.apple.com/downloads/static/downloads-index/tiles/softwareupdates/headline_image.png" width="214" height="29" alt="Software Updates"  /></h2><p>Get the latest software updates for your Apple computer or related equipment.</p>
+<ul class="links"><li><a class="more " href="http://support.apple.com/downloads/#macdesktops">Desktop Computers</a></li><li><a class="more " href="http://support.apple.com/downloads/#macnotebooks">Portable Computers</a></li><li><a class="more " href="http://support.apple.com/downloads/#macosandsoftware">Mac OS and Software</a></li><li><a class="more " href="http://support.apple.com/downloads/#peripherals">Peripherals</a></li><li><a class="more " href="http://support.apple.com/downloads/#serversandenterprise">Server and Enterprise</a></li><li><a class="more " href="http://support.apple.com/downloads/#internet">Internet</a></li></ul></article></section><section class="developer"><a class="section-container block" href="http://developer.apple.com/resources/"><img  class="icon" src="/downloads/static/downloads-index/developer/icon_image.jpg" width="114" height="104" alt=""  /><div class="details"><h2><img   src="/downloads/static/downloads-index/developer/headline_image.png" width="498" height="30" alt="Downloads and Resources for Developers"  /></h2><p>Learn about new capabilities in OS X Yosemite and iOS 8. Get an overview of the new programming language Swift. And start building the next generation of apps today. <span class="more">Read more</span></p></div></a></section></div><footer id="globalfooter" role="contentinfo"><div id="breadory"><ol id="breadcrumbs"><li class="home"><a href="/">Apple</a></li><li>Downloads</li></ol></div><!--/breadory--><p class="gf-buy footer-shop"><span>Shop the <a href="http://store.apple.com/us">Apple Online Store</a> (1-800-MY-APPLE),</span> visit an <a href="/retail/">Apple Retail Store</a>, or find a <a href="/buy/">reseller</a>.</p>
+
+<ul class="gf-links piped footer-links">
+	<li><a href="/about/" class="first">Apple Info</a></li>
+	<li><a href="/sitemap/">Site Map</a></li>
+	<li><a href="/hotnews/">Hot News</a></li>
+	<li><a href="/rss/">RSS Feeds</a></li>
+	
+	<li><a href="/contact/" class="contact_us">Contact Us</a></li>
+	<li><a href="/choose-your-country/" class="choose">
+		
+			<img src="http://images.apple.com/global/elements/flags/22x22/usa.png" alt="Choose your country or region" width="22" height="22" data-hires="true" />
+		
+	</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+	<p>Copyright © 2015 Apple Inc. All rights reserved.</p>
+	<ul class="piped">
+		<li><a href="/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+		<li><a href="/privacy/privacy-policy/">Updated Privacy Policy</a></li>
+	</ul>
+</div>
+</footer><!--globalfooter--></body></html>
