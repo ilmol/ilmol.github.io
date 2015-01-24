@@ -87,4 +87,10 @@ article {
 	hr {
 		clear: both;
 	}
+	#comments {
+		padding-top: 70px;
+		max-width: $size-width-content - 160px;
+		@include media-query($handheld) { padding-left: 10px;padding-right: 10px;}
+		margin: 0 auto;
+	}
 }

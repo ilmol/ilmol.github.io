@@ -1,12 +1,12 @@
 ---
 layout: post
+comments: true
 title: Youtube 반응형 동영상 삽입 그외 iframe
 date: 2015-01-15 12:27:06.000000000 -05:00
 categories:
 - BROWSER
 - CSS
 - HTML
-comments: true
 ---
 [Youtube](http://youtube.com), [Vimeo](http://vimeo.com) 같은 동영상들을 반응형 레이아웃및 디자인에 삽입하는 기법이다.  Responsive 반응형 틀을 만들고 그 틀에 `iframe`, `embed`를 맞추는 방법인데 상당히 쉽다.  [Thierry Koblenz](http://alistapart.com/article/creating-intrinsic-ratios-for-video/)가 내 놓았던 기법으로 알려져 있지만 뭐 이곳저곳에 널리 퍼져있는지라 쉽게 접할수 있는 기법이라 생각된다.
 
