@@ -9,9 +9,9 @@ categories:
 <p>오늘같은 광복절에는 특별히 제작되는 레이아웃들이 있습니다.  특히나 메이저 포털같은 <a href="http://empas.com">엠파스</a>의 경우 상당히 주기적으로 해더 부분이 바뀌게 되는데, 이러한 경우, 간단히 문서와 프레젠테이션의 분리로 얻는 이득의 최대한의 장점을 살릴수 있습니다.</p>
 <p>일단 단순한 예를 보겠습니다.
 이것이 뉴스 사이트라고 본다면, 보통 평범한 뉴스는 이렇게 광고가 옆에서 붙어서 나오게 된다고 합시다.
-<img src="assets/xhtml_body1.gif" width="300" height="261" alt="xhtml 변화 1" class="border1" /></p>
+<img src="/assets/img/blog/xhtml_body1.gif" width="300" height="261" alt="xhtml 변화 1" class="border1" /></p>
 <p>하지만 특별한 대형뉴스가 났을때에는 뉴스 전체가 옆칸까지 먹어서 크게 강조한다면 이렇게 되겠네요.  정확하게는 아니지만, ESPN 에서 사용하고 있는 대충의 형식입니다.  제가 흉내만 내어봅니다.
-<img src="assets/xhtml_body2.jpg" width="300" height="261" alt="xhtml 변화  2" class="border1" /></p>
+<img src="/assets/img/blog/xhtml_body2.jpg" width="300" height="261" alt="xhtml 변화  2" class="border1" /></p>
 <p>이 부분은 단순히 첫번재 사이트 형식에서 xhtml 부분의 &lt;body&gt; 에 속성을 주어 &lt;body id="big"&gt; 라고 바꾸었을때에 나타나는 레이아웃입니다.  그럼 body 에 준 속성값이 무엇을 바꿀수 있냐면, 바로 선택자의 변화입니다.</p>
 <p>보통 default 레이아웃의 css 값이
 #header {width: <strong>300</strong>px;} </p>
@@ -48,9 +48,9 @@ body#big div#ad {position:absolute; width: 100px;background:blue; height: 30px;t
 body#big div#news {clear:both; margin-right: 100px;}
 {% endhighlight %}</p>
 <p>이것은
-<img src="assets/xhtml_body1.gif" width="300" height="261" alt="xhtml 변화 1" class="border1" />
+<img src="/assets/img/blog/xhtml_body1.gif" width="300" height="261" alt="xhtml 변화 1" class="border1" />
 이런 레이아웃을 출력케 합니다.  하지만 이벤트가 생겼거나 커다란 일을 나타낸다면, body id="big" 을 주면 금세
 &lt;body id="big"&gt;
 이렇게 바뀌게 됩니다.
-<img src="assets/xhtml_body2.jpg" width="300" height="261" alt="xhtml 변화  2" class="border1" /></p>
+<img src="/assets/img/blog/xhtml_body2.jpg" width="300" height="261" alt="xhtml 변화  2" class="border1" /></p>
 <p>이것을 응용하면, 단순히 body 의 값만 바꾸는것으로 엄청난 것들을 바꾸어 버릴수 있습니다.  레이아웃, 폰트사이즈, 테마, 색상, 모든것을 말이죠.  실로 간편한 사이트 관리가 되는것입니다.  주기적으로 모습이 바뀌는 사이트라면 심각하게 고려해 볼수 있는 방법이네요.</p>

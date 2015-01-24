@@ -15,12 +15,12 @@ categories:
 <b>anti-aliasing</b> 이란 소프트웨어 테크닉으로 화면에서 딱딱하게 보이는것을 자연스럽게 바꾸어 주는것을 말합니다.  화면색을 8bit으로 바꾸면 곧바로 antialiasing 이 깨어지는걸 볼수 있습니다.  높은 화면색수가 필요한 테크닉이죠.  인터넷 디자인에 절대 적인 부분으로 자리잡았습니다. </p>
 <p>text-smoothing 으로도 잘 알려져 있는 이 anti-aliasing은 맥에서 기본으로 제공하는 기능으로 맥을 쓰시는분이면 잘 아실겁니다.  글자가 pixel 글자가 아닌 그림자가 혹은 테두리가 있는듯한 영향을 주어서 더욱 화면에 자연스럽게 표현되어 버리는거죠.  포토샵을 쓰실때에 글자에 그림자를 주어 약간 글자들이 화면에 붙어있는듯한 기분이 나게 해 보신분은 대충 어떤 느낌인지 아실겁니다.</p>
 <p>글자가 화면에 한 부분처럼 녹아있기때문에 그래픽상 너무나도  이득적인 요소를 제공하게 됩니다.  유저에게나 디자이너에게나 매력적인 부분이죠.  저에겐 Mac의 커다란 지름양의 유혹부분이기도 합니다.
-<img src="assets/b0045637_12171929.jpg" alt="anti-aliasing" />
-<img src="assets/b0045637_1283810.jpg" alt="anti-aliasing" /></p>
+<img src="/assets/img/blog/b0045637_12171929.jpg" alt="anti-aliasing" />
+<img src="/assets/img/blog/b0045637_1283810.jpg" alt="anti-aliasing" /></p>
 <p>물론.
 단점인 부분도 있습니다.  상당히 놀라웠던 부분인데요.  오랫동안 글을 읽거나 특히 프로그래밍으로 오랫동안 글씨들과 씨름하다보면 text-smoothing이 눈에 상당한 피로를 주는걸 알수 있습니다.  이것이 바로 위에서 언급한 디자인전달은 되지만 문서적인 전달에 약한 부분이 될수 있겠습니다.  오히려 반대라는 분들도 있습니다만, 장시간 쓰는것이 그러한 요소를 더하는걸수도 있겠네요.  여기저기서 text-smoothing 기능을 끄는법을 알려달라고 포스팅이 올라오기도 합니다.  또한, <a href="http://daringfireball.net" target="_blank">Daring Fireball</a>의 <a href="http://daringfireball.net/2003/03/antiantialiasing" target="_blank">Anti-Anti-Aliasing 글</a>을 보면  특히 pixel font들, 한국에서는 웹폰트라고도 하고 monospaced font  9, 8, 7 픽슬 크기의 폰트들이 anti-aliasing 이 저절로 되면서 그 픽셀폰트만의 기능을 하지 못하는경우가 생기게 됩니다.  마지막으로 맥에서의  사파리와 카미노에서의 비교를 예로 들었습니다만,  outline 폰트들과 bitmap폰트의 차이점또한 알아야 하고 여러 복잡한 부분으로 들어가게 되니 간단히 설명하자면, 폰트의 크기에 따라, 그리고 브라우저가 둘중 어떠한 폰트를 어떤 상황에서 고르느냐에 따라서 글자의 모양, 성질이 틀려진다는 예 였습니다.
-<img src="assets/b0045637_12101373.png" alt="monaco test" /></p>
-<p><img src="assets/b0045637_12105869.png" alt="monaco test" /></p>
+<img src="/assets/img/blog/b0045637_12101373.png" alt="monaco test" /></p>
+<p><img src="/assets/img/blog/b0045637_12105869.png" alt="monaco test" /></p>
 <p>DARINGFIREBALL에서 분석한 그림들 입니다.
 위는 카미노 그리고 밑은 사파리 입니다. 둘의 렌더링이 틀립니다.</p>
 <p>사파리 엔지니어 Dave Hyatt 은 그러한 부분을 CSS3 에서 설정할수 있도록 정하는 부분을 제안했습니다.</p>

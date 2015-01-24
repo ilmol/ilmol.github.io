@@ -59,40 +59,19 @@ article {
 	}
 
 	aside {
-		max-width: $size-width-content;
-		margin: 0 auto;
-		padding: 0 60px;
-		@include media-query($handheld) { padding-left: 10px;padding-right: 10px; }
-		position: relative;
-		li {
-			font-size: .8em;
-
-			a {
-				text-transform: uppercase;
-				border: 1px solid #ccc;
-				border-radius: 2px;
-				display: inline-block;
-				padding: 3px 10px;
-				font-size: .7em;
-				color: #bbb;
-				font-weight: bold;
-				margin-right: 4px;
-			}
-		}
-		li:first-child {
-			font-family: $font-family-date;
-			padding-bottom: 1.5em;
-			padding-top: 1.1em;
-		}
-		li:nth-child(2) {
-			display: none;
-			position: absolute;
-			right: $size-width-content;
-			top: 12px;
-			width: 80px;
-			text-align: right;
-			a {
-				margin-bottom: 3px;
+			ul {
+			max-width: $size-width-content;
+			margin: 0 auto;
+			padding: 0 60px 1em;
+			@include media-query($handheld) { padding-left: 10px;padding-right: 10px; }
+			position: relative;
+			li {
+				font-size: .8em;
+				span {padding-left: 2em;}
+				font-family: $font-family-date;
+				padding-bottom: .5em;
+				padding-top: 1.1em;
+				
 			}
 		}
 	}
@@ -109,14 +88,3 @@ article {
 		clear: both;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-

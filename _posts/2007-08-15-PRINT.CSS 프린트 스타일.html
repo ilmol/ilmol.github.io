@@ -47,7 +47,7 @@ h3 {font-size: 11pt;}</p>
 {% endhighlight %}</p>
 <p>브라우저가 지원만 한다면 (사파리가 아주 잘보이는 군요) #content 안에 있는 링크 뒤에 주소를 출력 하도록 하게 합니다.  하지만 #content 안의 글 제목에도 링크가 붙게되니 글 자체의 블록엘리먼트를 지정해 주어서 글 안의 링크에만 출력되도럭 하는 것이 좋은 방법이겠습니다.  일모리네는 .writing 부분이겠네요.  이러한 방법으로 링크를 지정해 주면 인쇄물이지만 웹주소를 찾아갈수 있는 장점이 있겠습니다.  </p>
 <p>링크에 스타일을 주었으니 문단에도 스타일을 지정해 보겠습니다.  문단 시작시에 들어짜기, 움푹 들어간 부분의 indentation 을 주어 문단 시작을 표현할수 있습니다.  text-indent: 값; 의 형식을 사용하면 되겠네요.  또한 인쇄는 페이지라는 테두리가 있기에 문단이 페이지의 마지막 부분일때에 한줄만 출력되고 다음 페이지로 넘어가는 경우가 있을수 있습니다.  이 때에 orphans를 지정해 주면 orphans 에 지정된 값 데로 문단의 최소 출력이 지정됩니다.
-<img src="assets/picture_3-20070815-013006.jpg" alt="orphans" />
+<img src="/assets/img/blog/picture_3-20070815-013006.jpg" alt="orphans" />
 {% highlight css %}
 p {text-indent: 13pt; orphans: 3;}
 {% endhighlight %}</p>
