@@ -5,6 +5,7 @@ description: 웹디자인, Front-End, 웹표준 이야기가 소소하게 나누
 baseurl: ""
 url: "http://ilmol.com"
 twitter_username: ilmol
+disqusid: ilmori
 # Build settings
 markdown: redcarpet
 redcarpet:
