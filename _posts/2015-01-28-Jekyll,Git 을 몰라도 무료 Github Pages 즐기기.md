@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Jekyll,Git 을 몰라도 무료 Github Pages 즐기기"
 date:   2015-01-28 021:14:11 +0900
 categories: products
