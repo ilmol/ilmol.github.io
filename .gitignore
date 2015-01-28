@@ -1,4 +1,4 @@
 _site
-_posts/*.draft.*
+_drafts
 .DS_Store
 .sass-cache
