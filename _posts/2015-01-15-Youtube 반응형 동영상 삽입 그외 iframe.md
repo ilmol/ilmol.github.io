@@ -14,8 +14,6 @@ categories:
 
 Youtube 의 동영상을 외부에 삽입할 시에 제공되는 코드는 `iframe`으로 아주 오래오래 묵혀온 방법이다. Vimeo 도 마찬가지 이고.  `width`, `height`이 패키지로 흘러나오는 `iframe`은 달갑지만은 않다. 
 
-그렇게 가는 건지
-
 ```html
 <iframe width="560" height="315" src="//www.youtube.com/embed/c_m2F_ph_uU" frameborder="0" allowfullscreen>
 </iframe>
