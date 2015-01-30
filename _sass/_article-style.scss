@@ -1,0 +1,35 @@
+.headline {
+	& > img {}
+	header {
+		max-width: 1200px;
+		background-size: cover;
+		text-align: center;
+		padding-bottom: 5em;
+		padding-top: 2em;
+		@include media-query($handheld) {padding-bottom: 6em;}
+		h1 {
+		    font-size: 5em;
+		    font-weight: 700;
+		    @include media-query($handheld) {font-size: 3.5em;}
+		    }
+		& > p {
+			font-size: 1.3em;
+			@include media-query($handheld) {font-size: 1.1em;}
+			display: block;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+	}
+	.featured {
+		color: #fff;
+		background-size: cover;
+		max-width: none;
+		h1 {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		&:hover {
+			background-color: rbga(0,0,0,0);
+		}
+	}
+}

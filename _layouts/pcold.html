@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+<meta property="og:site_name" content="일모리와 웹표준">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://ilmol.com{{ page.url }}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+{% if page.featured %}<meta property="og:image" content="{{ site.home_url }}{{ page.featured }}">{% endif %}
+<link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.css">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+<link rel="shortcut icon" href="/assets/img/system/logo@2x.png" />
+<style>
+body { background-color: #040C80;color: #ffffff;font-family: dotum, sans-serif;
+font-size: 100%;font-weight: 200;padding-left: 10px;padding-right: 10px;padding-top: 10px;
+overflow-x:hidden;}
+a { color: #fff;text-decoration: none;}
+a:hover { text-decoration: underline;}
+#logo {position: absolute;top: 0;}
+#logo a {background-color: #fff;color: #040c80;width: 40px;height: 40px;
+text-align: center; line-height: 40px;
+  padding: 8px 8px 6px;font-size: 1.1em;font-weight: 300;}
+hr { border-bottom: 1px solid #fff;}
+header, #wrapper {max-width: 780px;}
+nav ol {padding-left:0;margin-top: 30px;}
+nav ol:before { content: "[ 기본메뉴 ]";}
+nav ol li { margin-left: 1em; list-style: decimal; display: inline-block;}
+nav ol li:first-child:before { content: "1. ";}
+nav ol li:nth-child(2):before { content: "2. ";}
+nav ol li:nth-child(3):before { content: "3. ";}
+nav ol li:nth-child(4):before { content: "4. ";}
+aside ol {padding-left: 0;}
+aside ol:before { content: "[  카테고리 ]";}
+aside ol li {display: inline-block;margin-left: 1em;}
+aside ol li:nth-child(1):before { content: "6. ";}
+aside ol li:nth-child(2):before { content: "7. ";}
+aside ol li:nth-child(3):before { content: "8. ";}
+aside ol li:nth-child(4):before { content: "9. ";}
+aside ol li:nth-child(5):before { content: "10. ";}
+aside ol li:nth-child(6):before { content: "11. ";}
+aside ol li:nth-child(7):before { content: "12. ";}
+aside ol li:nth-child(8):before { content: "13. ";}
+aside ol li:nth-child(9):before { content: "14. ";}
+
+main h1 {font-size:1em;font-weight:200;margin-bottom: 0;line-height: 1.4em;}
+main h1:before {content:"제목: ";}
+main p.date { border-bottom: 1px dashed #fff;margin-top:0;margin-bottom: 10px;
+padding-bottom: .4em;}
+main {line-height: 1.7;}
+main p:nth-child(3) {margin-top: 0;}
+main a {text-decoration: underline;}
+main img[alt~="minisize"] { width:100px;}
+main img {max-width: 100%;}
+main ul li { list-style:none; }
+main ul li:before { content: "» ";}
+main blockquote {margin-left: 1em;padding-left: 10px;}
+main blockquote:before { content: '> '; float:left;margin-right: .5em;}
+
+</style>
+</head>
+<body>
+<header>
+<div id="logo"><a href="{{ site.url }}">일모리와 웹표준</a></div>
+<hr>
+<nav>
+<ol>
+<li><a href="http://ilmol.com" accesskey="1">초기화면</a></li>
+<li><a href="" accesskey="2">블로그</a></li>
+<li><a href="/about/" accesskey="3">주인장</a></li>
+<li><a href="/contact/" accesskey="4">연락하기</a></li>
+</ol>
+</nav>
+</header>
+<div id="wrapper">
+<aside>
+<ol class="category" start="5">
+<li><a href="/html/"><i class="iconp-html5-01"></i> HTML</a></li>
+<li><a href="/css/"><i class="iconp-css3-01"></i> CSS</a></li>
+<li><a href="/js/"><i class="iconp-prog-js01"></i> JS</a></li>
+<li><a href="/browser/"><i class="iconp-brw-firefox"></i> BROWSER</a></li>
+<li><a href="/standards/"><i class="icon-w3c"></i> 웹표준</a></li>
+<li><a href="/product/"><i class="iconp-os-apple"></i> PRODUCT</a></li>
+<li><a href="/design/"><i class="iconp-orkut"></i> DESIGN</a></li>
+<li><a href="/userfriendly/"><i class="icon-info"></i> UX/UI/AX</a></li>
+<li><a href="/etc/"><i class="icon-star"></i> ETC</a></li>
+</ol>
+<p>웹디자인, Front-End, 웹표준 이야기가 소소하게 나누어 지는 블로그 입니다.</p>
+</aside>
+<hr>
+<main id="main" roll="main">
+<h1>{{ page.title }}</h1>
+<p class="date">글쓴이: 일모리  {{ page.date }}</p>
+{{ content }}
+<hr>
+</main><!-- //main -->
+<footer>
+<p>Copyright © 2002-2015 <a href="http://ilmol.com">ilmol.com</a>.  All rights reserved.
+<br>Handcrafted by ilmol. 키보드로 직접 깎아 만들었습니다.</p>
+</footer>
+</div><!-- //wrapper -->
+
+</body>
+</html>
