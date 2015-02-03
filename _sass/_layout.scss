@@ -15,14 +15,15 @@ body > header {
 		a {
 			width: 43px;
 			height: 42px;
-			background-image: url(/assets/img/system/logo@2x.png)\9;
-			background-repeat: none\9;
-			float: left\9;
+			background-image: url(/assets/img/system/logo@2x.png)\9;/* ie */
+			background-size: 42px\9;/* ie */
+			margin-left: 8px\9;/* ie */
+			float: left\9;/* ie */
 		}
 		img {
 			width: 43px;
 			height: 42px;
-			display:none\9;
+			display:none\9;/* ie */
 		}
 	}
 	#logo:hover {
