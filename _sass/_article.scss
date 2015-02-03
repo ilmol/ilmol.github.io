@@ -4,6 +4,7 @@ article {
 	overflow-x: hidden;
 
 	& .index, & .category {
+		ul { padding-left: 0;}
 		li {
 			padding-bottom: 2em;
 			list-style: none;
