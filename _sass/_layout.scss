@@ -15,15 +15,10 @@ body > header {
 		a {
 			width: 43px;
 			height: 42px;
-			background-image: url(/assets/img/system/logo@2x.png)\9;/* ie */
-			background-size: 42px\9;/* ie */
-			margin-left: 8px\9;/* ie */
-			float: left\9;/* ie */
 		}
 		img {
 			width: 43px;
 			height: 42px;
-			display:none\9;/* ie */
 		}
 	}
 	#logo:hover {
@@ -58,6 +53,15 @@ body > header {
 				transform: translate3d(0,0,0);
 			}
 		}
+	}
+}
+.ie9 body header #logo a {
+	background-image: url(/assets/img/system/logo@2x.png);
+	background-size: 42px;
+	margin-left: 8px;
+	float: left;
+	img {
+		display: none;
 	}
 }
 // end header
