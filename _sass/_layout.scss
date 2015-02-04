@@ -15,10 +15,16 @@ body > header {
 		a {
 			width: 43px;
 			height: 42px;
-		}
-		img {
-			width: 43px;
-			height: 42px;
+			margin-left: 8px;
+			float: left;
+			text-indent: 100%; 
+			white-space: nowrap; 
+			overflow: hidden;
+			background: url(/assets/img/system/logo.png);
+			background-image: url(/assets/img/system/logo.svg), none;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 0 7px;
 		}
 	}
 	#logo:hover {
@@ -55,15 +61,6 @@ body > header {
 		}
 	}
 }
-.ie9 body header #logo a {
-	background-image: url(/assets/img/system/logo@2x.png);
-	background-size: 42px;
-	margin-left: 8px;
-	float: left;
-	img {
-		display: none;
-	}
-}
 // end header
 label[for="cat-trigger"] {
   position: absolute;
@@ -73,11 +70,9 @@ label[for="cat-trigger"] {
   height: 15px;
   cursor: pointer;
   z-index: 5;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background: url(/assets/img/system/sidemenu.png);
+  //background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>"), none;
   background-size: contain;
-}
-.ie9 .cat-trigger + label {
-	background: #000;
 }
 .cat-trigger:checked + label {
   background-color: #000;
