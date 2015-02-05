@@ -141,8 +141,60 @@ footer {
 	clear: both;
 	width: 100%;
 	position: relative;
+	padding-top: 20px;
 	p {
 		text-align: center;
 		font-size: .8em;
+	}
+}
+.log #main {
+	h1 {
+		clear: both;
+		padding-top: 1em;
+		&:before {
+			content: "#";
+		}
+	}
+	h2 {
+		clear: both;
+		margin-top: 3em;
+	}
+	h3 {
+		clear: both;
+		padding-top: 2em;
+		border-bottom: 1px solid #ddd;
+	}
+	h4 {
+		margin: 0;
+		padding-top: 2em;
+		clear: both;
+	}
+	ul {
+		padding-left: 0;
+		li {
+			float: left;
+			width: 47%;
+			margin-left: 20px;
+			font-size: 14px;
+			@include media-query(700px) { width: 95%; }
+			a[href*="alistapart"]:after {
+				content: " - alistapart";
+				color: #bbb;
+				font-weight: normal;
+				font-size: 10px;
+			}
+			a[href*="sitepoint"]:after {
+				content: " - sitepoint";
+				color: #bbb;
+				font-weight: normal;
+				font-size: 10px;
+			}
+			a[href*="smashing"]:after {
+				content: " - smashing";
+				color: #bbb;
+				font-weight: normal;
+				font-size: 10px;
+			}
+		}
 	}
 }

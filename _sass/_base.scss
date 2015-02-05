@@ -23,6 +23,9 @@ a {
 		color: $color-brand;
 	}
 }
+a[data-filetype="image"] {
+   text-decoration: none;
+}
 nav, aside {
 	ul, ol, li {
 		padding: 0;
