@@ -1,0 +1,15 @@
+---
+layout: default
+permalink: /tips/
+---
+<article>
+<div class="contents">
+<h2>Category: Tips</h2>
+<ul class="category">{% for tip in site.categories.tip %}
+<li>
+<h3><a href="{{ tip.url }}">{{ tip.title }}</a> - {{ tip.date | date: "%b %-d, %Y" }}</h3>
+</li>
+{% endfor %}
+</ul>
+</div>
+</article>
