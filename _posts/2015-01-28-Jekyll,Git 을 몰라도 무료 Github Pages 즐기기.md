@@ -3,8 +3,9 @@ layout: post
 comments: true
 title:  "Jekyll,Git 을 몰라도 무료 Github Pages 즐기기"
 date:   2015-01-28 21:14:11 +0900
-categories: products
+categories: products, tip
 description: 웹사이트및 블로그를 무료로 사용할 수 있는 Github Pages 서비스를 git 이나 명령어를 모르더래도 사용하는 방법.
+thumbnail: 2015jekyll.png
 ---
 Github Pages 는 Github에서 제공하는 무료 웹사이트 서비스로써 자신의 프로젝트 소개나 회사를 소개하기에 편한 곳이지만 Jekyll 엔진이 돌고 있으니 간단한 블로깅이 가능하다.  다시말해서 무료로 회원들이 블로깅 서비스를 누릴 수 있다.  "[워드프레스에서 Jekyll로 마이그레이션](http://ilmol.com/2015/01/%EC%9B%8C%EB%93%9C%ED%94%84%EB%A0%88%EC%8A%A4%EC%97%90%EC%84%9C%20Jekyll%EB%A1%9C%20%EB%A7%88%EC%9D%B4%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%85%98.html)" 에서 소개했듯이 많은 장점을 갖고 있지만 git 을 배워야 하고 Jekyll을 깔아야 하는 번거로움과 어려움이 따른다.
 

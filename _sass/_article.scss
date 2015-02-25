@@ -3,20 +3,6 @@ article {
 	padding-bottom: 70px;
 	overflow-x: hidden;
 
-	& .index, & .category {
-		ul { padding-left: 0;}
-		li {
-			padding-bottom: 2em;
-			list-style: none;
-			h3 {
-				font-weight: normal;
-				a {
-					border-bottom: none;
-				}
-			}
-		}
-	}
-
 	> img {
 		display: block;
 		width: 100%;
@@ -101,5 +87,10 @@ article {
 		max-width: $size-width-content - 160px;
 		@include media-query($handheld) { padding-left: 10px;padding-right: 10px;}
 		margin: 0 auto;
+	}
+	footer {
+		padding: 0;
+		border: 0;
+		margin: 0;
 	}
 }

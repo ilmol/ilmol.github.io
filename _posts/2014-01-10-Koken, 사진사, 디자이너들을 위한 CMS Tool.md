@@ -5,7 +5,8 @@ title: Koken, 사진사, 디자이너들을 위한 CMS Tool
 date: 2014-01-10 02:44:54.000000000 -05:00
 categories:
 - PRODUCT
-featured: /assets/img/blog/2015kok4.png
+featured: 2015kok4.png
+thumbnail: 2015koken.png
 ---
 [Koken](http://koken.me/) 은 소개하자면 설치형 컨텐츠 관리 시스탬, 워드프레스와 같은 간단한 컨텐츠 관리를 돕는 시스탬이다.  워드프레스만큼 설치도 쉬우며 워드프레스보다는 고급스러운 느낌에 특별히 사진이나 디자인관련 유저들을 겨냥한 시스탬인 만큼 좀더 고급스러운 인터페이스와 테마들을 제공한다.  설치형 [Smugmug](http://smugmug.com) 정도라고나 할까..
 

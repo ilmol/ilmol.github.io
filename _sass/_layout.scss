@@ -7,7 +7,7 @@ body > header {
 
 	#logo {
 		width: 60px;
-		height: 52px;
+		height: 60px;
 		text-align: center;
 		padding: 8px 0 0;
 		float: left;
@@ -121,16 +121,113 @@ label[for="cat-trigger"] {
 }
 // end main
 
-.pagination {
-	font-size: .9em;
-	padding: 0 $size-padding-article-side;
+#index #main {
+	position: relative;
+	article {
+		> img {
+			max-width: none;
+		}
+		.contents { 
+			margin-left: 0;
+			max-width: none;
+			padding-left: 0;
+			padding-right: 350px;
+			@include media-query(1200px) { padding-right: 290px; }
+			@include media-query($handheld) { padding-right: 0;}
+			ul { 
+				margin-top: 0;
+				padding-left: 0;
+
+				li {
+					padding-left: 18%;
+					padding-right: 13%;
+		      padding-bottom: 2.8em;
+		      padding-top: 2.4em;
+		      border-bottom: 1px solid #eee;
+		      list-style: none;
+		      position: relative;
+		      @include media-query(1200px) { padding-left: 7em; padding-right: 2.5em;}
+					h3 {
+						font-weight: normal;
+		        font-size: 1.1em;
+		        margin-top: 0;
+						a {
+							border-bottom: none;
+						}
+					}
+					p {
+						 margin: 0;
+					   font-size: .9em;
+					   line-height: 1.4;
+					}
+					a:hover img {
+						border: 1px solid $color-brand;
+						transition: border-width .4s ease-in-out;
+        		-webkit-transition: border-width .4s ease-in-out;
+        		transform: translate3d(0, 0, 0); 
+
+					}
+					img {
+						position: absolute; 
+						top: 2.8em;
+						left: 4%;
+						width: 80px;
+						border-radius: 100%;
+						border: 6px solid #eee;
+						@include media-query(1200px) { left: 1em;}
+					}
+				}
+			}
+		}
+	}
+	aside {
+		width: 350px;
+		border-left: 1px solid #eee;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin-top: 0; /* image */
+		@include media-query(1200px) { width: 290px; }
+		@include media-query($handheld) { position: relative; top: auto; right: auto; bottom: auto; border-left: 0;width: 100%;border-top: 1px solid #eee;padding-top: 1em;}
+		&:before {
+				@include media-query($handheld) { content: "More contents"; font-size: 1.4em;padding-left: 5em; }
+			}
+		ul {
+			border-bottom: 1px solid #eee;
+			padding-bottom: 1.4em;
+			padding-top: 2.3em;
+			padding-left: 1.4em;
+			padding-right: 1em;
+			@include media-query($handheld) { padding-left: 7.2em; }
+			h3 {
+				font-size: 1.1em;
+				margin-top: 0;
+			}
+			h4 {
+				font-weight: normal;
+				font-size: .9em;
+				margin-top: .2em;
+				margin-bottom: .5em;
+			}
+		}
+	}
 }
+.pagination {
+	clear: both;
+	font-size: .9em;
+	padding: 0 18%;
+	@include media-query(1200px) { padding-left: 8em; }
+}
+
 footer {
 	clear: both;
-	width: 100%;
 	position: relative;
-	padding-top: 20px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 	background-color: $color-bg-base;
+	border-top: 1px solid #eee;
+	@include media-query($handheld) { border-top: 0; }
 	p {
 		text-align: center;
 		font-size: .8em;
