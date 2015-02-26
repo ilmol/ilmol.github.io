@@ -97,3 +97,45 @@
 		}
 	}
 }
+#browser {
+	header {
+		max-width: none;
+		margin: 0;
+		padding: 1em 0;
+		border-bottom: 1px solid #eee;
+		font-size: .8em;
+		h1 {
+			padding: 0;
+			text-align: center;
+		}
+	}
+	.contents {
+		max-width: none;
+		padding: 0;
+		ul {
+			padding: 0;
+			margin: 0;
+
+			li {
+				width: 50%;
+				padding: 0;
+				list-style: none;
+				height: 500px;
+				border-left: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+				float: left;
+				padding-left: 1em;
+
+				@include media-query($handheld) { width: 100%; height: auto; padding-bottom: 30px;}
+
+				h3 {
+					margin: 0;
+					font-size: 1.1em;
+					padding-top: .6em;
+
+				}
+			}
+			
+		}
+	}
+}
