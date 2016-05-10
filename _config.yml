@@ -6,9 +6,9 @@ baseurl: ""
 url: "http://ilmol.com"
 twitter_username: ilmol
 # Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: ["footnotes"]
+markdown: kramdown
+# redcarpet:
+  # extensions: ["footnotes"]
 paginate: 25
 paginate_path: "page:num/"
 permalink: "/:year/:month/:title.html"
