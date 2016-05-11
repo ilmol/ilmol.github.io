@@ -19,7 +19,7 @@ thumbnail: 2016jekyll3.png
 
 완벽한 마이그래이션은 아닐것이고 아마 인용문구 등의 사용이나 code 블락의 표현에서 어딘가에는 충돌이 있긴 할듯 하다.
 
-###Jekyll 3.0
+##Jekyll 3.0
 
 말 나온김에 제킬3.0을 살짝 살펴보면 markdown 지원을 kramdown 으로 제한하는 것 외에도 Textile 마크업 사용 또한 지원하지 않으며 relative permalinks 또한 지원하지 않는다.  
 
