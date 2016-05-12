@@ -11,7 +11,7 @@ jekyll-crosspost_to_medium:
   cache: .jekyll-crosspost_to_medium
   status: draft
   license: all-rights-reserved
-  text: '<p><i>This article was originally posted <a href=\"#{url}\" rel=\"canonical\">on my site</a>.</i></p>’,
+  text: '<p><i>This article was originally posted <a href=\"#{url}\" rel=\"canonical\">on my site</a>.</i></p>’
   backdate: true
 ---
 
