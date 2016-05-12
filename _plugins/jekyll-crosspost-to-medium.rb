@@ -166,7 +166,7 @@ module Jekyll
           'contentFormat' => "html",
           'content'       => content,
           'tags'          => tags,
-          'publishStatus' => @settings['status'] || "draft",
+          'publishStatus' => @settings['status'] || "public",
           'publishedAt'   => published_at.iso8601,
           'license'       => @settings['license'] || "all-rights-reserved",
           'canonicalUrl'  => canonical_url
