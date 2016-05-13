@@ -125,6 +125,7 @@
         border-bottom: 1px solid #eee;
 				float: left;
 				padding-left: 1em;
+				overflow: hidden;
 
 				@include media-query($handheld) { width: 100%; height: auto; padding-bottom: 30px;}
 
