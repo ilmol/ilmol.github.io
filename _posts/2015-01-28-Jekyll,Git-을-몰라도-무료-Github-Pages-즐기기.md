@@ -3,7 +3,10 @@ layout: post
 comments: true
 title:  "Jekyll,Git 을 몰라도 무료 Github Pages 즐기기"
 date:   2015-01-28 21:14:11 +0900
-categories: products, tip
+categories:
+- article
+- tip
+- product
 description: 웹사이트및 블로그를 무료로 사용할 수 있는 Github Pages 서비스를 git 이나 명령어를 모르더래도 사용하는 방법.
 thumbnail: 2015jekyll.png
 ---
