@@ -28,7 +28,7 @@ crosspost_to_medium: true
 
 ![](https://images2.imagebam.com/3e/9b/dc/2cf9bd1360995532.jpg)
 
-##단종제품의 매력
+## 단종제품의 매력
 
 2019년, 기억에서 지워졌던 그녀석이 눈에 들어왔다.  그리고 지나칠 수 없었다.  때마침 인터넷이 안되는 외진곳에서 종종 캠핑을 하다보니 필요에 의해 구입하게된 아이팟 5세대와 완벽한 조합이었기에 더더욱 놓칠수 없었다.
 
@@ -38,7 +38,7 @@ Apple iPod Hi-Fi는 기능은 별볼일 없는 단순 인테리어 제품으로�
 
 ![](https://images2.imagebam.com/68/36/cd/a3962e1360995529.jpg)
 
-##2020년에도 화끈한 iPod Hi-Fi
+## 2020년에도 화끈한 iPod Hi-Fi
 
 2018년 애플은 Airport Express 의 [Airplay2 지원 업데이트를 공개](https://www.cnet.com/google-amp/news/apple-just-turned-your-ancient-airport-express-router-into-an-airplay-2-wireless-speaker-dongle/)한다.   Airport Express는 35mm 잭을 꼽을 수 있어서 아무 스피커든지 네트워크 스피커로 변환시켜주는 기기이다.   Bluetooth와 다른점은  wifi가 연결된 애플제품에서 바로 Airplay 로 인식이 된다는 점이다.  애플 기기에서 소리 옵션 중 하나로 표기되기 때문에 같은 네트웤에 있다면 어떤 애플 기기에서도 Hi-fi로 소리를 출력하며 또한 시리, 애플와치, 아이폰으로 소리 및 기본적인 음악 컨트롤이 가능하다.   애플 환경을 구축한 나에겐 더할나위 없는 음향 시스탬이 구축된 것이다.
 
@@ -62,7 +62,7 @@ Airport Express2 와 Apple iPod Hi-Fi의 조합은 왠만한 현대식 스피커
 
 ![](https://images2.imagebam.com/58/73/70/f295ab1360995539.jpg)
 
-최소 $100 이상 거래되는 스피커가 누구에게나 맞는건 아니다.  하지만 애플 eco system 안에 이미 있으며 거실 한 가운데에 눈에 띄는 it 아이탬을 두고 싶다면 추천한다.  그 당시 실패작으로 불리었지만 시간이 갈 수록 사랑받는 애플의 Hi-Fi 스피커, Apple Express2와 함께 지금 당장 귀가 즐거운 울림을 즐겨보길.
+최소 $100 이상 거래되는 스피커가 누구에게나 맞는건 아니다.  하지만 애플 eco system 안에 이미 있으며 거실 한 가운데에 눈에 띄는 it 아이탬을 두고 싶다면 추천한다.  그 당시 실패작으로 불리었지만 시간이 갈 수록 사랑받는 애플의 Hi-Fi 스피커, Apple Express와 함께 지금 당장 귀가 즐거운 울림을 즐겨보길.
 
 
 여담.
