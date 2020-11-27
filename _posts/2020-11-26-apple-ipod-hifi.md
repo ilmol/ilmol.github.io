@@ -4,9 +4,9 @@ comments: true
 title: "apple iPod Hi-Fi(ve) 애플 스피커의 새 단장"
 date: 2020-11-26 02:30:00 +00:00
 categories:
-- PRODUCT
-- DESIGN
-- ETC
+- product
+- design
+- etc
 tags:
 - 애플 스피커
 - 애플
