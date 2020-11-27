@@ -7,7 +7,7 @@ permalink: /product/
 <h2>Category: Product</h2>
 <ul class="category">{% for product in site.categories.product %}
 <li>
-<h3><a href="{{ products.url }}">{{ product.title }}</a> - {{ product.date | date: "%b %-d, %Y" }}</h3>
+<h3><a href="{{ product.url }}">{{ product.title }}</a> - {{ product.date | date: "%b %-d, %Y" }}</h3>
 </li>
 {% endfor %}
 </ul>
