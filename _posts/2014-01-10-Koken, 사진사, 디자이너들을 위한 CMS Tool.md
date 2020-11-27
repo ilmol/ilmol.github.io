@@ -4,7 +4,7 @@ comments: true
 title: Koken, 사진사, 디자이너들을 위한 CMS Tool
 date: 2014-01-10 02:44:54.000000000 -05:00
 categories:
-- PRODUCT
+- product
 featured: 2015kok4.png
 thumbnail: 2015koken.png
 ---

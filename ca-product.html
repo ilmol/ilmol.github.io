@@ -5,9 +5,9 @@ permalink: /product/
 <article>
 <div class="contents">
 <h2>Category: Product</h2>
-<ul class="category">{% for products in site.categories.products %}
+<ul class="category">{% for product in site.categories.product %}
 <li>
-<h3><a href="{{ products.url }}">{{ products.title }}</a> - {{ products.date | date: "%b %-d, %Y" }}</h3>
+<h3><a href="{{ products.url }}">{{ product.title }}</a> - {{ product.date | date: "%b %-d, %Y" }}</h3>
 </li>
 {% endfor %}
 </ul>

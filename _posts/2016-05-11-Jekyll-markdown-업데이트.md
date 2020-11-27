@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Jekyll markdown 업데이트"
 date:   2016-05-11 11:13:00 +0900
-categories: etc, products
+categories: etc, product
 description: 오랜만에 Github Pages 서비스 업데이트를 하며 markdown 업데이트 단행.  
 thumbnail: 2016jekyll3.png
 crosspost_to_medium: true
